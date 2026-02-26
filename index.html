@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="author" content="" />
-    <meta
-      name="description"
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-    />
-    <meta name="keywords" content="" />
-    <title>WTW - PPTX Generator</title>
-    <link
-      rel="shortcut icon"
-      href="assets/images/favicon.ico"
-      type="image/x-icon"
-    />
-    <!-- css-->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/all.min.css" />
 
-    <!-- Font awesome link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/0901bfe3aa.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/fe073c3ad3.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/c6fd3d7ec2.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="author" content="" />
+  <meta name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" />
+  <meta name="keywords" content="" />
+  <title>WTW - PPTX Generator</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <!-- css-->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
 
-  <body>
+  <!-- Font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+</head>
+
+<body>
   <header>
     <div class="container">
       <nav class="navbar navbar-light">
+        <div class="left-navbar-items">
         <div class="brand-logo">
-          <a title="Fineco" class="navbar-brand" href="index.html">
-            <img src="assets/images/logo1.svg" alt="Generali - PPTX Generator" class="main-logo1" />
+          <a title="WTW - PPTX Generator" class="navbar-brand" href="index.html">
+            <img src="assets/images/logo1.svg" alt="WTW - PPTX Generator" class="main-logo1" />
+            <img src="assets/images/m-logo.svg" alt="WTW - PPTX Generator" class="main-logo2" />
+
           </a>
         </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-        <div class="header-right">
+        <div class="header-right" id="headerRight">
           <ul class="nav-ul navbar-nav">
             <li class="nav-item">
               <a href="customer-management.html" class="nav-link customers-link">
@@ -74,740 +65,442 @@
                   presentazione</span>
               </a>
             </li>
-            <li class="nav-item navBtn2">
-              <a href="" class="new-ppt1">
-                <span class="setGap1">Sofia Williams</span><span><i class="fa-solid fa-right-from-bracket"></i></span>
-              </a>
-            </li>
           </ul>
+        </div>
+        </div>
+
+        <div class="navBtn2">
+          <a href="" class="new-ppt1">
+            <span class="setGap1">Sofia Williams</span><span><i class="fa-solid fa-right-from-bracket"></i></span>
+          </a>
         </div>
       </nav>
     </div>
   </header>
 
-    <section class="stepper-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="stepper">
-              <div class="step active">
-                <div class="circle">1</div>
-                <p class="mb-0">Cliente e progetto</p>
-              </div>
-              <hr class="liner" />
-              <div class="step">
-                <div class="circle">2</div>
-                <p class="mb-0">Upload e Impostazioni output</p>
-              </div>
-              <hr class="liner" />
-              <div class="step">
-                <div class="circle">3</div>
-                <p class="mb-0">Download</p>
-              </div>
+  <section class="stepper-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="stepper">
+            <div class="step active">
+              <div class="circle">1</div>
+              <p class="mb-0">Cliente e progetto</p>
+            </div>
+            <hr class="liner" />
+            <div class="step">
+              <div class="circle">2</div>
+              <p class="mb-0">Upload e Impostazioni output</p>
+            </div>
+            <hr class="liner" />
+            <div class="step">
+              <div class="circle">3</div>
+              <p class="mb-0">Download</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="inner-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="process-section">
-              <!-- Step 1 start -->
-              <div class="process-content" id="step-1">
-                <div class="process-title-section">
-                  <h3 class="main-title">Seleziona Cliente e Progetto</h3>
-                  <p class="mb-0">
-                    Scegli il cliente e il progetto per personalizzare la tua
-                    presentazione.
-                  </p>
-                </div>
-                <div class="process-selected-item">
-                  <div class="client-select">
-                    <div class="">
-                      <h6 class="client-title">
-                        <span><i class="fa-solid fa-building"></i></span
-                        >Seleziona Cliente
-                      </h6>
-                    </div>
-                    <div class="radio-buttons" id="cliente-options">
-                      <div class="company-name">
-                        <label>
-                          <input
-                            type="radio"
-                            name="cliente"
-                            value="Assicurazioni Generali S.p.A."
-                          />
-                          <span>Assicurazioni Generali S.P.A.</span>
-                        </label>
-                      </div>
+  <section class="inner-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="process-section">
+            <!-- Step 1 start -->
+            <div class="process-content" id="step-1">
+              <div class="process-title-section">
+                <h3 class="main-title">Seleziona Cliente e Progetto</h3>
+                <p class="mb-0">
+                  Scegli il cliente e il progetto per personalizzare la tua
+                  presentazione.
+                </p>
+              </div>
+              <div class="process-selected-item">
+                <div class="client-select">
+                  <div class="">
+                    <h6 class="client-title">
+                      <span><i class="fa-solid fa-building"></i></span>Seleziona Cliente
+                    </h6>
+                  </div>
+                  <div class="radio-buttons" id="cliente-options">
+                    <div class="company-name">
+                      <label>
+                        <input type="radio" name="cliente" value="Assicurazioni Generali S.p.A." />
+                        <span>Assicurazioni Generali S.P.A.</span>
+                      </label>
                     </div>
                   </div>
-                  <div class="client-select client-select1">
-                    <div class="">
-                      <h6 class="client-title">
-                        <span><i class="fa-solid fa-building"></i></span
-                        >Seleziona Cliente
-                      </h6>
+                </div>
+                <div class="client-select client-select1">
+                  <div class="">
+                    <h6 class="client-title">
+                      <span><i class="fa-solid fa-building"></i></span>Seleziona Cliente
+                    </h6>
+                  </div>
+                  <div class="radio-buttons" id="progetto-options">
+                    <div class="company-name">
+                      <label>
+                        <input type="radio" name="progetto" value="Engagement Survey 2025" />
+                        <span>Engagement Survey 2025</span>
+                        <span class="tick">✔</span>
+                      </label>
                     </div>
-                    <div class="radio-buttons" id="progetto-options">
-                      <div class="company-name">
-                        <label>
-                          <input
-                            type="radio"
-                            name="progetto"
-                            value="Engagement Survey 2025"
-                          />
-                          <span>Engagement Survey 2025</span>
-                          <span class="tick">✔</span>
-                        </label>
-                      </div>
 
-                      <div class="company-name">
-                        <label>
-                          <input
-                            type="radio"
-                            name="progetto"
-                            value="Engagement Survey 2024"
-                          />
-                          <span>Engagement Survey 2024</span>
-                          <span class="tick">✔</span>
-                        </label>
-                      </div>
+                    <div class="company-name">
+                      <label>
+                        <input type="radio" name="progetto" value="Engagement Survey 2024" />
+                        <span>Engagement Survey 2024</span>
+                        <span class="tick">✔</span>
+                      </label>
+                    </div>
 
-                      <div class="company-name">
-                        <label>
-                          <input
-                            type="radio"
-                            name="progetto"
-                            value="Engagement Survey 2023"
-                          />
-                          <span>Engagement Survey 2023</span>
-                          <span class="tick">✔</span>
-                        </label>
-                      </div>
+                    <div class="company-name">
+                      <label>
+                        <input type="radio" name="progetto" value="Engagement Survey 2023" />
+                        <span>Engagement Survey 2023</span>
+                        <span class="tick">✔</span>
+                      </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Step 1 end -->
+            </div>
+            <!-- Step 1 end -->
 
-              <!-- Step 2 start -->
-              <div class="process-content d-none" id="step-2">
-                <div class="process-title-section">
-                  <h3 class="main-title">Carica File di Input</h3>
+            <!-- Step 2 start -->
+            <div class="process-content d-none" id="step-2">
+              <div class="process-title-section">
+                <h3 class="main-title">Carica File di Input</h3>
+                <p class="mb-0">
+                  Carica il file di input e verifica la mappatura dei
+                  contenuti
+                </p>
+              </div>
+              <div class="process-selected-item process-selected-item1 pptx-uploaded">
+                <div class="uploaded-icon">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <div class="uploaded-content">
+                  <h6 class="">Trascina qui il tuo file</h6>
                   <p class="mb-0">
-                    Carica il file di input e verifica la mappatura dei
-                    contenuti
+                    oppure clicca per sfogliare e selezionare un file
                   </p>
                 </div>
-                <div
-                  class="process-selected-item process-selected-item1 pptx-uploaded"
-                >
-                  <div class="uploaded-icon">
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                  </div>
-                  <div class="uploaded-content">
-                    <h6 class="">Trascina qui il tuo file</h6>
-                    <p class="mb-0">
-                      oppure clicca per sfogliare e selezionare un file
-                    </p>
-                  </div>
-                  <div class="uploaded-btn">
-                    <button id="actionBtn" class="btn all-btns">
-                      Scegli File
-                    </button>
-                  </div>
-                  <p class="info-p">Formati supportati: XLSX, PNG</p>
+                <div class="uploaded-btn">
+                  <button id="actionBtn" class="btn all-btns">
+                    Scegli File
+                  </button>
+                </div>
+                <p class="info-p">Formati supportati: XLSX, PNG</p>
 
-                  <input
-                    type="file"
-                    id="pptxFile"
-                    accept=".xlsx,image/png"
-                    class="form-control mb-2"
-                    style="display: none"
-                  />
-                </div>                
+                <input type="file" id="pptxFile" accept=".xlsx,image/png" class="form-control mb-2"
+                  style="display: none" />
+              </div>
 
-                <div class="uploaded-data-table upload-img-section">
-                  <div class="process-title-section process-title-section-1">
-                    
-                    <h4 class="">Mappatura dei contenuti</h4>
-                    <h5 class="mb-0">
-                      Visualizza e organizza i file caricati facilmente
-                    </h5>
+              <div class="uploaded-data-table upload-img-section">
+                <div class="process-title-section process-title-section-1">
 
-                  
-                  </div>
+                  <h4 class="">Mappatura dei contenuti</h4>
+                  <h5 class="mb-0">
+                    Visualizza e organizza i file caricati facilmente
+                  </h5>
 
-                  <div class="table-responsive">
-                    <table
-                      class="table table-bordered"
-                      id="slidesTable"
-                      style="display: table"
-                    >
-                      <thead>
-                        <tr>
-                          <th>Type</th>
-                          <th>File</th>
-                          <th>Unit</th>
-                          <th>Content</th>
-                          <th>Status</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><div class="badge yellow-bg">Benchmark</div></td>
-                          <td>
-                            BenchmarkScoreExport - (Generali
-                            Investments_Generali Global Engagement Survey 2024
-                            GIH - REPORTING).xlsx
-                          </td>
-                          <td>Generali Investments</td>
-                          <td>
-                            <div>
-                              <h6>Benchmark(s):</h6>
-                              <ul class="nav">
-                                <li class="nav-items">
-                                  Europe Financial Services Norm (141,327
-                                  Responses)
-                                </li>
-                                <li class="nav-items">
-                                  Europe HQ Financial Services Companies
-                                  (323,488 Responses)
-                                </li>
-                                <li class="nav-items">
-                                  Financial Asset Management Norm (4,536
-                                  Responses)
-                                </li>
-                                <li class="nav-items">
-                                  Financial Services Norm (143,039 Responses)
-                                </li>
-                                <li class="nav-items">
-                                  US Financial Services (183,813 Responses)
-                                </li>
-                              </ul>
-                            </div>
-                          </td>
-                          <td><div class="badge success-bg">Ready</div></td>
-                          <td><i class="fa-solid fa-trash"></i></td>
-                        </tr>
-                        <tr>
-                          <td><div class="badge blue-bg">Breakdown</div></td>
-                          <td>
-                            BreakdownScoreExport - (Generali
-                            Investments_Generali Global Engagement Survey 2024
-                            GIH - REPORTING) (1).xlsx​
-                          </td>
-                          <td>Generali Investments</td>
-                          <td>
-                            <div>
-                              <h6>Breakdonw(s):</h6>
-                              <ul class="nav">
-                                <li class="nav-items">
-                                  Organization Structure
-                                </li>
-                                <li class="nav-items">Location</li>
-                                <li class="nav-items">Gender</li>
-                                <li class="nav-items">Manager</li>
-                              </ul>
-                            </div>
-                          </td>
-                          <td><div class="badge warning-bg">Warnings</div></td>
-                          <td><i class="fa-solid fa-download"></i></td>
-                        </tr>
-                        <tr>
-                          <td><div class="badge gray-bg">Comments</div></td>
-                          <td>comment-report (10).png</td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td><div class="badge success-bg">Ready</div></td>
-                          <td>
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+
                 </div>
 
-                <div class="upload-img-section">
-                  <div class="process-title-section process-title-section-1 process-title-section-2">
-                    <div class="logo-main-title">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="slidesTable" style="display: table">
+                    <thead>
+                      <tr>
+                        <th>Type</th>
+                        <th>File</th>
+                        <th>Unit</th>
+                        <th>Content</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="badge yellow-bg">Benchmark</div>
+                        </td>
+                        <td>
+                          BenchmarkScoreExport - (Generali
+                          Investments_Generali Global Engagement Survey 2024
+                          GIH - REPORTING).xlsx
+                        </td>
+                        <td>Generali Investments</td>
+                        <td>
+                          <div>
+                            <h6>Benchmark(s):</h6>
+                            <ul class="nav">
+                              <li class="nav-items">
+                                Europe Financial Services Norm (141,327
+                                Responses)
+                              </li>
+                              <li class="nav-items">
+                                Europe HQ Financial Services Companies
+                                (323,488 Responses)
+                              </li>
+                              <li class="nav-items">
+                                Financial Asset Management Norm (4,536
+                                Responses)
+                              </li>
+                              <li class="nav-items">
+                                Financial Services Norm (143,039 Responses)
+                              </li>
+                              <li class="nav-items">
+                                US Financial Services (183,813 Responses)
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="badge success-bg">Ready</div>
+                        </td>
+                        <td><i class="fa-solid fa-trash"></i></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="badge blue-bg">Breakdown</div>
+                        </td>
+                        <td>
+                          BreakdownScoreExport - (Generali
+                          Investments_Generali Global Engagement Survey 2024
+                          GIH - REPORTING) (1).xlsx​
+                        </td>
+                        <td>Generali Investments</td>
+                        <td>
+                          <div>
+                            <h6>Breakdonw(s):</h6>
+                            <ul class="nav">
+                              <li class="nav-items">
+                                Organization Structure
+                              </li>
+                              <li class="nav-items">Location</li>
+                              <li class="nav-items">Gender</li>
+                              <li class="nav-items">Manager</li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="badge warning-bg">Warnings</div>
+                        </td>
+                        <td><i class="fa-solid fa-download"></i></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="badge gray-bg">Comments</div>
+                        </td>
+                        <td>comment-report (10).png</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>
+                          <div class="badge success-bg">Ready</div>
+                        </td>
+                        <td>
+                          <i class="fa-solid fa-triangle-exclamation"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="upload-img-section">
+                <div class="process-title-section process-title-section-1 process-title-section-2">
+                  <div class="logo-main-title">
                     <h4 class="">Impostazioni Output</h4>
                     <h5 class="mb-0">
                       Configura l'aspetto del progetto e le preferenze di output
                     </h5>
-                    </div>
-
-                      <a class="accordion-button collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <i class="fa-light fa-chevron-down"></i>
-                    </a>
                   </div>
-                  <div class="add-logo add-company-items in collapse" id="collapseOne" >
-                    <div class="img-section">
-                      <div class="add-img-content">
-                        <h6 class="img-title">Logo</h6>
-                        <div
-                          class="process-selected-item process-selected-item1 logo-upload-area"
-                        >
-                          <div class="uploaded-icon" style="cursor: pointer">
-                            <i class="fa-solid fa-cloud-arrow-up"></i>
-                          </div>
-                          <div class="uploaded-content" style="cursor: pointer">
-                            <p class="mb-0">
-                              Clicca per caricare il logo (512px x 512px)
-                            </p>
-                          </div>
-                          <p class="info-p" style="cursor: pointer">
-                            PNG, JPG fino a 5MB
-                          </p>
-                          <input
-                            type="file"
-                            id="logoInput"
-                            accept="image/png, image/jpeg"
-                          />
+
+                  <a class="accordion-button collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="false" aria-controls="collapseOne">
+                    <i class="fa-light fa-chevron-down"></i>
+                  </a>
+                </div>
+                <div class="add-logo add-company-items in collapse" id="collapseOne">
+                  <div class="img-section">
+                    <div class="add-img-content">
+                      <h6 class="img-title">Logo</h6>
+                      <div class="process-selected-item process-selected-item1 logo-upload-area">
+                        <div class="uploaded-icon" style="cursor: pointer">
+                          <i class="fa-solid fa-cloud-arrow-up"></i>
                         </div>
-                        <div
-                          class="logo-preview-container"
-                          style="display: none"
-                        >
-                          <div class="img-preview-option">
-                            <img
-                              id="logoPreview"
-                              class="upload-preview"
-                              style="
+                        <div class="uploaded-content" style="cursor: pointer">
+                          <p class="mb-0">
+                            Clicca per caricare il logo (512px x 512px)
+                          </p>
+                        </div>
+                        <p class="info-p" style="cursor: pointer">
+                          PNG, JPG fino a 5MB
+                        </p>
+                        <input type="file" id="logoInput" accept="image/png, image/jpeg" />
+                      </div>
+                      <div class="logo-preview-container" style="display: none">
+                        <div class="img-preview-option">
+                          <img id="logoPreview" class="upload-preview" style="
                                 display: block;
                                 max-width: 150px;
                                 max-height: 150px;
-                              "
-                            />
-                          </div>
-                          <div class="img-dimensions">
-                            <div class="logo-meta"></div>
-                            <button
-                              type="button"
-                              class="btn all-btns"
-                              id="removeLogoBtn"
-                            >
-                              <span
-                                ><i class="fa-regular fa-trash me-1"></i
-                              ></span>
-                              Rimuovi
-                            </button>
-                          </div>
+                              " />
                         </div>
-                      </div>
-                      <div class="color-picker">
-                        <label for="colorPicker1" class="img-title"
-                          >Colore Primario:</label
-                        >
-                        <div class="color-picker-input">
-                          <input
-                            type="color"
-                            id="colorPicker1"
-                            value="#C5281C"
-                          />
-                          <input type="text" id="colorCode1" value="#C5281C" />
+                        <div class="img-dimensions">
+                          <div class="logo-meta"></div>
+                          <button type="button" class="btn all-btns" id="removeLogoBtn">
+                            <span><i class="fa-regular fa-trash me-1"></i></span>
+                            Rimuovi
+                          </button>
                         </div>
                       </div>
                     </div>
+                    <div class="color-picker">
+                      <label for="colorPicker1" class="img-title">Colore Primario:</label>
+                      <div class="color-picker-input">
+                        <input type="color" id="colorPicker1" value="#C5281C" />
+                        <input type="text" id="colorCode1" value="#C5281C" />
+                      </div>
+                    </div>
+                  </div>
 
-                    <div class="img-section">
-                      <div class="add-img-content">
-                        <h6 class="img-title">Immagine di Copertina</h6>
-                        <div
-                          class="process-selected-item process-selected-item1 cover-upload-area"
-                        >
-                          <div class="uploaded-icon" style="cursor: pointer">
-                            <i class="fa-solid fa-image"></i>
-                          </div>
-                          <div class="uploaded-content" style="cursor: pointer">
-                            <p class="mb-0">
-                              Clicca per caricare l’immagine di copertina
-                              (1024px x 800px)
-                            </p>
-                          </div>
-                          <p class="info-p" style="cursor: pointer">
-                            PNG, JPG fino a 10MB
-                          </p>
-                          <input
-                            type="file"
-                            id="coverInput"
-                            accept="image/png, image/jpeg"
-                          />
+                  <div class="img-section">
+                    <div class="add-img-content">
+                      <h6 class="img-title">Immagine di Copertina</h6>
+                      <div class="process-selected-item process-selected-item1 cover-upload-area">
+                        <div class="uploaded-icon" style="cursor: pointer">
+                          <i class="fa-solid fa-image"></i>
                         </div>
+                        <div class="uploaded-content" style="cursor: pointer">
+                          <p class="mb-0">
+                            Clicca per caricare l’immagine di copertina
+                            (1024px x 800px)
+                          </p>
+                        </div>
+                        <p class="info-p" style="cursor: pointer">
+                          PNG, JPG fino a 10MB
+                        </p>
+                        <input type="file" id="coverInput" accept="image/png, image/jpeg" />
+                      </div>
 
-                        <div
-                          class="cover-preview-container logo-preview-container"
-                          style="display: none"
-                        >
-                          <div class="img-preview-option">
-                            <img
-                              id="coverPreview"
-                              class="upload-preview"
-                              style="
+                      <div class="cover-preview-container logo-preview-container" style="display: none">
+                        <div class="img-preview-option">
+                          <img id="coverPreview" class="upload-preview" style="
                                 display: block;
                                 max-width: 200px;
                                 max-height: 160px;
-                              "
-                            />
-                          </div>
-                          <div class="img-dimensions">
-                            <div class="cover-meta"></div>
-                            <button
-                              type="button"
-                              class="btn all-btns"
-                              id="removeCoverBtn"
-                            >
-                              <span
-                                ><i class="fa-regular fa-trash me-1"></i
-                              ></span>
-                              Rimuovi
-                            </button>
-                          </div>
+                              " />
+                        </div>
+                        <div class="img-dimensions">
+                          <div class="cover-meta"></div>
+                          <button type="button" class="btn all-btns" id="removeCoverBtn">
+                            <span><i class="fa-regular fa-trash me-1"></i></span>
+                            Rimuovi
+                          </button>
                         </div>
                       </div>
-                      <div class="color-picker">
-                        <label for="colorPicker2" class="img-title">Colore Primario:</label>
-                        <div class="color-picker-input">
-                          <input
-                            type="color"
-                            id="colorPicker2"
-                            value="#000000"
-                          />
-                          <input type="text" id="colorCode2" value="#000000" />
-                        </div>
+                    </div>
+                    <div class="color-picker">
+                      <label for="colorPicker2" class="img-title">Colore Primario:</label>
+                      <div class="color-picker-input">
+                        <input type="color" id="colorPicker2" value="#000000" />
+                        <input type="text" id="colorCode2" value="#000000" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- Step 2 end -->
+            </div>
+            <!-- Step 2 end -->
 
-              <!-- Step 4 start -->
-              <div class="process-content d-none" id="step-3">
-                <div class="download-svg-img text-center">
-                  <img src="./assets/images/download-svg.svg" alt="download" />
-                </div>
-                <div class="process-title-section">
-                  <h3 class="main-title">
-                    Fatto! La tua presentazione è pronta per il download
-                  </h3>
-                  <p class="mb-0 set-width">
-                    Grazie per aver completato la configurazione. La tua
-                    presentazione personalizzata è stata generata con successo
-                    ed è pronta per il download.
-                  </p>
-                </div>
+            <!-- Step 4 start -->
+            <div class="process-content d-none" id="step-3">
+              <div class="download-svg-img text-center">
+                <img src="./assets/images/download-svg.svg" alt="download" />
+              </div>
+              <div class="process-title-section">
+                <h3 class="main-title">
+                  Fatto! La tua presentazione è pronta per il download
+                </h3>
+                <p class="mb-0 set-width">
+                  Grazie per aver completato la configurazione. La tua
+                  presentazione personalizzata è stata generata con successo
+                  ed è pronta per il download.
+                </p>
+              </div>
 
-                <div class="pptx-downlaod-btn">
-                  <p>
-                    Ora puoi scaricare il tuo file PPTX utilizzando il pulsante
-                    qui sotto.
-                  </p>
-                  <div class="green-btn">
-                    <a
-                      href="assets/sample.pptx"
-                      download
-                      class="btn all-btns btn-success"
-                      id="downloadPptxBtn"
-                    >
-                      Scarica
-                      <i class="fa-solid fa-arrow-down-to-bracket ms-1"></i>
-                    </a>
-                  </div>
+              <div class="pptx-downlaod-btn">
+                <p>
+                  Ora puoi scaricare il tuo file PPTX utilizzando il pulsante
+                  qui sotto.
+                </p>
+                <div class="green-btn">
+                  <a href="assets/sample.pptx" download class="btn all-btns btn-success" id="downloadPptxBtn">
+                    Scarica
+                    <i class="fa-solid fa-arrow-down-to-bracket ms-1"></i>
+                  </a>
                 </div>
               </div>
-              <!-- Step 4 end -->
+            </div>
+            <!-- Step 4 end -->
 
-              <!-- Prev/Next Button -->
-              <div class="process-bar-next-btn">
-                <div class="btns-option">
-                  <button
-                    class="btn btn-secondary btn2 pre-next-tab-btn"
-                    id="prevBtn"
-                  >
-                    <span><i class="fa-solid fa-arrow-left me-2"></i></span>
-                    <span class="prev-label">Indietro</span>
-                  </button>
-                  <button
-                    class="btn btn-secondary btn1 all-btns pre-next-tab-btn"
-                    id="nextBtn"
-                  >
-                    <span class="next-label">Continue</span>
-                    <span><i class="fa-solid fa-arrow-right"></i></span>
-                  </button>
-                </div>
+            <!-- Prev/Next Button -->
+            <div class="process-bar-next-btn">
+              <div class="btns-option">
+                <button class="btn btn-secondary btn2 pre-next-tab-btn" id="prevBtn">
+                  <span><i class="fa-solid fa-arrow-left me-2"></i></span>
+                  <span class="prev-label">Indietro</span>
+                </button>
+                <button class="btn btn-secondary btn1 all-btns pre-next-tab-btn" id="nextBtn">
+                  <span class="next-label">Continue</span>
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="company-footer-logo">
-            <p>
-              <a
-                title="WTW"
-                class="navbar-brand"
-                href="https://www.wtwco.com/it-it"
-              >
-                <img
-                  src="assets/images/footer-logo.svg"
-                  alt="WTW - PPTX Generator"
-                  class="main-logo1"
-                />
-              </a>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="company-footer-logo">
+          <p>
+            <a title="WTW" class="navbar-brand" href="https://www.wtwco.com/it-it">
+              <img src="assets/images/footer-logo.svg" alt="WTW - PPTX Generator" class="main-logo1" />
+            </a>
 
-              <span>© 2025 WTW. Tutti i diritti riservati.</span>
-            </p>
-          </div>
-
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="" class="nav-links">Privacy Policy</a>
-            </li>
-            <li class="nav-item">
-              <a href="" class="nav-links">Termini di Servizio</a>
-            </li>
-          </ul>
+            <span>© 2025 WTW. Tutti i diritti riservati.</span>
+          </p>
         </div>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="" class="nav-links">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-links">Termini di Servizio</a>
+          </li>
+        </ul>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- script -->
+  <!-- script -->
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom1.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 
-    
-    <script>
-      // Logo and Cover upload preview and info logic with validation (hide/show entire upload area)
-      document.addEventListener("DOMContentLoaded", function () {
-        // --- Logo Upload Logic ---
-        var logoInput = document.getElementById("logoInput");
-        var logoPreview = document.getElementById("logoPreview");
-        var logoPreviewContainer = document.querySelector(
-          ".logo-preview-container"
-        );
-        var logoUploadArea = logoInput
-          ? logoInput.closest(".logo-upload-area")
-          : null;
-        var addLogoContent = logoInput
-          ? logoInput.closest(".add-img-content")
-          : null;
-        var logoMeta = logoPreviewContainer
-          ? logoPreviewContainer.querySelector(".logo-meta")
-          : null;
-        var removeLogoBtn = document.getElementById("removeLogoBtn");
-        if (
-          logoInput &&
-          logoPreview &&
-          logoPreviewContainer &&
-          addLogoContent &&
-          logoMeta &&
-          removeLogoBtn &&
-          logoUploadArea
-        ) {
-          // Make the entire upload area clickable (except the input itself)
-          logoUploadArea.style.cursor = "pointer";
-          logoUploadArea.addEventListener("click", function (e) {
-            if (e.target !== logoInput) {
-              logoInput.click();
-            }
-          });
-          logoInput.addEventListener("change", function () {
-            var file = logoInput.files[0];
-            if (!file) return;
-            // --- Validation for logo: max 512x512px, max 5MB ---
-            var fileSizeKB = file.size / 1024;
-            if (fileSizeKB < 1 || fileSizeKB > 5 * 1024) {
-              alert("Invalid file size! Allowed range: 1KB to 5MB.");
-              logoInput.value = "";
-              return;
-            }
-            var img = new Image();
-            img.onload = function () {
-              if (
-                this.width < 1 ||
-                this.height < 1 ||
-                this.width > 512 ||
-                this.height > 512
-              ) {
-                alert("Invalid dimensions! Allowed up to 512×512 px.");
-                logoInput.value = "";
-              } else {
-                // Hide entire upload area, show preview UI
-                logoUploadArea.style.display = "none";
-                logoPreviewContainer.style.display = "flex";
-                logoPreview.src = img.src;
-                var sizeKB = Math.round(file.size / 1024);
-                logoMeta.innerHTML =
-                  '<p style="color:#000000"> <strong>' +
-                  file.name +
-                  "</strong></p>" +
-                  "<p>misurare: " +
-                  sizeKB +
-                  " KB</p>" +
-                  "<p>Dimensione: " +
-                  img.width +
-                  "px x " +
-                  img.height +
-                  "px</p>";
-              }
-            };
-            img.src = URL.createObjectURL(file);
-          });
-          removeLogoBtn.addEventListener("click", function () {
-            // Reset UI
-            logoInput.value = "";
-            logoPreview.src = "";
-            logoPreviewContainer.style.display = "none";
-            logoUploadArea.style.display = "";
-          });
-        }
+</body>
 
-        // --- Cover Upload Logic ---
-        var coverInput = document.getElementById("coverInput");
-        var coverPreview = document.getElementById("coverPreview");
-        var coverPreviewContainer = document.querySelector(
-          ".cover-preview-container"
-        );
-        var coverUploadArea = coverInput
-          ? coverInput.closest(".cover-upload-area")
-          : null;
-        var addCoverContent = coverInput
-          ? coverInput.closest(".add-img-content")
-          : null;
-        var coverMeta = coverPreviewContainer
-          ? coverPreviewContainer.querySelector(".cover-meta")
-          : null;
-        var removeCoverBtn = document.getElementById("removeCoverBtn");
-        if (
-          coverInput &&
-          coverPreview &&
-          coverPreviewContainer &&
-          addCoverContent &&
-          coverMeta &&
-          removeCoverBtn &&
-          coverUploadArea
-        ) {
-          // Make the entire upload area clickable (except the input itself)
-          coverUploadArea.style.cursor = "pointer";
-          coverUploadArea.addEventListener("click", function (e) {
-            if (e.target !== coverInput) {
-              coverInput.click();
-            }
-          });
-          coverInput.addEventListener("change", function () {
-            var file = coverInput.files[0];
-            if (!file) return;
-            // --- Validation for cover: max 1024x800px, max 10MB ---
-            var fileSizeKB = file.size / 1024;
-            if (fileSizeKB < 1 || fileSizeKB > 10 * 1024) {
-              alert("Invalid file size! Allowed range: 1KB to 10MB.");
-              coverInput.value = "";
-              return;
-            }
-            var img = new Image();
-            img.onload = function () {
-              if (
-                this.width < 1 ||
-                this.height < 1 ||
-                this.width > 1024 ||
-                this.height > 800
-              ) {
-                alert("Invalid dimensions! Allowed up to 1024×800 px.");
-                coverInput.value = "";
-              } else {
-                // Hide entire upload area, show preview UI
-                coverUploadArea.style.display = "none";
-                coverPreviewContainer.style.display = "flex";
-                coverPreview.src = img.src;
-                var sizeKB = Math.round(file.size / 1024);
-                coverMeta.innerHTML =
-                  '<p style="color:#000000"> <strong>' +
-                  file.name +
-                  "</strong></p>" +
-                  "<p>misurare: " +
-                  sizeKB +
-                  " KB</p>" +
-                  "<p>Dimensione: " +
-                  img.width +
-                  "px x " +
-                  img.height +
-                  "px</p>";
-              }
-            };
-            img.src = URL.createObjectURL(file);
-          });
-          removeCoverBtn.addEventListener("click", function () {
-            // Reset UI
-            coverInput.value = "";
-            coverPreview.src = "";
-            coverPreviewContainer.style.display = "none";
-            coverUploadArea.style.display = "";
-          });
-        }
-      });
-    </script>
-    <script>
-      // Make .pptx-uploaded and #actionBtn clickable to open the hidden file input (only one event listener)
-      document.addEventListener("DOMContentLoaded", function () {
-        var uploadArea = document.querySelector(".pptx-uploaded");
-        var fileInput = document.getElementById("pptxFile");
-        var actionBtn = document.getElementById("actionBtn");
-        if (uploadArea && fileInput) {
-          uploadArea.style.cursor = "pointer";
-          uploadArea.addEventListener("click", function (e) {
-            if (e.target.id !== "actionBtn") {
-              fileInput.click();
-            }
-          });
-        }
-        if (actionBtn && fileInput) {
-          actionBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            fileInput.click();
-          });
-        }
-        // Auto-upload when file selected
-        if (fileInput) {
-          fileInput.addEventListener("change", function () {
-            if (fileInput.files.length) {
-              var file = fileInput.files[0];
-              var ext = file.name.split(".").pop().toLowerCase();
-              if (ext !== "xlsx" && ext !== "png") {
-                alert("Formato non supportato! Seleziona un file XLSX o PNG.");
-                fileInput.value = "";
-                return;
-              }
-              // Optional: Add size validation if needed
-              // XLSX: max 10MB, PNG: max 5MB
-              var maxSize = ext === "xlsx" ? 10 * 1024 * 1024 : 5 * 1024 * 1024;
-              if (file.size > maxSize) {
-                alert(
-                  "File troppo grande! Limite: " +
-                    (ext === "xlsx" ? "10MB" : "5MB")
-                );
-                fileInput.value = "";
-                return;
-              }
-              if (typeof handleFile === "function") handleFile();
-            }
-          });
-        }
-      });
-    </script>
-  </body>
 </html>

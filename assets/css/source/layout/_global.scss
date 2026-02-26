@@ -89,6 +89,10 @@ h6 {
   text-align: center;
   padding: 7px 16px;
 
+    @media screen and (max-width: 1199px) {
+    font-size: 12px;
+  }
+
   @media screen and (min-width:1200px) and (max-width: 1720px) {
     font-size: 13px;
   }

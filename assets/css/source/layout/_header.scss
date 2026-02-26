@@ -14,160 +14,338 @@ header {
   border-bottom: 1px solid #E5E7EB;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
 
-  .header-right {
-    .nav-ul {
-      flex-direction: row;
-      align-items: center;
 
-      .navBtn1 {
-        font-size: 15px;
-        line-height: 1.2;
+  @media only screen and (max-width: 1199px) {
+    height: auto;
+  }
 
-        .new-ppt {
-          padding: 8px 15px;
-          background: var.$cta-color;
-          border-radius: 8px;
-          color: var.$white-color;
-          border: 1px solid var.$cta-color;
 
-          &.disabled {
-            pointer-events: none;
-            cursor: default;
-            color: #6B7280;
-            background: #E5E7EB;
-            border: 1px solid #E5E7EB;
 
+  .left-navbar-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    position: relative;
+
+    .brand-logo {
+      .navbar-brand {
+        .main-logo1 {
+          display: none;
+
+          @media only screen and (min-width:768px) and (max-width: 1199px) {
+            width: 220px;
           }
 
-          &:hover {
-            background: transparent;
-            color: var.$cta-color;
+          @media only screen and (min-width:768px) {
+            display: inline;
           }
         }
 
-        .setGap {
-          margin-right: 6px;
-        }
+        .main-logo2 {
+          display: inline;
+          width: 90px;
 
-        @media screen and (min-width: 1200px) and (max-width: 1720px) {
-          font-size: 14px;
+          @media only screen and (min-width:768px) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    // Hamburger Menu
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+      padding: 8px;
+      border: none;
+      background: transparent;
+      z-index: 1101;
+      pointer-events: auto;
+
+      @media only screen and (max-width: 1199px) {
+        display: flex;
+      }
+
+      span {
+        width: 25px;
+        height: 3px;
+        background-color: var.$bg-color;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+        display: block;
+      }
+
+      &.active {
+        span {
+          &:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+          }
+
+          &:nth-child(2) {
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+          }
+        }
+      }
+    }
+
+    .header-right {
+
+      @media only screen and (max-width: 1199px) {
+        position: fixed;
+        top: 74px;
+        right: -100%;
+        width: 400px;
+        background: #ffffff;
+        border-bottom: 1px solid #E5E7EB;
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
+        overflow-y: auto;
+        padding: 0;
+        height: 100vh;
+        transition: all ease 0.5s;
+        z-index: 100;
+
+        &.show {
+          right: 0;
         }
       }
 
-      .navBtn2 {
-        .new-ppt1 {
-          color: #374151;
-          font-size: 14px;
-          line-height: 1.4;
-          font-weight: 500;
+      @media only screen and (min-width: 768px) {
+        top: 54px;
+
+      }
+
+
+      @media only screen and (max-width: 575px) {
+        width: 100%;
+      }
+
+      .nav-ul {
+        flex-direction: row;
+        align-items: center;
+
+        @media only screen and (max-width: 1199px) {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 16px 20px;
+        }
+
+        .navBtn1 {
+          font-size: 15px;
+          line-height: 1.2;
+          display: inline-flex;
+
+          .new-ppt {
+            padding: 8px 15px;
+            background: var.$cta-color;
+            border-radius: 8px;
+            color: var.$white-color;
+            border: 1px solid var.$cta-color;
+
+            &.disabled {
+              pointer-events: none;
+              cursor: default;
+              color: #6B7280;
+              background: #E5E7EB;
+              border: 1px solid #E5E7EB;
+
+            }
+
+            &:hover {
+              background: transparent;
+              color: var.$cta-color;
+            }
+          }
+
+          .setGap {
+            margin-right: 6px;
+          }
 
           @media screen and (min-width: 1200px) and (max-width: 1720px) {
-            font-size: 13px;
+            font-size: 14px;
           }
         }
 
-        .setGap1 {
-          margin-right: 10px;
+        .nav-item {
+
+          padding-right: 20px;
+
+          @media only screen and (max-width: 1199px) {
+            padding-right: 0;
+            padding-bottom: 20px;
+            width: 100%;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          // Dropdown open on hover
+          &:hover {
+
+            @media only screen and (min-width: 1200px) {
+              .dropdown-menu {
+                display: block;
+                margin-top: 0;
+              }
+            }
+
+            .nav-link {
+              color: var.$cta-color;
+
+              i {
+                color: var.$cta-color;
+              }
+            }
+          }
+
+          &.rightBorder {
+            border-right: 1px solid #D1D5DB;
+            margin-right: 20px;
+
+            @media only screen and (max-width: 1199px) {
+              border-right: none;
+              margin-right: 0;
+            }
+          }
+
+          .nav-link {
+            font-size: 15px;
+            line-height: 20px;
+            color: #64748B;
+            padding: 0;
+
+            @media only screen and (min-width: 1200px) and (max-width: 1720px) {
+              font-size: 13px;
+              line-height: 18px;
+            }
+
+            i {
+              color: var.$bg-color;
+            }
+
+            &:hover {
+              color: var.$cta-color;
+
+              i {
+                color: var.$cta-color;
+              }
+            }
+
+            &.active {
+              color: var.$cta-color !important;
+
+              i {
+                color: var.$cta-color !important;
+              }
+            }
+
+            // Ensure it doesn't get stuck if standard Bootstrap JS interferes
+            &:focus {
+              color: var.$cta-color;
+
+              i {
+                color: var.$cta-color;
+              }
+            }
+
+            // But if it is active, it should stay active color
+            &.active:focus {
+              color: var.$cta-color !important;
+
+              i {
+                color: var.$cta-color !important;
+              }
+            }
+          }
+
+          .dropdown-menu {
+
+            @media only screen and (min-width: 1200px) {
+              position: absolute;
+              border: 1px solid #E5E7EB;
+              box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+              border-radius: 8px;
+            }
+
+
+            .dropdown-item {
+              font-size: 14px;
+              line-height: 20px;
+              font-weight: 400;
+              color: #334155;
+            }
+
+            .show {
+              display: block;
+            }
+          }
+
+          .dropdown-toggle::after {
+            border: 0;
+            content: "\f078";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 10px;
+            margin-left: 0.5em;
+            vertical-align: 0;
+          }
+
+        }
+      }
+    }
+
+  }
+
+  .navBtn2 {
+    display: inline-flex;
+    margin-left: 20px;
+
+    .new-ppt1 {
+      color: #374151;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 500;
+
+      @media only screen and (max-width: 1199px) {
+               line-height: 16px;
+        }
+
+      @media screen and (min-width: 1200px) and (max-width: 1720px) {
+        font-size: 13px;
+      }
+
+
+      .setGap1 {
+        margin-right: 10px;
+        display: none;
+
+        @media only screen and (min-width: 1200px) {
+          display: inline;
         }
       }
 
-      .nav-item {
-
-        padding-right: 20px;
-
-        &:last-child {
-          padding-right: 0;
+      span i {
+        @media only screen and (max-width: 1199px) {
+          font-size: 20px;
         }
-
-        // Dropdown open on hover
-        &:hover {
-          .dropdown-menu {
-            display: block;
-            margin-top: 0; 
-          }
-          
-          .nav-link {
-            color: var.$cta-color;
-            i {
-              color: var.$cta-color;
-            }
-          }
-        }
-
-        &.rightBorder {
-          border-right: 1px solid #D1D5DB;
-          margin-right: 20px;
-        }
-
-        .nav-link {
-          font-size: 15px;
-          line-height: 20px;
-          color: #64748B;
-
-          @media screen and (min-width: 1200px) and (max-width: 1720px)  {
-            font-size: 13px;
-          line-height: 18px;
-          }
-
-          i {
-            color: var.$bg-color;
-          }
-
-          &:hover {
-            color: var.$cta-color;
-
-            i {
-              color: var.$cta-color;
-            }
-          }
-
-          &.active {
-            color: var.$cta-color !important;
-
-            i {
-              color: var.$cta-color !important;
-            }
-          }
-          
-          // Ensure it doesn't get stuck if standard Bootstrap JS interferes
-          &:focus {
-               color: var.$cta-color;
-             i { color: var.$cta-color; }
-          }
-           // But if it is active, it should stay active color
-           &.active:focus {
-              color: var.$cta-color !important;
-              i { color: var.$cta-color !important; }
-           }
-        }
-
-        .dropdown-menu {
-          position: absolute;
-          border: 1px solid #E5E7EB;
-          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-          border-radius: 8px;
-
-          .dropdown-item {
-            font-size: 14px;
-            line-height: 20px;
-            font-weight: 400;
-            color: #334155;
-          }
-        }
-
-        .dropdown-toggle::after {
-          border: 0;
-          content: "\f078";
-          font-family: "Font Awesome 6 Free";
-          font-weight: 900;
-          font-size: 10px;
-          margin-left: 0.5em;
-          vertical-align: 0;
-        }
-
       }
     }
   }
 }
 
 /*----header end ----*/
+
+// Body scroll prevention when navbar is open (mobile)
+body.navbar-open {
+  @media only screen and (max-width: 1199px) {
+    overflow: hidden;
+  }
+}
