@@ -64,8 +64,8 @@ h6 {
   // font-family: var.$heading-font-family;
 }
 
-
-h5, h6 {
+h5,
+h6 {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
@@ -73,14 +73,14 @@ h5, h6 {
   color: #111827;
 
   @media screen and (min-width:1200px) and (max-width: 1720px) {
-    font-size: 15px;    
+    font-size: 15px;
   }
 }
 
 
 .all-btns {
   color: var.$white-color !important;
-  background: var.$bg-color;
+  background: var.$cta-color;
   border-radius: 8px;
   font-family: "Poppins";
   font-weight: 400;
@@ -89,8 +89,8 @@ h5, h6 {
   text-align: center;
   padding: 7px 16px;
 
-    @media screen and (min-width:1200px) and (max-width: 1720px) {
-    font-size: 13px;    
+  @media screen and (min-width:1200px) and (max-width: 1720px) {
+    font-size: 13px;
   }
 
   &:focus {
@@ -98,4 +98,299 @@ h5, h6 {
     box-shadow: none;
   }
 
+}
+
+.global-btn {
+  border-radius: 8px;
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 9px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var.$secondary-text-color;
+
+
+  @media screen and (min-width:1200px) and (max-width: 1720px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+
+
+  &.primary-global-btn {
+    background: var.$cta-color;
+    color: var.$white-color;
+
+    &:hover {
+      background: transparent;
+      color: var.$cta-color;
+      border-color: var.$cta-color;
+    }
+  }
+
+  &.secondary-global-btn {
+    background: transparent;
+    color: var.$secondary-text-color;
+  }
+
+  &.form-control {
+    padding: 10px 16px 10px 36px !important;
+    color: var.$secondary-text-color;
+
+    &:focus {
+      border-color: var.$secondary-text-color;
+    }
+  }
+
+  &:hover {
+    border-color: var.$cta-color;
+    color: var.$cta-color;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+
+
+}
+
+.filter-btn {
+  padding: 10px 12px;
+  color: #475569;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background: transparent;
+    color: var.$cta-color;
+    border-color: var.$cta-color;
+  }
+
+}
+
+
+// Filter Dropdown Styles
+.position-relative {
+  position: relative !important;
+}
+
+.filter-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 625px;
+  background: #fff;
+  border: 1px solid #E4E4E7;
+  box-shadow: 0 16px 16px rgba(12, 12, 13, 0.1);
+  border-radius: 12px;
+  padding: 0;
+  z-index: 99;
+  margin-top: 8px;
+
+  &.show {
+    display: block;
+  }
+
+  .filter-dropdown-header {
+    padding: 20px 20px 4px;
+
+    h6 {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 500;
+      color: var.$text-color;
+    }
+  }
+
+  .filter-dropdown-body {
+    padding: 20px;
+
+    .form-label {
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: 400;
+      color: #334155;
+      margin-bottom: 12px;
+    }
+
+    .form-select {
+      font-size: 13px;
+      line-height: 16px;
+      color: #6b7280;
+      border-radius: 8px;
+      border: 1px solid #CBD5E1;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      padding: 9px 16px;
+      cursor: pointer;
+
+      &:focus {
+        border-color: var.$cta-color;
+        box-shadow: 0 0 0 2px rgba(209, 36, 184, 0.1);
+      }
+    }
+
+    .usersInfo {
+      .totleUsers {
+        background: rgba(209, 36, 184,0.1);
+        color: var.$cta-color;
+      }
+    }
+  }
+
+  .filter-dropdown-footer {
+    padding: 0 20px 20px;
+
+    .fliter-footer-btn {
+      width: 136px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+// Custom Range Slider
+.range-slider-container {
+  margin-top: 25px;
+  padding: 0 10px;
+}
+
+.custom-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: #e5e7eb;
+  outline: none;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var.$white-color;
+    border: 2px solid var.$cta-color;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+    margin-top: -6px; // Adjust to center on track
+    position: relative;
+    z-index: 2;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #e5e7eb;
+    border-radius: 2px;
+  }
+
+  // Firefox
+  &::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var.$cta-color;
+    border-radius: 50%;
+    background: var.$white-color;
+    cursor: pointer;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #e5e7eb;
+    border-radius: 2px;
+  }
+}
+
+// Progress fill trick for Webkit (needs JS to update background-size usually, or hardcode linear-gradient)
+// For now, simple track. To get the "red" filled part, we often use a linear-gradient background on the input updated via JS
+// or strict CSS if we supported 'input type=range' progress, which standard CSS doesn't do easily cross-browser without JS.
+// I will start with a static red track for now or better, use JS to update the background gradient. 
+// Adding a default linear-gradient for initial state (50%)
+.custom-range {
+  background: linear-gradient(to right, var.$cta-color 0%, var.$cta-color 50%, var.$primary-bg 50%, var.$primary-bg 100%);
+}
+
+.range-value-tooltip {
+  position: absolute;
+  top: -38px;
+  transform: translateX(-50%);
+  background: var.$cta-color;
+  color: var.$white-color;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 10;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var.$cta-color transparent transparent transparent;
+  }
+}
+
+// Dual Slider Specifics
+.slider-track {
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.custom-range.dual-range {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  background: none;
+  /* Clear default track background */
+  height: 0;
+  /* Minimize height to avoid blocking clicks outside thumb */
+  z-index: 2;
+  margin: 0;
+
+  &::-webkit-slider-runnable-track {
+    background: none;
+    height: 4px;
+  }
+
+  &::-webkit-slider-thumb {
+    pointer-events: auto;
+    /* Re-enable pointer events for thumb */
+    margin-top: -6px;
+    /* Center thumb */
+    position: relative;
+    z-index: 3;
+  }
+
+  &::-moz-range-track {
+    background: none;
+    height: 4px;
+  }
+
+  &::-moz-range-thumb {
+    pointer-events: auto;
+  }
 }

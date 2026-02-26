@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="author" content="" />
+    <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" />
+    <meta name="keywords" content="" />
+    <title>Generali - PPTX Generator</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <!-- css-->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+
+    <!-- Font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+</head>
+
+<body>
+     <header>
+        <div class="container">
+            <nav class="navbar navbar-light">
+                <div class="brand-logo">
+                    <a title="Fineco" class="navbar-brand" href="index.html">
+                        <img src="assets/images/logo1.svg" alt="Generali - PPTX Generator" class="main-logo1" />
+                    </a>
+                </div>
+
+                <div class="header-right">
+                    <ul class="nav-ul navbar-nav">
+                        <li class="nav-item">
+                            <a href="customer-management.html" class="nav-link customers-link">
+                                <i class="fa-solid fa-building me-2"></i>Customers
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown rightBorder">
+                            <a href="#" class="nav-link users-link active dropdown-toggle" id="usersDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-users me-2"></i>Users
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="usersDropdown">
+                                <li><a class="dropdown-item" href="user-management.html">Users management</a></li>
+                                <li><a class="dropdown-item" href="#">Access log</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item navBtn1">
+                            <a href="" class="new-ppt">
+                                <span class="setGap"><i class="fa-solid fa-plus"></i></span><span>Nuova
+                                    presentazione</span>
+                            </a>
+                        </li>
+                        <li class="nav-item navBtn2">
+                            <a href="" class="new-ppt1">
+                                <span class="setGap1">Sofia Williams</span><span><i
+                                        class="fa-solid fa-right-from-bracket"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="stepper-section position-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="user-management-header">
+                        <div>
+                            <h2 class="uesr-management-title mb-1">User Management</h2>
+                            <p class="uesr-management-subtitle mb-0">Manage system access, roles, and entities for all
+                                users.
+                            </p>
+                        </div>
+                        <div class="header-actions">
+                            <button class="btn global-btn secondary-global-btn" id="btnSetInactive" disabled>
+                                Set As Inactive
+                            </button>
+                            <button class="global-btn secondary-global-btn">
+                                <i class="fa-solid fa-file-import me-2"></i>
+                                Import Users
+                            </button>
+                            <button class="global-btn secondary-global-btn">
+                                <i class="fa-solid fa-download me-2"></i>
+                                Download Users
+                            </button>
+                            <button class="global-btn secondary-global-btn">
+                                <i class="fa-solid fa-key me-2"></i>
+                                Download Token
+                            </button>
+                            <button class="global-btn primary-global-btn action-btn">
+                                <i class="fa-solid fa-plus me-2"></i>
+                                Add New User
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="user-management-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Filter Section -->
+                    <div class="card mb-4">
+                        <div class="filter-section">
+                            <div class="filter-header">
+                                <div class="inner-filter-header">
+                                    <h6 class="mb-0">All Users</h6>
+                                    <span class="badge">124</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <div class="search-wrapper position-relative">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="text" class="form-control ps-5 global-btn secondary-global-btn"
+                                            placeholder="Search users...">
+                                    </div>
+                                    <button class="global-btn secondary-global-btn filter-btn"><i
+                                            class="fa-solid fa-filter me-2"></i>Filter</button>
+                                </div>
+                            </div>
+                            <div class="applied-filters">
+
+                                <div class="applied-filters-title">
+                                    <h6 class="mb-0">Applied Filters:</h6>
+                                </div>
+
+                                <div class="applied-filters-tags">
+                                    <div class="filter-tag badge ">
+                                        Admin <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                    <div class="filter-tag badge">
+                                        Active <i class="fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table user-table align-middle mb-0">
+                                    <thead class="bg-light text-uppercase text-muted small">
+                                        <tr>
+                                            <th scope="col" class=""><input type="checkbox" class="form-check-input"
+                                                    id="checkAll">
+                                            </th>
+                                            <th scope="col">Name <i class="fa-solid fa-sort ms-1"></i></th>
+                                            <th scope="col">Username / Email</th>
+                                            <th scope="col">Profile</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Last Login</th>
+                                            <th scope="col">Entities Access</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Row 1 -->
+                                        <tr class="selected-row">
+                                            <td class="">
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td class="td-name">John Doe</td>
+                                            <td class="text-muted">john.doe@company.com</td>
+                                            <td><span class="badge badge-admin">Admin</span></td>
+                                            <td><span class="badge badge-active">Active</span></td>
+                                            <td class="">Oct 24, 2025 09:42 AM</td>
+                                            <td class="text-muted">
+                                                <i class="fa-solid fa-globe me-2"></i>
+                                                Italy (All Customers)
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-link text-muted p-0">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <!-- Row 2 -->
+                                        <tr>
+                                            <td class="">
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td class="td-name">Sarah Miller</td>
+                                            <td class="text-muted">sarah.m@agency.com</td>
+                                            <td><span class="badge badge-editor">Editor</span></td>
+                                            <td><span class="badge badge-inactive">Inactive</span></td>
+                                            <td class="">Oct 23, 2025 04:15 PM</td>
+                                            <td class="text-muted">
+                                                <div><i class="fa-solid fa-building me-2"></i>Epicentro</div>
+                                                <div><i class="fa-solid fa-building me-2"></i>MT</div>
+                                                <div><i class="fa-solid fa-building me-2 opacity-0"></i>
+                                                    <span class="text-danger small">+more(20)</span>
+                                                </div>
+                                            </td>
+                                            <td><button class="btn btn-link text-muted p-0"><i
+                                                        class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                        </tr>
+                                        <!-- Row 3 -->
+                                        <tr>
+                                            <td class="">
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td class="td-name">Michael Ross</td>
+                                            <td class="text-muted">m.ross@inactive.com</td>
+                                            <td><span class="badge badge-viewer">Viewer</span></td>
+                                            <td><span class="badge badge-blocked">Blocked</span></td>
+                                            <td class="">Sep 12, 2025 11:00 AM</td>
+                                            <td class="text-muted"><i class="fa-solid fa-globe me-2"></i>France (All
+                                                Customers)</td>
+                                            <td><button class="btn btn-link text-muted p-0"><i
+                                                        class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                        </tr>
+                                        <!-- Row 4 -->
+                                        <tr>
+                                            <td class="">
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td class="td-name">Emma Lewis</td>
+                                            <td class="text-muted">emma.lewis@design.co</td>
+                                            <td><span class="badge badge-editor">Editor</span></td>
+                                            <td><span class="badge badge-active">Active</span></td>
+                                            <td class="">Oct 22, 2025 02:30 PM</td>
+                                            <td class="text-muted"><i class="fa-solid fa-building me-2"></i>TechCorp
+                                                Ltd.</td>
+                                            <td><button class="btn btn-link text-muted p-0"><i
+                                                        class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                        </tr>
+                                        <!-- Row 5 -->
+                                        <tr>
+                                            <td class="">
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td class="td-name">David Wilson</td>
+                                            <td class="text-muted">david.w@consulting.com</td>
+                                            <td><span class="badge badge-viewer">Viewer</span></td>
+                                            <td><span class="badge badge-active">Active</span></td>
+                                            <td class="">Oct 21, 2025 10:15 AM</td>
+                                            <td class="text-muted"><i class="fa-solid fa-globe me-2"></i>Spain (All
+                                                Customers)</td>
+                                            <td><button class="btn btn-link text-muted p-0"><i
+                                                        class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Pagination -->
+                            <div class="pagination-container">
+                                <p class="mb-0">Showing <strong>1</strong> to <strong>5</strong> of
+                                    <strong>124</strong> users</p>
+                                <div class="pagination-wrapper">
+                                    <button class="global-btn secondary-global-btn disabled">
+                                        <i class="fa-solid fa-chevron-left "></i>
+                                    </button>
+                                    <button class="global-btn primary-global-btn active-global-btn">1</button>
+                                    <button class="global-btn secondary-global-btn">2</button>
+                                    <button class="global-btn secondary-global-btn">3</button>
+                                    <span class="text-muted px-2">...</span>
+                                    <button class="global-btn secondary-global-btn">25</button>
+                                    <button class="global-btn secondary-global-btn"><i
+                                            class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="company-footer-logo">
+                    <p>
+                        <a title="WTW" class="navbar-brand" href="https://www.wtwco.com/it-it">
+                            <img src="assets/images/footer-logo.svg" alt="Generali - PPTX Generator"
+                                class="main-logo1" />
+                        </a>
+
+                        <span>© 2025 WTW. Tutti i diritti riservati.</span>
+                    </p>
+                </div>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="" class="nav-links">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-links">Termini di Servizio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkAll = document.getElementById('checkAll');
+            const userCheckboxes = document.querySelectorAll('.user-table tbody .form-check-input');
+            const btnSetInactive = document.getElementById('btnSetInactive');
+
+            function updateButtonState() {
+                if (!btnSetInactive) return;
+
+                const anyChecked = Array.from(userCheckboxes).some(cb => cb.checked);
+                // "Change to inactive to active" - interpreting as enabling the button
+                btnSetInactive.disabled = !anyChecked;
+
+                // If further visual change is needed beyond disabled state:
+                if (anyChecked) {
+                    btnSetInactive.classList.remove('secondary-global-btn');
+                    btnSetInactive.classList.add('primary-global-btn');
+                } else {
+                    btnSetInactive.classList.remove('primary-global-btn');
+                    btnSetInactive.classList.add('secondary-global-btn');
+                }
+            }
+
+            function updateRowStyle(checkbox) {
+                const row = checkbox.closest('tr');
+                if (checkbox.checked) {
+                    row.classList.add('active-row');
+                } else {
+                    row.classList.remove('active-row');
+                }
+            }
+
+            // Header "Select All" Checkbox
+            if (checkAll) {
+                checkAll.addEventListener('change', function () {
+                    const isChecked = this.checked;
+                    userCheckboxes.forEach(cb => {
+                        cb.checked = isChecked;
+                        updateRowStyle(cb);
+                    });
+                    updateButtonState();
+                });
+            }
+
+            // Individual Row Checkboxes
+            userCheckboxes.forEach(cb => {
+                cb.addEventListener('change', function () {
+                    updateRowStyle(this);
+                    updateButtonState();
+
+                    // Update Header Checkbox State
+                    if (checkAll) {
+                        const allChecked = Array.from(userCheckboxes).every(c => c.checked);
+                        const someChecked = Array.from(userCheckboxes).some(c => c.checked);
+                        checkAll.checked = allChecked;
+                        checkAll.indeterminate = someChecked && !allChecked;
+                    }
+                });
+            });
+
+            // Initialize state on load (in case checks persist)
+            updateButtonState();
+            userCheckboxes.forEach(cb => {
+                if (cb.checked) updateRowStyle(cb);
+            });
+        });
+    </script>
+</body>
+
+</html>

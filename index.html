@@ -10,7 +10,7 @@
       content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
     />
     <meta name="keywords" content="" />
-    <title>Generali - PPTX Generator</title>
+    <title>WTW - PPTX Generator</title>
     <link
       rel="shortcut icon"
       href="assets/images/favicon.ico"
@@ -19,6 +19,7 @@
     <!-- css-->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/all.min.css" />
+
     <!-- Font awesome link -->
     <link
       rel="stylesheet"
@@ -40,38 +41,49 @@
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <nav class="navbar navbar-light">
-          <div class="brand-logo">
-            <a title="Fineco" class="navbar-brand" href="index.html">
-              <img
-                src="assets/images/logo1.svg"
-                alt="Generali - PPTX Generator"
-                class="main-logo1"
-              />
-            </a>
-          </div>
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-light">
+        <div class="brand-logo">
+          <a title="Fineco" class="navbar-brand" href="index.html">
+            <img src="assets/images/logo1.svg" alt="Generali - PPTX Generator" class="main-logo1" />
+          </a>
+        </div>
 
-          <div class="header-right">
-            <ul class="nav-ul navbar-nav">
-              <li class="nav-item navBtn1">
-                <a href="" class="new-ppt">
-                  <span class="setGap"><i class="fa-solid fa-plus"></i></span
-                  ><span>Nuova presentazione</span>
-                </a>
-              </li>
-              <li class="nav-item navBtn2">
-                <a href="" class="new-ppt1">
-                  <span class="setGap1">Sofia Williams</span
-                  ><span><i class="fa-solid fa-right-from-bracket"></i></span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
+        <div class="header-right">
+          <ul class="nav-ul navbar-nav">
+            <li class="nav-item">
+              <a href="customer-management.html" class="nav-link customers-link">
+                <i class="fa-solid fa-building me-2"></i>Customers
+              </a>
+            </li>
+            <li class="nav-item dropdown rightBorder">
+              <a href="#" class="nav-link users-link dropdown-toggle" id="usersDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-users me-2"></i>Users
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="usersDropdown">
+                <li><a class="dropdown-item" href="user-management.html">Users management</a></li>
+                <li><a class="dropdown-item" href="#">Access log</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item navBtn1">
+              <a href="" class="new-ppt">
+                <span class="setGap"><i class="fa-solid fa-plus"></i></span><span>Nuova
+                  presentazione</span>
+              </a>
+            </li>
+            <li class="nav-item navBtn2">
+              <a href="" class="new-ppt1">
+                <span class="setGap1">Sofia Williams</span><span><i class="fa-solid fa-right-from-bracket"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
     <section class="stepper-section">
       <div class="container">
@@ -476,244 +488,6 @@
               </div>
               <!-- Step 2 end -->
 
-              <!-- Step 3 start -->
-              <!-- <div class="process-content d-none" id="step-3">
-                <div class="process-title-section">
-                  <h3 class="main-title">Impostazioni Output</h3>
-                  <p class="mb-0">
-                    Configura l'aspetto del progetto e le preferenze di output
-                  </p>
-                </div>
-
-                <div class="img-content-section">
-                  <div class="upload-img-section">
-                    <h5 class="mb-0">Aspetto</h5>
-                    <div class="add-logo add-company-items">
-                      <div class="img-section">
-                        <div class="add-img-content">
-                          <h6 class="img-title">Logo</h6>
-                          <div
-                            class="process-selected-item process-selected-item1 logo-upload-area"
-                          >
-                            <div class="uploaded-icon" style="cursor: pointer">
-                              <i class="fa-solid fa-cloud-arrow-up"></i>
-                            </div>
-                            <div
-                              class="uploaded-content"
-                              style="cursor: pointer"
-                            >
-                              <p class="mb-0">
-                                Clicca per caricare il logo (512px x 512px)
-                              </p>
-                            </div>
-                            <p class="info-p" style="cursor: pointer">
-                              PNG, JPG fino a 5MB
-                            </p>
-                            <input
-                              type="file"
-                              id="logoInput"
-                              accept="image/png, image/jpeg"
-                            />
-                          </div>
-                          <div
-                            class="logo-preview-container"
-                            style="display: none"
-                          >
-                            <div class="img-preview-option">
-                              <img
-                                id="logoPreview"
-                                class="upload-preview"
-                                style="
-                                  display: block;
-                                  max-width: 150px;
-                                  max-height: 150px;
-                                "
-                              />
-                            </div>
-                            <div class="img-dimensions">
-                              <div class="logo-meta"></div>
-                              <button
-                                type="button"
-                                class="btn all-btns"
-                                id="removeLogoBtn"
-                              >
-                                <span
-                                  ><i class="fa-regular fa-trash me-1"></i
-                                ></span>
-                                Rimuovi
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <label for="colorPicker1" class="img-title"
-                            >Colore Primario:</label
-                          >
-                          <div class="color-picker-input">
-                            <input
-                              type="color"
-                              id="colorPicker1"
-                              value="#C5281C"
-                            />
-                            <input
-                              type="text"
-                              id="colorCode1"
-                              value="#C5281C"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="img-section">
-                        <div class="add-img-content">
-                          <h6 class="img-title">Immagine di Copertina</h6>
-                          <div
-                            class="process-selected-item process-selected-item1 cover-upload-area"
-                          >
-                            <div class="uploaded-icon" style="cursor: pointer">
-                              <i class="fa-solid fa-image"></i>
-                            </div>
-                            <div
-                              class="uploaded-content"
-                              style="cursor: pointer"
-                            >
-                              <p class="mb-0">
-                                Clicca per caricare l’immagine di copertina
-                                (1024px x 800px)
-                              </p>
-                            </div>
-                            <p class="info-p" style="cursor: pointer">
-                              PNG, JPG fino a 10MB
-                            </p>
-                            <input
-                              type="file"
-                              id="coverInput"
-                              accept="image/png, image/jpeg"
-                            />
-                          </div>
-
-                          <div
-                            class="cover-preview-container logo-preview-container"
-                            style="display: none"
-                          >
-                            <div class="img-preview-option">
-                              <img
-                                id="coverPreview"
-                                class="upload-preview"
-                                style="
-                                  display: block;
-                                  max-width: 200px;
-                                  max-height: 160px;
-                                "
-                              />
-                            </div>
-                            <div class="img-dimensions">
-                              <div class="cover-meta"></div>
-                              <button
-                                type="button"
-                                class="btn all-btns"
-                                id="removeCoverBtn"
-                              >
-                                <span
-                                  ><i class="fa-regular fa-trash me-1"></i
-                                ></span>
-                                Rimuovi
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="color-picker">
-                          <label for="colorPicker2">Colore Primario:</label>
-                          <div class="color-picker-input">
-                            <input
-                              type="color"
-                              id="colorPicker2"
-                              value="#000000"
-                            />
-                            <input
-                              type="text"
-                              id="colorCode2"
-                              value="#000000"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                 <div class="uploaded-data-table">
-                  <h6 class="mb-4">Mappatura dei contenuti</h6>
-
-                  <div class="table-responsive">
-                    <table
-                      class="table table-bordered"
-                      id="slidesTable"
-                      style="display: table"
-                    >
-                      <thead>
-                        <tr>
-                          <th>Type</th>
-                          <th>File</th>
-                          <th>Unit</th>
-                          <th>Content</th>
-                          <th>Status</th>
-                          <th>Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td><div class="badge yellow-bg">Benchmark</div></td>
-                          <td>BenchmarkScoreExport - (Generali Investments_Generali Global Engagement Survey 2024 GIH - REPORTING).xlsx</td>
-                          <td>Generali Investments</td>
-                          <td>
-                            <div>
-                                <h6>Benchmark(s):</h6>
-                                <ul class="nav">
-                                     <li class="nav-items">Europe Financial Services Norm (141,327 Responses)</li>
-                                     <li class="nav-items">Europe HQ Financial Services Companies (323,488 Responses)</li>
-                                     <li class="nav-items">Financial Asset Management Norm (4,536 Responses)</li>
-                                    <li class="nav-items">Financial Services Norm (143,039 Responses)</li>
-                                     <li class="nav-items">US Financial Services (183,813 Responses)</li>
-                                </ul>
-                            </div>
-                            </td>
-                          <td><div class="badge success-bg">Ready</div></td>
-                          <td><i class="fa-solid fa-trash"></i></td>                          
-                        </tr>
-                        <tr>
-                          <td><div class="badge blue-bg">Breakdown</div></td>
-                          <td>BreakdownScoreExport - (Generali Investments_Generali Global Engagement Survey 2024 GIH - REPORTING) (1).xlsx​</td>
-                          <td>Generali Investments</td>
-                          <td>
-                            <div>                                
-                                <h6>Breakdonw(s):</h6>
-                                <ul class="nav">
-                                     <li class="nav-items">Organization Structure</li>
-                                     <li class="nav-items">Location</li>
-                                     <li class="nav-items">Gender</li>
-                                    <li class="nav-items">Manager</li>
-                                </ul>
-                            </div>
-                            </td>
-                          <td><div class="badge warning-bg">Warnings</div></td>
-                          <td><i class="fa-solid fa-download"></i></td>
-                        </tr>
-                        <tr>
-                          <td><div class="badge gray-bg">Comments</div></td>
-                          <td>comment-report (10).png</td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td><div class="badge success-bg">Ready</div></td>
-                          <td><i class="fa-solid fa-triangle-exclamation"></i></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-                </div>
-              </div> -->
-              <!-- Step 3 end -->
-
               <!-- Step 4 start -->
               <div class="process-content d-none" id="step-3">
                 <div class="download-svg-img text-center">
@@ -787,7 +561,7 @@
               >
                 <img
                   src="assets/images/footer-logo.svg"
-                  alt="Generali - PPTX Generator"
+                  alt="WTW - PPTX Generator"
                   class="main-logo1"
                 />
               </a>
@@ -816,6 +590,7 @@
     <script src="assets/js/custom.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 
+    
     <script>
       // Logo and Cover upload preview and info logic with validation (hide/show entire upload area)
       document.addEventListener("DOMContentLoaded", function () {

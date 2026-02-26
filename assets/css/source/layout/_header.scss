@@ -16,23 +16,32 @@ header {
 
   .header-right {
     .nav-ul {
-      gap:20px;
-      flex-direction:row;
+      flex-direction: row;
+      align-items: center;
 
       .navBtn1 {
         font-size: 15px;
         line-height: 1.2;
+
         .new-ppt {
-        padding: 8px 15px;
-        background: var.$bg-color;
-        border-radius: 8px;
-        color: var.$white-color;
-        
-        &.disabled {
-                  pointer-events: none;
-                  cursor: default;
-                  color: #6B7280;
-                  background: #E5E7EB;
+          padding: 8px 15px;
+          background: var.$cta-color;
+          border-radius: 8px;
+          color: var.$white-color;
+          border: 1px solid var.$cta-color;
+
+          &.disabled {
+            pointer-events: none;
+            cursor: default;
+            color: #6B7280;
+            background: #E5E7EB;
+            border: 1px solid #E5E7EB;
+
+          }
+
+          &:hover {
+            background: transparent;
+            color: var.$cta-color;
           }
         }
 
@@ -41,19 +50,19 @@ header {
         }
 
         @media screen and (min-width: 1200px) and (max-width: 1720px) {
-            font-size: 14px;           
-          }
+          font-size: 14px;
+        }
       }
 
       .navBtn2 {
-        .new-ppt1 {            
+        .new-ppt1 {
           color: #374151;
           font-size: 14px;
           line-height: 1.4;
           font-weight: 500;
-          
+
           @media screen and (min-width: 1200px) and (max-width: 1720px) {
-            font-size: 13px;           
+            font-size: 13px;
           }
         }
 
@@ -61,7 +70,104 @@ header {
           margin-right: 10px;
         }
       }
+
+      .nav-item {
+
+        padding-right: 20px;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        // Dropdown open on hover
+        &:hover {
+          .dropdown-menu {
+            display: block;
+            margin-top: 0; 
+          }
+          
+          .nav-link {
+            color: var.$cta-color;
+            i {
+              color: var.$cta-color;
+            }
+          }
+        }
+
+        &.rightBorder {
+          border-right: 1px solid #D1D5DB;
+          margin-right: 20px;
+        }
+
+        .nav-link {
+          font-size: 15px;
+          line-height: 20px;
+          color: #64748B;
+
+          @media screen and (min-width: 1200px) and (max-width: 1720px)  {
+            font-size: 13px;
+          line-height: 18px;
+          }
+
+          i {
+            color: var.$bg-color;
+          }
+
+          &:hover {
+            color: var.$cta-color;
+
+            i {
+              color: var.$cta-color;
+            }
+          }
+
+          &.active {
+            color: var.$cta-color !important;
+
+            i {
+              color: var.$cta-color !important;
+            }
+          }
+          
+          // Ensure it doesn't get stuck if standard Bootstrap JS interferes
+          &:focus {
+               color: var.$cta-color;
+             i { color: var.$cta-color; }
+          }
+           // But if it is active, it should stay active color
+           &.active:focus {
+              color: var.$cta-color !important;
+              i { color: var.$cta-color !important; }
+           }
+        }
+
+        .dropdown-menu {
+          position: absolute;
+          border: 1px solid #E5E7EB;
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+          border-radius: 8px;
+
+          .dropdown-item {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            color: #334155;
+          }
+        }
+
+        .dropdown-toggle::after {
+          border: 0;
+          content: "\f078";
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          font-size: 10px;
+          margin-left: 0.5em;
+          vertical-align: 0;
+        }
+
+      }
     }
   }
 }
+
 /*----header end ----*/
