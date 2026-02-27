@@ -89,7 +89,7 @@ h6 {
   text-align: center;
   padding: 7px 16px;
 
-    @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     font-size: 12px;
   }
 
@@ -115,21 +115,19 @@ h6 {
   color: var.$secondary-text-color;
 
 
-  @media screen and (min-width:1200px) and (max-width: 1720px) {
+  @media screen and (max-width: 1720px) {
     font-size: 12px;
     line-height: 16px;
   }
 
-
-
   &.primary-global-btn {
-    background: var.$cta-color;
+    background: var.$bg-color;
     color: var.$white-color;
 
     &:hover {
       background: transparent;
-      color: var.$cta-color;
-      border-color: var.$cta-color;
+      color: var.$bg-color;
+      border-color: var.$bg-color;
     }
   }
 
@@ -148,8 +146,8 @@ h6 {
   }
 
   &:hover {
-    border-color: var.$cta-color;
-    color: var.$cta-color;
+    border-color: var.$bg-color;
+    color: var.$bg-color;
   }
 
   &:focus,
@@ -239,7 +237,7 @@ h6 {
 
     .usersInfo {
       .totleUsers {
-        background: rgba(209, 36, 184,0.1);
+        background: rgba(209, 36, 184, 0.1);
         color: var.$cta-color;
       }
     }
@@ -397,4 +395,71 @@ h6 {
   &::-moz-range-thumb {
     pointer-events: auto;
   }
+}
+
+.breadcrumb {
+  padding: 12px 0;
+
+  .breadcrumb-item,
+  .breadcrumb-item a {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var.$primary-color;
+
+    &::before {
+      content: none
+    }
+
+    &.breadcrumb-item1 {
+      font-weight: 500;
+      color: var.$text-color;
+    }
+
+    &.breadcrumb-user-name {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.badge {
+
+  &.badge-admin {
+    background: #F3E8FF;
+    color: #6B21A8;
+  }
+
+  &.badge-editor {
+    background: #DBEAFE;
+    color: #1E40AF;
+  }
+
+  &.badge-viewer {
+    background: #BCF6F3;
+    color: #0097AE;
+  }
+
+  &.badge-active {
+    background: #DCFCE7;
+    color: var.$active-color;
+    border: 1px solid #BBF7D0;
+  }
+
+  &.badge-inactive {
+    background: #F1F5F9;
+    color: rgba(71, 85, 105, 0.4);
+    border: 1px solid #E2E8F0;
+  }
+
+  &.badge-blocked {
+    background: rgba(255, 187, 84, 0.15);
+    color: #166534;
+    border: 1px solid rgba(255, 187, 84, 0.2);
+  }
+
+  &.badge-admin {
+          background-color: #FCE7F3;
+          color: #BE185D;
+        }
+
 }

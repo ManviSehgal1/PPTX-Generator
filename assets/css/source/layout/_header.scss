@@ -198,10 +198,10 @@ header {
             }
 
             .nav-link {
-              color: var.$cta-color;
+              color: var.$bg-color;
 
               i {
-                color: var.$cta-color;
+                color: var.$bg-color;
               }
             }
           }
@@ -232,10 +232,10 @@ header {
             }
 
             &:hover {
-              color: var.$cta-color;
+              color: var.$bg-color;
 
               i {
-                color: var.$cta-color;
+                color: var.$bg-color;
               }
             }
 
@@ -281,6 +281,11 @@ header {
               line-height: 20px;
               font-weight: 400;
               color: #334155;
+
+              &:active, &:hover, &:focus {
+                color: var.$white-color;
+                background: var.$bg-color;
+              }
             }
 
             .show {
