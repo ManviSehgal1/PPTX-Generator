@@ -167,8 +167,8 @@ h6 {
   &:active,
   &.active {
     background: transparent;
-    color: var.$cta-color;
-    border-color: var.$cta-color;
+    color: var.$bg-color;
+    border-color: var.$bg-color;
   }
 
 }
@@ -419,6 +419,16 @@ h6 {
     &.breadcrumb-user-name {
       text-transform: uppercase;
     }
+
+    @media only screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @media only screen and (min-width:1200px) and (max-width: 1720px) {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
 }
 
@@ -458,8 +468,56 @@ h6 {
   }
 
   &.badge-admin {
-          background-color: #FCE7F3;
-          color: #BE185D;
-        }
+    background-color: #FCE7F3;
+    color: #BE185D;
+  }
+
+  &.full-access {
+    background: #DBEAFE;
+    color: #1D4ED8;
+  }
+
+  &.manager {
+    background: #FEF9C3;
+    color: #A16207;
+  }
+
+  &.viewer-only {
+    background: #F3F4F6;
+    color: #374151;
+  }
+
+}
+
+.small {
+  font-size: 12px;
+  line-height: 16px;
+  color: var.$primary-color;
+  font-weight: 400;
+  margin-bottom: 0;
+
+  @media only screen and (max-width: 1720px) {
+    font-size: 11px;
+    line-height: 14px;
+  }
+}
+
+.large {
+  font-size: 14px;
+  line-height: 20px;
+  color: var.$text-color;
+  font-weight: 500;
+
+   @media only screen and (max-width: 1720px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 4px;
+    }
+
 
 }

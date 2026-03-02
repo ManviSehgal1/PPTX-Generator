@@ -1323,8 +1323,39 @@ input[type="radio"]:checked+span::after {
         padding: 9px 12px;
       }
     }
+  }
+
+  &.user-details-header {
+
+    @media only screen and (max-width: 575px) {
+      gap: 12px;
+    }
+
+    @media only screen and (min-width: 576px) {
+      flex-wrap: nowrap;
+    }
 
 
+    .header-actions {
+      @media only screen and (max-width: 575px) {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: 576px) {
+        flex-wrap: nowrap;
+        width: auto;
+      }
+
+      .global-btn {
+        @media only screen and (max-width: 575px) {
+          width: 100%;
+        }
+
+        @media only screen and (min-width: 576px) {
+          flex: 0 0 auto;
+        }
+      }
+    }
   }
 }
 
@@ -1340,6 +1371,9 @@ input[type="radio"]:checked+span::after {
   input {
     width: 256px;
 
+    @media only screen and (max-width: 767px) {
+      width: 225px;
+    }
 
   }
 
@@ -1375,6 +1409,15 @@ input[type="radio"]:checked+span::after {
     flex-wrap: wrap;
     gap: 30px;
 
+    @media screen and (max-width: 1199px) {
+      gap: 24px;
+    }
+
+    @media screen and (max-width: 767px) {
+      gap: 16px;
+    }
+
+
     .inner-filter-header {
       display: flex;
       align-items: center;
@@ -1385,6 +1428,16 @@ input[type="radio"]:checked+span::after {
         line-height: 24px;
         font-weight: 600;
         color: var.$text-color;
+
+         @media screen and (max-width: 1720px) {
+          font-size: 15px;
+          line-height: 24px;
+        }
+
+        @media screen and (max-width: 1199px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
 
       .badge {
@@ -1393,9 +1446,13 @@ input[type="radio"]:checked+span::after {
         color: var.$primary-color;
         font-size: 12px;
         line-height: 16px;
-        font-weight: 700;
+        font-weight: 600;
         border-radius: 20px;
         padding: 2px 8px;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 11px;
+        }
       }
     }
   }
@@ -1435,6 +1492,7 @@ input[type="radio"]:checked+span::after {
 
 .user-management-section {
   padding-bottom: 40px;
+
 }
 
 .card {
@@ -1535,8 +1593,8 @@ input[type="radio"]:checked+span::after {
 
       .form-check-input {
         &:checked {
-          background-color: var.$secondary-bg-color;
-          border-color: var.$secondary-bg-color;
+          background-color: var.$bg-color;
+          border-color: var.$bg-color;
         }
 
         &::after {
@@ -1565,7 +1623,7 @@ input[type="radio"]:checked+span::after {
 }
 
 .user-table tbody tr.active-row {
-  background: rgba(197, 40, 28, 0.05);
+  background: rgba(127, 53, 178, 0.05);
 }
 
 
@@ -1598,9 +1656,9 @@ input[type="radio"]:checked+span::after {
       }
 
       &:hover {
-        background: var.$cta-color;
+        background: var.$bg-color;
         color: var.$white-color;
-        border-color: var.$cta-color;
+        border-color: var.$bg-color;
       }
 
       &.active-global-btn {
@@ -1627,9 +1685,41 @@ input[type="radio"]:checked+span::after {
 // user details styling
 
 .user-details-info {
-
   display: flex;
   gap: 24px;
+  margin-bottom: 24px;
+
+   @media only screen and (max-width: 1199px) {
+    gap: 16px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
+
+  .similar-card-details {
+    padding: 24px;
+    border-radius: 8px;
+    background: var.$white-color;
+    border: 1px solid var.$primary-bg;
+    box-shadow: var.$boxshadow;
+
+      @media only screen and (min-width: 1200px) and (max-width: 1720px) {
+      padding: 20px;
+    }
+
+    @media only screen and (max-width: 1199px) {
+      padding: 20px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 16px;
+    }
+  }
 
   .profile-main-details {
     width: 31.2%;
@@ -1637,12 +1727,16 @@ input[type="radio"]:checked+span::after {
     flex-direction: column;
     gap: 24px;
 
+     @media only screen and (max-width: 1199px) {
+      gap: 16px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
+
+
     .user-profile-options {
-      padding: 24px;
-      border-radius: 8px;
-      background: var.$white-color;
-      border: 1px solid var.$primary-bg;
-      box-shadow: var.$boxshadow;
 
       .user-profile-info {
         display: flex;
@@ -1669,6 +1763,16 @@ input[type="radio"]:checked+span::after {
             height: 100%;
             object-fit: cover;
           }
+
+          @media only screen and (max-width:991px) {
+            width: 84px;
+            height: 84px;
+          }
+
+          @media only screen and (max-width:767px) {
+            width: 72px;
+            height: 72px;
+          }
         }
 
         .profile-details {
@@ -1679,6 +1783,12 @@ input[type="radio"]:checked+span::after {
             color: var.$text-color;
             font-weight: 600;
             margin-bottom: 4px;
+
+
+            @media only screen and (max-width:1199px) {
+              font-size: 18px;
+              line-height: 24px;
+            }
           }
 
           .user-email {
@@ -1686,6 +1796,11 @@ input[type="radio"]:checked+span::after {
             line-height: 20px;
             color: var.$email-color;
             margin-bottom: 12px;
+
+            @media only screen and (max-width:1199px) {
+              font-size: 13px;
+              line-height: 18px;
+            }
           }
 
           .status-badges {
@@ -1695,9 +1810,15 @@ input[type="radio"]:checked+span::after {
 
             .badge {
               font-size: 12px;
-              padding: 0.25rem 0.75rem;
+              line-height: 16px;
+              padding: 4px 12px;
               border-radius: 12px;
               text-transform: uppercase;
+
+              @media only screen and (max-width:1199px) {
+              font-size: 11px;
+            }
+
             }
 
           }
@@ -1707,6 +1828,15 @@ input[type="radio"]:checked+span::after {
       .user-additional-info {
         border-top: 1px solid var.$primary-bg;
         padding-top: 24px;
+
+
+        @media only screen and (max-width:991px) {
+          padding-top: 20px;
+        }
+
+        @media only screen and (max-width:767px) {
+          padding-top: 16px;
+        }
 
         .basic-details-card {
 
@@ -1728,19 +1858,8 @@ input[type="radio"]:checked+span::after {
               grid-column-gap: 8px;
               grid-row-gap: 16px;
 
-              p.small {
-                font-size: 12px;
-                line-height: 16px;
-                color: var.$primary-color;
-                font-weight: 400;
-
-              }
-
-              p.user-large {
-                font-size: 14px;
-                line-height: 20px;
-                color: var.$text-color;
-                font-weight: 500;
+              .user-email {
+                word-break: break-all;
               }
             }
           }
@@ -1749,6 +1868,217 @@ input[type="radio"]:checked+span::after {
 
     }
 
+    .system-access-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .card-title {
+        font-size: 18px;
+        line-height: 28px;
+        color: var.$text-color;
+        font-weight: 600;
+        margin-bottom: 0;
+
+         @media only screen and (max-width:1720px) {
+          font-size: 16px;
+          line-height: 24px;
+          }
+
+        
+          @media only screen and (max-width:1199px) {
+          font-size: 15px;
+          line-height: 24px;
+          }
+      }
+
+      .system-access-card-body {
+        display: flex;
+        gap: 12px;
+
+        .system-access-left-icon {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #FAF5FF;
+          border-radius: 8px;
+
+          @media only screen and (max-width:1199px) {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .user-entities-access-table {
+    width: 68.8%;
+    height: fit-content;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
+
+    .filter-section {
+      padding: 0 0 24px;
+    }
+
+
+    .card-title {
+      font-size: 18px;
+      line-height: 28px;
+      color: var.$text-color;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .table-responsive {
+      .entities-table {
+        margin-bottom: 0;
+
+        tr {
+
+          th {
+            padding: 0px 16px 12px;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 600;
+            color: var.$primary-color;
+            border-bottom: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            &:last-child {
+              width: 90px;
+            }
+
+            @media only screen and (max-width: 1720px) {
+              font-size: 11px;
+              line-height: 14px;
+              padding: 0px 12px 12px;
+            }
+          }
+
+          td {
+            padding: 16px;
+            border-top: 1px solid #E2E8F0;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            color: var.$primary-color;
+            vertical-align: middle;
+
+             @media only screen and (max-width: 1720px) {
+              font-size: 13px;
+              line-height: 18px;
+            }
+
+            @media only screen and (max-width: 1199px) {
+              font-size: 12px;
+              line-height: 16px;
+              padding: 12px;
+            }
+
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            &:last-child {
+              text-align: center;
+            }
+
+            h6 {
+              font-size: 16px;
+              line-height: 24px;
+              color: var.$text-color;
+              font-weight: 600;
+
+              @media only screen and (max-width: 1720px) {
+                font-size: 15px;
+              }
+
+              @media only screen and (max-width: 1199px) {
+                font-size: 14px;
+                line-height: 20px;
+              }
+            }
+
+            .badge {
+              font-size: 12px;
+              line-height: 16px;
+              font-weight: 500;
+              border-radius: 20px;
+              padding: 2px 10px;
+              text-transform: none;
+
+
+              @media only screen and (max-width: 1199px) {
+                font-size: 11px;
+              }
+            }
+
+            .status-td {
+
+              &.status-active {
+                color: #16A34A;
+                font-weight: 500;
+              }
+
+              &.status-restricted {
+                color: #DC2626;
+                font-weight: 500;
+              }
+            }
+
+            .ellipsis-action {
+              color: #9CA3AF;
+            }
+          }
+        }
+
+        tbody {
+          border-top: none;
+        }
+
+        // tbody {
+        //   tr:last-child {
+        //     td {
+        //       border-bottom: none;
+        //     }
+        //   }
+        // }
+
+      }
+    }
+
+    .grant-permissions {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var.$primary-bg;
+      text-align: center;
+
+      a {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        color: var.$bg-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
 }

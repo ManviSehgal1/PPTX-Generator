@@ -90,20 +90,17 @@
                             </p>
                         </div>
                         <div class="header-actions">
-                            <button class="btn global-btn secondary-global-btn" id="btnSetInactive" disabled>
+                            <button class="btn global-btn secondary-global-btn" id="btnSetInactive" style="display: none;">
+                                <i class="fa-solid fa-eye-slash me-2"></i>
                                 Set As Inactive
                             </button>
                             <button class="global-btn secondary-global-btn">
                                 <i class="fa-solid fa-file-import me-2"></i>
-                                Import Users
+                                Upload Users
                             </button>
                             <button class="global-btn secondary-global-btn">
                                 <i class="fa-solid fa-download me-2"></i>
                                 Download Users
-                            </button>
-                            <button class="global-btn secondary-global-btn">
-                                <i class="fa-solid fa-key me-2"></i>
-                                Download Token
                             </button>
                             <button class="global-btn primary-global-btn action-btn">
                                 <i class="fa-solid fa-plus me-2"></i>
@@ -129,16 +126,69 @@
                                     <h6 class="mb-0">All Users</h6>
                                     <span class="badge">124</span>
                                 </div>
+                                <!-- <div class="d-flex gap-2">
+                                    <div class="search-wrapper position-relative">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="text" class="form-control ps-5 global-btn secondary-global-btn"
+                                            placeholder="Search users...">
+                                    </div>
+                                    <button class="global-btn secondary-global-btn filter-btn" id="filterBtn"><i
+                                            class="fa-solid fa-filter me-2"></i>Filter</button>
+                                </div> -->
+
                                 <div class="d-flex gap-2">
                                     <div class="search-wrapper position-relative">
                                         <i class="fa-solid fa-magnifying-glass"></i>
                                         <input type="text" class="form-control ps-5 global-btn secondary-global-btn"
                                             placeholder="Search users...">
                                     </div>
-                                    <button class="global-btn secondary-global-btn filter-btn"><i
-                                            class="fa-solid fa-filter me-2"></i>Filter</button>
+                                    <div class="position-relative d-inline-block">
+                                        <button class="global-btn secondary-global-btn filter-btn" id="filterBtn">
+                                            <i class="fa-solid fa-filter me-2"></i>
+                                            Filter
+                                        </button>
+                                        <!-- Filter Dropdown -->
+                                        <div class="filter-dropdown" id="filterDropdown">
+                                            <div class="filter-dropdown-header">
+                                                <h6 class="mb-0">Filters</h6>
+                                            </div>
+                                            <div class="filter-dropdown-body">
+                                                <div class="row g-3">
+                                                    <div class="col-md-6 mt-0">
+                                                        <label class="form-label">
+                                                            <i class="fa-light fa-user"></i> Profile</label>
+                                                        <select class="form-select">
+                                                            <option selected>All profiles</option>
+                                                            <option value="1">Admin</option>
+                                                            <option value="2">Editor</option>
+                                                            <option value="3">Viewer</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6 mt-0">
+                                                        <label class="form-label">
+                                                            <i class="fa-regular fa-square-check me-1"></i> Status</label>
+                                                        <select class="form-select">
+                                                            <option selected>All statuses</option>
+                                                            <option value="1">Active</option>
+                                                            <option value="2">Inactive</option>
+                                                            <option value="3">Blocked</option>
+                                                        </select>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                            <div class="filter-dropdown-footer d-flex gap-2">
+                                                <button class="global-btn primary-global-btn fliter-footer-btn">Apply
+                                                    Filter</button>
+                                                <button class="global-btn secondary-global-btn fliter-footer-btn"
+                                                    id="clearFilters">Clear
+                                                    All</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            </div>                        
+
                             <div class="applied-filters">
 
                                 <div class="applied-filters-title">
@@ -330,17 +380,17 @@
                 if (!btnSetInactive) return;
 
                 const anyChecked = Array.from(userCheckboxes).some(cb => cb.checked);
-                // "Change to inactive to active" - interpreting as enabling the button
-                btnSetInactive.disabled = !anyChecked;
+                // show or hide the button depending on selection
+                btnSetInactive.style.display = anyChecked ? 'inline-block' : 'none';
 
-                // If further visual change is needed beyond disabled state:
-                if (anyChecked) {
-                    btnSetInactive.classList.remove('secondary-global-btn');
-                    btnSetInactive.classList.add('primary-global-btn');
-                } else {
-                    btnSetInactive.classList.remove('primary-global-btn');
-                    btnSetInactive.classList.add('secondary-global-btn');
-                }
+                // adjust visual style when visible
+                // if (anyChecked) {
+                //     btnSetInactive.classList.remove('secondary-global-btn');
+                //     btnSetInactive.classList.add('primary-global-btn');
+                // } else {
+                //     btnSetInactive.classList.remove('primary-global-btn');
+                //     btnSetInactive.classList.add('secondary-global-btn');
+                // }
             }
 
             function updateRowStyle(checkbox) {
@@ -385,6 +435,41 @@
             userCheckboxes.forEach(cb => {
                 if (cb.checked) updateRowStyle(cb);
             });
+
+            // Filter Dropdown Logic
+            const filterBtn = document.getElementById('filterBtn');
+            const filterDropdown = document.getElementById('filterDropdown');
+            const clearFiltersBtn = document.getElementById('clearFilters');
+
+            if (filterBtn && filterDropdown) {
+                // Toggle Dropdown
+                filterBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const isOpen = filterDropdown.classList.toggle('show');
+                    filterBtn.classList.toggle('active', isOpen);
+                });
+
+                // Close on Outside Click
+                document.addEventListener('click', function (e) {
+                    if (!filterDropdown.contains(e.target) && !filterBtn.contains(e.target)) {
+                        filterDropdown.classList.remove('show');
+                        filterBtn.classList.remove('active');
+                    }
+                });
+
+                // Prevent closing when clicking inside dropdown
+                filterDropdown.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+
+            if (clearFiltersBtn) {
+                clearFiltersBtn.addEventListener('click', function () {
+                    const selects = filterDropdown.querySelectorAll('select');
+                    selects.forEach(select => select.selectedIndex = 0);
+
+                });
+            }
         });
     </script>
 </body>

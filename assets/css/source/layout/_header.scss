@@ -240,19 +240,19 @@ header {
             }
 
             &.active {
-              color: var.$cta-color !important;
+              color: var.$bg-color !important;
 
               i {
-                color: var.$cta-color !important;
+                color: var.$bg-color !important;
               }
             }
 
             // Ensure it doesn't get stuck if standard Bootstrap JS interferes
             &:focus {
-              color: var.$cta-color;
+              color: var.$bg-color;
 
               i {
-                color: var.$cta-color;
+                color: var.$bg-color;
               }
             }
 
