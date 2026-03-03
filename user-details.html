@@ -14,6 +14,8 @@
     <!-- css-->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- custom overrides -->
+    <link rel="stylesheet" href="assets/css/custom.css" />
 
     <!-- Font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -323,6 +325,18 @@
     <!-- script -->
 
     <script src="assets/js/jquery.js"></script>
+    <!-- custom page scripts (modal etc.) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var addUserModal = document.getElementById('addUserModal');
+            var addUserForm = document.getElementById('addUserForm');
+            if (addUserModal) {
+                addUserModal.addEventListener('show.bs.modal', function () {
+                    if (addUserForm) addUserForm.reset();
+                });
+            }
+        });
+    </script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/custom1.js"></script>

@@ -114,8 +114,12 @@ h6 {
   font-weight: 500;
   color: var.$secondary-text-color;
 
+ @media only screen and (min-width: 1200px) and (max-width: 1720px) {
+      padding: 9px 12px;
 
-  @media screen and (max-width: 1720px) {
+  }
+
+  @media only screen and (max-width: 1720px) {
     font-size: 12px;
     line-height: 16px;
   }
@@ -190,8 +194,20 @@ h6 {
   box-shadow: 0 16px 16px rgba(12, 12, 13, 0.1);
   border-radius: 12px;
   padding: 0;
-  z-index: 99;
+  z-index: 98;
   margin-top: 8px;
+
+  @media only screen and (max-width:767px) {
+    width: auto;
+  }
+
+  @media only screen and (min-width:768px) and (max-width:1199px) {
+    width: 460px;
+  }
+
+  @media only screen and (min-width:1200px) and (max-width:1720px) {
+    width: 560px;
+  }
 
   &.show {
     display: block;
@@ -211,6 +227,13 @@ h6 {
   .filter-dropdown-body {
     padding: 20px;
 
+    .form-control {
+      border-radius: 8px;
+      background-color: #FCFCFC;
+       font-size: 13px;
+      line-height: 26px;      
+    }
+
     .form-label {
       font-size: 13px;
       line-height: 16px;
@@ -228,17 +251,46 @@ h6 {
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
       padding: 9px 16px;
       cursor: pointer;
+      background-color: #FCFCFC;
 
       &:focus {
-        border-color: var.$cta-color;
+        border-color: var.$bg-color;
         box-shadow: 0 0 0 2px rgba(209, 36, 184, 0.1);
       }
     }
 
     .usersInfo {
+      margin-bottom: 12px;
       .totleUsers {
-        background: rgba(209, 36, 184, 0.1);
-        color: var.$cta-color;
+        background: rgba(127, 53, 178, 0.1);
+        color: var.$bg-color;
+      }
+    }
+
+    .search-wrapper {
+      margin-bottom: 12px;
+
+      input {
+        width: 100%;
+      }
+
+      .form-control {
+        font-size: 13px;
+        line-height: 26px;
+        padding: 7px 12px 7px 36px !important;
+        background-color: #FCFCFC !important;
+      }
+    }
+
+    .search-tags {
+      .badge {
+        background: #F3F4F6;
+        color: var.$secondary-text-color;
+        padding: 6px 12px;
+
+        i {
+          cursor: pointer;
+        }
       }
     }
   }
@@ -250,6 +302,20 @@ h6 {
       width: 136px;
       font-size: 14px;
       line-height: 20px;
+
+      @media only screen and (max-width: 1720px) {
+        width: 120px;
+      }
+
+      @media only screen and (max-width: 1720px) {
+        font-size: 13px;
+        line-height: 18px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
   }
 }
@@ -508,7 +574,7 @@ h6 {
   color: var.$text-color;
   font-weight: 500;
 
-   @media only screen and (max-width: 1720px) {
+  @media only screen and (max-width: 1720px) {
     font-size: 13px;
     line-height: 18px;
   }
@@ -517,7 +583,7 @@ h6 {
     font-size: 12px;
     line-height: 14px;
     margin-top: 4px;
-    }
+  }
 
 
 }
