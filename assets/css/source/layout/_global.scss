@@ -77,6 +77,12 @@ h6 {
   }
 }
 
+.flex-column-with-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 
 .all-btns {
   color: var.$white-color !important;
@@ -231,7 +237,16 @@ h6 {
       border-radius: 8px;
       background-color: #FCFCFC;
        font-size: 13px;
-      line-height: 26px;      
+      line-height: 26px; 
+
+      &:hover {
+        border-color: var.$bg-color;
+      }
+      
+      &:focus {
+        border-color: var.$bg-color;
+        box-shadow: none;
+      }
     }
 
     .form-label {
@@ -283,6 +298,12 @@ h6 {
     }
 
     .search-tags {
+
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+
       .badge {
         background: #F3F4F6;
         color: var.$secondary-text-color;
@@ -377,11 +398,6 @@ h6 {
   }
 }
 
-// Progress fill trick for Webkit (needs JS to update background-size usually, or hardcode linear-gradient)
-// For now, simple track. To get the "red" filled part, we often use a linear-gradient background on the input updated via JS
-// or strict CSS if we supported 'input type=range' progress, which standard CSS doesn't do easily cross-browser without JS.
-// I will start with a static red track for now or better, use JS to update the background gradient. 
-// Adding a default linear-gradient for initial state (50%)
 .custom-range {
   background: linear-gradient(to right, var.$cta-color 0%, var.$cta-color 50%, var.$primary-bg 50%, var.$primary-bg 100%);
 }
@@ -499,6 +515,13 @@ h6 {
 }
 
 .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
 
   &.badge-admin {
     background: #F3E8FF;
@@ -551,6 +574,11 @@ h6 {
   &.viewer-only {
     background: #F3F4F6;
     color: #374151;
+  }
+
+  &.badge-danger {
+    background: #FEF2F2;
+    color: #B91C1C;
   }
 
 }
