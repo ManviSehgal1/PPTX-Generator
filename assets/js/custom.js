@@ -412,5 +412,3 @@ let currentStep = 1;
         });
       }
     }
-
-     

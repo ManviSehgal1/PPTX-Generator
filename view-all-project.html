@@ -81,7 +81,7 @@
 
     <div class="stepper-section project-stepper-section">
         <div class="container">
-            <div class="row">
+            <div class="row flex-column-with-gap">
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ul class="breadcrumb mb-0">
@@ -90,7 +90,7 @@
                             <li class="breadcrumb-item"><i class="fa-regular fa-chevron-right"></i></li>
                             <li class="breadcrumb-item breadcrumb-item1" aria-current="page"><a href="customers-details.html" class="">Global Tech Solutions</a></li></li>
                              <li class="breadcrumb-item"><i class="fa-regular fa-chevron-right"></i></li>
-                            <li class="breadcrumb-item breadcrumb-item1" aria-current="page">Global Tech Solutions</li>
+                            <li class="breadcrumb-item breadcrumb-item1" aria-current="page">View All Projects</li>
                         </ul>
                     </nav>
                 </div>
@@ -105,9 +105,10 @@
                             </p>
                         </div>
                         <div class="header-actions">
-                            <button class="global-btn secondary-global-btn">
-                                Edit Customer
-                            </button>
+                           <div class="search-wrapper">
+                                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                        <input type="text" class="form-control ps-5 global-btn secondary-global-btn" placeholder="Search projects...">
+                                    </div>
                             <button class="global-btn primary-global-btn action-btn">
                                 <i class="fa-solid fa-plus me-2"></i>
                                 New Project
@@ -121,6 +122,9 @@
 
     <section class="project-all-details">
         <div class="container">
+            <div class="all-project-grid">
+                
+            </div>
         </div>
     </section>
 

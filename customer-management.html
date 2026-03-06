@@ -163,22 +163,8 @@
                                                             <option selected>All statuses</option>
                                                             <option value="1">Active</option>
                                                             <option value="2">Inactive</option>
-                                                            <option value="3">Blocked</option>
                                                         </select>
-                                                    </div>
-                                                    <div class="col-12 mt-3">
-                                                        <div
-                                                            class="usersInfo d-flex justify-content-between align-items-center">
-                                                            <label class="form-label mb-0">
-                                                                <i class="fa-light fa-user-group"></i>
-                                                                User Volume
-                                                            </label>
-                                                            <span class="badge totleUsers" id="userVolumeLimit">100
-                                                                Users</span>
-                                                        </div>
-                                                        <input type="number" class="form-control" id="userVolumeInput"
-                                                            min="0" max="100" placeholder="enter volume">
-                                                    </div>
+                                                    </div>                                                    
                                                 </div>
                                             </div>
                                             <div class="filter-dropdown-footer d-flex gap-2">
@@ -221,7 +207,7 @@
                                             <th scope="col">Total Projects</th>
                                             <th scope="col">Active Templates</th>
                                             <th scope="col">Status</th>
-                                            <th scope="col">Allowed Users</th>
+                                            <th scope="col">Active users</th>
                                             <th scope="col">Actions</th>
                                         </tr>
                                     </thead>
@@ -237,11 +223,23 @@
                                             <td>124</td>
                                             <td>12</td>
                                             <td><span class="badge badge-active">Active</span></td>
-                                            <td class="text-muted">50<span class="text-opcity">/100</span></td>
+                                            <td class="text-muted">50</td>
                                             <td>
-                                                <button class="btn btn-link text-muted p-0">
-                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                </button>
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle"
+                                                        type="button"
+                                                        data-bs-toggle="dropdown"
+                                                        data-bs-display="dynamic"
+                                                        aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><a class="dropdown-item" href="#">Set Inactive</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Delete Customer</a></li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
                                         <!-- Row 2 -->
@@ -254,10 +252,18 @@
                                             <td>45</td>
                                             <td>5</td>
                                             <td><span class="badge badge-inactive">Inactive</span></td>
-                                            <td class="text-muted">28<span class="text-opcity">/50</span></td>
-                                            <td><button class="btn btn-link text-muted p-0">
-                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                </button>
+                                            <td class="text-muted">28</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><a class="dropdown-item" href="#">Set Active</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Delete Customer</a></li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
                                         <!-- Row 3 -->
@@ -269,11 +275,19 @@
                                             <td class="text-muted">APAC</td>
                                             <td>12</td>
                                             <td>2</td>
-                                            <td><span class="badge badge-blocked">Blocked</span></td>
-                                            <td class="text-muted">10<span class="text-opcity">/10</span></td>
-                                            <td><button class="btn btn-link text-muted p-0">
-                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                </button>
+                                            <td><span class="badge badge-inactive">Inactive</span></td>
+                                            <td class="text-muted">10</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><a class="dropdown-item" href="#">Set Active</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Delete Customer</a></li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
                                         <!-- Row 4 -->
@@ -286,10 +300,18 @@
                                             <td>89</td>
                                             <td>8</td>
                                             <td><span class="badge badge-active">Active</span></td>
-                                            <td class="text-muted">42<span class="text-opcity">/76</span></td>
-                                            <td><button class="btn btn-link text-muted p-0">
-                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                                                </button>
+                                            <td class="text-muted">42</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><a class="dropdown-item" href="#">Set Inactive</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Delete Customer</a></li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
                                         <!-- Row 5 -->
@@ -302,9 +324,19 @@
                                             <td>32</td>
                                             <td>4</td>
                                             <td><span class="badge badge-active">Active</span></td>
-                                            <td class="text-muted">15<span class="text-opcity">/32</span></td>
-                                            <td><button class="btn btn-link text-muted p-0"><i
-                                                        class="fa-solid fa-ellipsis-vertical"></i></button></td>
+                                            <td class="text-muted">15</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-menu-end">
+                                                        <li><a class="dropdown-item" href="#">Set Inactive</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Delete Customer</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
                                         </tr>
 
                                     </tbody>
@@ -365,9 +397,26 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.js"></script>
-    <script src="assets/js/custom.js"></script>
     <script src="assets/js/custom1.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <script>
+            var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+dropdownElementList.map(function (dropdownToggleEl) {
+    return new bootstrap.Dropdown(dropdownToggleEl, {
+        popperConfig: {
+            modifiers: [
+                {
+                    name: 'flip',
+                    options: {
+                        fallbackPlacements: ['top', 'right', 'left']
+                    }
+                }
+            ]
+        }
+    })
+})
+    </script>
 
    <script>
         document.addEventListener('DOMContentLoaded', function () {

@@ -107,10 +107,6 @@
                             <button class="global-btn secondary-global-btn">
                                 Edit Customer
                             </button>
-                            <button class="global-btn primary-global-btn action-btn">
-                                <i class="fa-solid fa-plus me-2"></i>
-                                New Project
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -122,50 +118,53 @@
         <div class="container">
             <div class="customer-details-asides">
                 <div class="left-aside-details">
-                    <div class="all-similar-cards classification-card flex-column-with-gap">
-                        <h6 class="mb-0">Classification</h6>
-                        <div class="classification-details flex-column-with-gap">
-                            <div class="classification-subdetails">
-                                <div class="classification-icon globe-icon">
-                                    <i class="fa-solid fa-globe"></i>
-                                </div>
-                                <div>
-                                    <div class="small">Geo Area</div>
-                                    <div class="large">EMEA</div>
-                                </div>
-                            </div>
-                            <div class="classification-subdetails ">
-                                <div class="classification-icon industry-icon">
-                                    <i class="fa-solid fa-industry"></i>
-                                </div>
-                                <div>
-                                    <div class="small">Industry</div>
-                                    <div class="large">Manufacturing & Logistics</div>
-                                </div>
-                            </div>
-                            <div class="classification-subdetails ">
-                                <div class="classification-icon car-icon">
-                                    <i class="fa-solid fa-car"></i>
-                                </div>
-                                <div>
-                                    <div class="small">Sub-Industry</div>
-                                    <div class="large">Automotive Parts</div>
+                    <div class="all-similar-cards flex-column-with-gap">
+                        <div class="classification-card">
+                            <h6 class="mb-3">Classification</h6>
+                            <div class="classification-details flex-column-with-gap">
+                                <div class="classification-subdetails">
+                                    <div class="classification-icon globe-icon">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+                                    <div>
+                                        <div class="small">Geo Area</div>
+                                        <div class="large">EMEA</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="quick-stats-card flex-column-with-gap">
 
-                    <!-- Quick Stats Card -->
-                    <div class="all-similar-cards quick-stats-card flex-column-with-gap">
-                        <h6 class="mb-0">Quick Stats</h6>
-                        <div class="stats-details">
-                            <div class="stats-subdetails stats-project">
-                                <h3 class="mb-0">12</h3>
-                                <div class="small">Active Projects</div>
-                            </div>
-                            <div class="stats-subdetails stats-users">
-                                <h3 class="mb-0">45</h3>
-                                <div class="small">Total Users</div>
+                            <h6 class="mb-0">Quick Stats</h6>
+
+                            <div class="stats-details flex-column-with-gap">
+                                <div class="stats-subdetails">
+                                    <div class="classification-icon total-projects-icon">
+                                        <i class="fa-solid fa-folder-open"></i>
+                                    </div>
+                                    <div class="stats-project">
+                                        <h3 class="mb-0">120</h3>
+                                        <div class="small">Total Projects</div>
+                                    </div>
+                                </div>
+                                <div class="stats-subdetails">
+                                    <div class="classification-icon total-users-icon">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <div class="stats-total-users">
+                                        <h3 class="mb-0">50</h3>
+                                        <div class="small">Total Users</div>
+                                    </div>
+                                </div>
+                                <div class="stats-subdetails">
+                                    <div class="classification-icon active-users-icon">
+                                        <i class="fa-solid fa-user-check"></i>
+                                    </div>
+                                    <div class=" stats-active-users">
+                                        <h3 class="mb-0">40</h3>
+                                        <div class="small">Active Users</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -173,49 +172,207 @@
 
                 <!-- Right Content -->
                 <div class="right-aside-details">
-
-                    <div class="active-project-info flex-column-with-gap">
-                        <div class="active-project-heading">
-                            <h4 class="mb-0">Active Projects</h4>
-                            <a href="view-all-project.html" class="large">View all</a>
+                    <div class="all-project-info flex-column-with-gap">
+                        <div class="all-project-heading">
+                            <h4 class="mb-0">All Projects</h4>
+                            <button class="global-btn primary-global-btn action-btn" data-bs-toggle="modal" data-bs-target="#createProjectModal">
+                                <i class="fa-solid fa-plus me-2"></i>
+                                Create New Project
+                            </button>
                         </div>
-                        <div class="all-similar-cards active-project-details">
-                            <div class="active-project-subdetails">
-                                <h5 class="mb-0">Annual Strategy Review 2026</h5>
-                                <div class="large">Updated 2 days ago by Maria Gomez</div>
-                                <div class="active-project-tags">
-                                    <span class="badge badge-danger">
-                                        <i class="fa-solid fa-file-powerpoint"></i> Executive Summary.pptx
-                                    </span>
-                                    <span class="badge badge-editor">
-                                        <i class="fa-solid fa-file-powerpoint"></i> Market Analysis.pptx
-                                    </span>
-                                    <span class="badge badge-active">
-                                        <i class="fa-solid fa-file-powerpoint"></i> Financial Projection.pptx
-                                    </span>
+                        <div class="view-all-projects">
+                            <div class="all-similar-cards all-project-details">
+                                <div class="active-project-subdetails">
+                                    <div class="category-badge">
+                                        <span class="badge badge-active">Active</span>
+                                    </div>
+                                    <h5 class="mb-0">Annual Strategy Review 2026</h5>
+                                    <div class="active-project-tags">
+                                        <span class="badge badge-danger">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Executive Summary
+                                        </span>
+                                        <span class="badge badge-editor">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Market Analysis
+                                        </span>
+                                        <span class="badge badge-active">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Financial Projection
+                                        </span>
+                                        <span class="badge viewer-only">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="projects-action-option dropdown">
+                                    <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="category-badge">
-                                <span class="badge viewer-only">Internal</span>
-                            </div>
-                        </div>
-                        <div class="all-similar-cards active-project-details">
-                            <div class="active-project-subdetails">
-                                <h5 class="mb-0">Supply Chain Optimization</h5>
-                                <div class="large">Updated Oct 20, 2025</div>
-                                <div class="active-project-tags">
-                                    <span class="badge badge-danger">
-                                        <i class="fa-solid fa-file-powerpoint"></i> Executive Summary.pptx
-                                    </span>
-                                    <span class="badge viewer-only">
-                                        <i class="fa-solid fa-plus"></i>
-                                    </span>
 
+                            <div class="all-similar-cards all-project-details">
+                                <div class="active-project-subdetails">
+                                    <div class="category-badge ">
+                                        <span class="badge badge-inactive">Inactive</span>
+                                    </div>
+                                    <h5 class="mb-0">Supply Chain Optimization</h5>
+                                    <div class="active-project-tags">
+                                        <span class="badge badge-danger">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Pitch Deck V2
+                                        </span>                                        
+                                        <span class="badge viewer-only">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="projects-action-option dropdown">
+                                    <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="category-badge ">
-                                <span class="badge manager">Client-facing</span>
+
+                            <div class="all-similar-cards all-project-details">
+                                <div class="active-project-subdetails">
+                                    <div class="category-badge ">
+                                        <span class="badge badge-inactive">Inactive</span>
+                                    </div>
+                                    <h5 class="mb-0">Q3 Performance Reporting</h5>
+                                    <div class="active-project-tags">
+                                        <span class="badge badge-danger">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Quarterly Summary
+                                        </span>
+                                         <span class="badge badge-editor">
+                                            <i class="fa-solid fa-file-powerpoint"></i> KPI Dashboard
+                                        </span>
+                                        <span class="badge viewer-only">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="projects-action-option dropdown">
+                                    <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>                           
+
+                            <div class="all-similar-cards all-project-details">
+                                <div class="active-project-subdetails">
+                                    <div class="category-badge ">
+                                        <span class="badge badge-inactive">Inactive</span>
+                                    </div>
+                                    <h5 class="mb-0">Digital Transformation Roadmap</h5>
+                                    <div class="active-project-tags">
+                                        <span class="badge badge-danger">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Strategic Roadmap
+                                        </span>                                       
+                                        <span class="badge viewer-only">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="projects-action-option dropdown">
+                                    <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
                             </div>
+
+                            <div class="all-similar-cards all-project-details">
+                                <div class="active-project-subdetails">
+                                    <div class="category-badge">
+                                        <span class="badge badge-active">Active</span>
+                                    </div>
+                                    <h5 class="mb-0">Logistics Renewal Proposal</h5>
+                                    <div class="active-project-tags">
+                                        <span class="badge badge-danger">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Service Catalog
+                                        </span>
+                                        <span class="badge badge-editor">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Pricing Proposal
+                                        </span>
+                                        <span class="badge viewer-only">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="projects-action-option dropdown">
+                                    <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="all-similar-cards all-project-details">
+                                <div class="active-project-subdetails">
+                                    <div class="category-badge ">
+                                        <span class="badge badge-inactive">Inactive</span>
+                                    </div>
+                                    <h5 class="mb-0">Supply Chain Optimization</h5>
+                                    <div class="active-project-tags">
+                                        <span class="badge badge-danger">
+                                            <i class="fa-solid fa-file-powerpoint"></i> Executive Summary.pptx
+                                        </span>
+                                        <span class="badge viewer-only">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="projects-action-option dropdown">
+                                    <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
@@ -225,11 +382,9 @@
                             <div class="search-with-filter-option">
                                 <div class="search-wrapper">
                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                    <input type="text" class="form-control ps-5 global-btn secondary-global-btn" placeholder="Search team...">
+                                    <input type="text" class="form-control ps-5 global-btn secondary-global-btn"
+                                        placeholder="Search team...">
                                 </div>
-                                <button class="btn">
-                                    <i class="fa-solid fa-sliders text-muted"></i>
-                                </button>
                             </div>
                         </div>
                         <div class="allowed-users-table flex-column-with-gap">
@@ -239,7 +394,9 @@
                                         <tr>
                                             <th class="">User</th>
                                             <th class="">Role</th>
+                                            <th class="">Status</th>
                                             <th class="">Permissions</th>
+                                            <th scope="col">Last Login</th>
                                             <th class="">Actions</th>
                                         </tr>
                                     </thead>
@@ -248,7 +405,8 @@
                                         <tr>
                                             <td>
                                                 <div class="allowed-users-info">
-                                                    <div class="users-profile-img"><span class="badge badge-admin">JD</span></div>
+                                                    <div class="users-profile-img"><span
+                                                            class="badge badge-admin">JD</span></div>
                                                     <div>
                                                         <div class="large">John Doe</div>
                                                         <div class="small">john.doe@epicentro.it</div>
@@ -256,16 +414,21 @@
                                                 </div>
                                             </td>
                                             <td><span class="badge badge-admin">Admin</span></td>
+                                            <td><span class="badge badge-active">Active</span></td>
                                             <td>Full access to all projects</td>
+                                            <td class="">Oct 24, 2025 09:42 AM</td>
                                             <td>
-                                                <button class="btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                                <button class="btn"><i
+                                                        class="fa-solid fa-ellipsis-vertical"></i></button>
                                             </td>
                                         </tr>
                                         <!-- User 2 -->
                                         <tr>
                                             <td>
                                                 <div class="allowed-users-info">
-                                                    <div class="users-profile-img"><span><img src="assets/images/allowed-user-img.png" alt="Sarah Miller"></span></div>
+                                                    <div class="users-profile-img"><span><img
+                                                                src="assets/images/allowed-user-img.png"
+                                                                alt="Sarah Miller"></span></div>
                                                     <div>
                                                         <div class="large">Sarah Miller</div>
                                                         <div class="small">s.miller@epicentro.it</div>
@@ -273,17 +436,21 @@
                                                 </div>
                                             </td>
                                             <td><span class="badge badge-editor">Editor</span>
+                                            <td><span class="badge badge-inactive">Inactive</span></td>
                                             </td>
                                             <td>Can create and edit slides</td>
+                                            <td class="">Oct 23, 2025 04:15 PM</td>
                                             <td>
-                                                <button class="btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                                <button class="btn"><i
+                                                        class="fa-solid fa-ellipsis-vertical"></i></button>
                                             </td>
                                         </tr>
                                         <!-- User 3 -->
                                         <tr>
                                             <td>
                                                 <div class="allowed-users-info">
-                                                    <div class="users-profile-img"><span class="badge viewer-only">MR</span></div>
+                                                    <div class="users-profile-img"><span
+                                                            class="badge viewer-only">MR</span></div>
                                                     <div>
                                                         <div class="large">Michael Ross</div>
                                                         <div class="small">m.ross@epicentro.it</div>
@@ -291,23 +458,26 @@
                                                 </div>
                                             </td>
                                             <td><span class="badge viewer-only">Viewer</span></td>
+                                            <td><span class="badge badge-active">Active</span></td>
                                             <td>Read-only access</td>
+                                            <td class="">Sep 12, 2025 11:00 AM</td>
                                             <td>
-                                                <button class="btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                                <button class="btn"><i
+                                                        class="fa-solid fa-ellipsis-vertical"></i></button>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="all-user-link">
+                            <!-- <div class="all-user-link">
                                 <a href="#" class="large">Manage All Users</a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>   
 
     <footer>
         <div class="container">
@@ -334,6 +504,83 @@
             </div>
         </div>
     </footer>
+
+     <!-- Create New Project Modal -->
+    <div class="modal fade" id="createProjectModal" tabindex="-1" aria-labelledby="createProjectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-heading-option">
+                    <h5 class="modal-title mb-0" id="createProjectModalLabel">Create New Project</h5>
+                    </div>
+                   <i class="fa-solid fa-x close-btn" data-bs-dismiss="modal" aria-label="Close"></i>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="projectName" class="form-label">Project Name</label>
+                                <input type="text" class="form-control" id="projectName" placeholder="e.g. Q4 Growth Strategy">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="projectStatus" class="form-label">Project Status</label>
+                                <select class="form-select" id="projectStatus">
+                                    <option selected>Active</option>
+                                    <option value="1">Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <label class="form-label d-block mb-3">Select PPTX Templates</label>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-3">
+                                    <div class="template-card all-similar-cards p-0">
+                                        <input type="radio" name="template" id="template1" value="executive-deck" class="d-none">
+                                        <label for="template1" class="template-label">
+                                            <img src="assets/images/pptx1.png" alt="Executive Deck V2" class="img-fluid rounded">
+                                            <div class="template-name large">Executive Deck V2</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="template-card all-similar-cards p-0">
+                                        <input type="radio" name="template" id="template2" value="quarterly-report" class="d-none">
+                                        <label for="template2" class="template-label">
+                                            <img src="assets/images/pptx2.png" alt="Quarterly Report" class="img-fluid rounded">
+                                            <div class="template-name large">Quarterly Report</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="template-card all-similar-cards p-0">
+                                        <input type="radio" name="template" id="template3" value="financial-overview" class="d-none">
+                                        <label for="template3" class="template-label">
+                                            <img src="assets/images/pptx3.png" alt="Financial Overview" class="img-fluid rounded">
+                                            <div class="template-name large">Financial Overview</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <div class="template-card all-similar-cards p-0">
+                                        <input type="radio" name="template" id="template4" value="market-trends" class="d-none">
+                                        <label for="template4" class="template-label">
+                                            <img src="assets/images/pptx4.png" alt="Market Trends" class="img-fluid rounded">
+                                            <div class="template-name large">Market Trends</div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="global-btn secondary-global-btn" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="global-btn primary-global-btn">Create Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- script -->
 
