@@ -6,8 +6,8 @@
   position: sticky;
   top: 0px;
   background: #f9fafb;
-  z-index: 2;
-  position: relative;
+  z-index: 10;
+  // position: relative;
 
   @media only screen and (min-width: 1200px) and (max-width: 1720px) {
     padding: 120px 0 36px;
@@ -1221,7 +1221,6 @@ input[type="radio"]:checked+span::after {
   background: var.$primary-bg;
   border-radius: 50px;
   font-weight: 500;
-  padding: 6px 10px;
   color: var.$white-color;
 
   &.success-bg {
@@ -1371,6 +1370,17 @@ input[type="radio"]:checked+span::after {
     padding: 24px;
     background: var.$white-color;
     border-bottom: 1px solid var.$primary-bg;
+
+    @media only screen and (max-width: 991px) {
+      padding: 20px;
+    }
+
+    .header-actions {
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        width: auto;
+      }
+    }
+
   }
 }
 
@@ -1532,109 +1542,6 @@ input[type="radio"]:checked+span::after {
 
     .user-table {
       tr {
-        th {
-          padding: 12px 24px;
-          font-size: 12px;
-          line-height: 16px;
-          font-weight: 600;
-          color: #64748B;
-          letter-spacing: 0.6px;
-          border-bottom: none;
-          border-top: 1px solid #E2E8F0;
-
-
-          @media only screen and (max-width:1199px) {
-            font-size: 11px;
-            line-height: 14px;
-          }
-
-          @media only screen and (min-width:1200px) and (max-width:1720px) {
-            padding: 12px 20px;
-          }
-
-          @media only screen and (max-width:1199px) {
-            padding: 12px 16px;
-          }
-
-          &:last-child {
-            text-align: center;
-          }
-        }
-
-        td {
-          padding: 22px 24px;
-          font-size: 14px;
-          line-height: 20px;
-          color: #475569;
-          border-top: 1px solid #E2E8F0;
-          white-space: nowrap;
-
-          @media only screen and (min-width:1400px) and (max-width:1720px) {
-            font-size: 13px;
-            line-height: 18px;
-          }
-
-          @media only screen and (min-width:1200px) and (max-width:1720px) {
-            padding: 20px;
-          }
-
-          @media only screen and (max-width:1399px) {
-            font-size: 12px;
-            line-height: 16px;
-          }
-
-          @media only screen and (max-width:1199px) {
-            padding: 16px;
-          }
-
-          &.td-name {
-            a {
-              font-weight: 600;
-              color: var.$text-color;
-
-              &:hover {
-                color: var.$bg-color;
-                text-decoration: underline;
-              }
-            }
-          }
-
-          .badge {
-            font-size: 12px;
-            line-height: 16px;
-            font-weight: 500;
-            border-radius: 20px;
-            padding: 2px 10px;
-
-            @media only screen and (max-width:1199px) {
-              font-size: 11px;
-            }
-          }
-
-          &.text-muted {
-            color: #475569;
-
-            i {
-              color: var.$light-gray;
-            }
-
-            .text-opcity {
-              opacity: 0.5;
-            }
-          }
-
-
-
-
-          &:last-child {
-            text-align: center;
-
-            i {
-              color: var.$light-gray;
-              cursor: pointer;
-            }
-          }
-        }
 
         th,
         td {
@@ -1643,6 +1550,10 @@ input[type="radio"]:checked+span::after {
             width: 60px;
 
           }
+        }
+
+        &.active-row {
+          background: rgba(127, 53, 178, 0.05);
         }
 
       }
@@ -1694,13 +1605,12 @@ input[type="radio"]:checked+span::after {
           box-shadow: none;
         }
       }
+
     }
   }
 }
 
-.user-table tbody tr.active-row {
-  background: rgba(127, 53, 178, 0.05);
-}
+
 
 
 .pagination-container {
@@ -2041,14 +1951,7 @@ input[type="radio"]:checked+span::after {
         tr {
 
           th {
-            padding: 0px 16px 12px;
-            font-size: 12px;
-            line-height: 16px;
-            font-weight: 600;
-            color: var.$primary-color;
-            border-bottom: none;
-            text-transform: uppercase;
-            vertical-align: middle;
+            padding: 12px 16px;
 
             &:first-child {
               padding-left: 0;
@@ -2061,7 +1964,7 @@ input[type="radio"]:checked+span::after {
             @media only screen and (max-width: 1720px) {
               font-size: 11px;
               line-height: 14px;
-              padding: 0px 12px 12px;
+              padding: 12px;
             }
           }
 
@@ -2201,6 +2104,16 @@ input[type="radio"]:checked+span::after {
         font-weight: 600;
         color: var.$text-color;
         text-transform: uppercase;
+
+        @media only screen and (max-width:1720px) {
+          font-size: 13px;
+          line-height: 18px;
+        }
+
+        @media only screen and (max-width:1199px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
     }
 
@@ -2258,6 +2171,18 @@ input[type="radio"]:checked+span::after {
       flex-direction: column;
       gap: 24px;
 
+      @media only screen and (min-width:1200px) and (max-width:1720px) {
+        width: 24%;
+      }
+
+      @media only screen and (min-width:992px) and (max-width:1720px) {
+        padding: 20px;
+      }
+
+      @media only screen and (min-width:992px) and (max-width:1199px) {
+        width: 28%;
+      }
+
       @media only screen and (max-width:991px) {
         width: 100%;
         padding: 20px 16px;
@@ -2289,7 +2214,23 @@ input[type="radio"]:checked+span::after {
               line-height: 36px;
               font-weight: 700;
               color: var.$text-color;
+
+              @media only screen and (max-width:1200px) and (max-width:1720px) {
+                font-size: 28px;
+                line-height: 32px;
+              }
+
+              @media only screen and (max-width:1199px) {
+                font-size: 24px;
+                line-height: 28px;
+              }
             }
+          }
+
+          @media only screen and (max-width:991px) {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
           }
         }
       }
@@ -2299,6 +2240,19 @@ input[type="radio"]:checked+span::after {
     .right-aside-details {
       width: 78.8%;
       padding: 24px;
+
+      @media only screen and (min-width:1200px) and (max-width:1720px) {
+        width: 76%;
+      }
+
+      @media only screen and (min-width:992px) and (max-width:1720px) {
+        padding: 20px;
+
+      }
+
+      @media only screen and (min-width:992px) and (max-width:1199px) {
+        width: 72%;
+      }
 
       @media only screen and (max-width:991px) {
         width: 100%;
@@ -2310,6 +2264,16 @@ input[type="radio"]:checked+span::after {
         line-height: 28px;
         font-weight: 600;
         color: var.$text-color;
+
+        @media only screen and (min-width:1200px) and (max-width:1720px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        @media only screen and (max-width:1199px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
 
       .all-project-info {
@@ -2338,12 +2302,20 @@ input[type="radio"]:checked+span::after {
 
         .view-all-projects {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           grid-gap: 16px;
           grid-auto-rows: 1fr;
+          align-items: stretch;
           max-height: 550px;
           overflow-y: auto;
 
+          @media only screen and (max-width:1199px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          @media only screen and (max-width:767px) {
+            grid-template-columns: 1fr;
+          }
 
           &::-webkit-scrollbar {
             width: 3px;
@@ -2368,6 +2340,7 @@ input[type="radio"]:checked+span::after {
 
           .all-project-details {
             display: flex;
+            flex-direction: column;
             gap: 16px;
 
             @media only screen and (max-width:991px) {
@@ -2377,9 +2350,8 @@ input[type="radio"]:checked+span::after {
 
             .active-project-subdetails {
               display: flex;
-              flex-direction: column;
+              justify-content: space-between;
               gap: 8px;
-              flex: 1;
 
 
               h5 {
@@ -2392,62 +2364,6 @@ input[type="radio"]:checked+span::after {
               .large {
                 color: var.$primary-color;
                 font-weight: 400;
-              }
-
-              .active-project-tags {
-                display: flex;
-                gap: 8px;
-                flex-wrap: wrap;
-                margin-top: 4px;
-                max-height: 160px;
-                overflow-y: auto;
-
-
-                &::-webkit-scrollbar {
-                  width: 3px;
-                }
-
-
-                &::-webkit-scrollbar-track {
-                  background: #f1f1f1;
-                  border-radius: 10px;
-                }
-
-
-                &::-webkit-scrollbar-thumb {
-                  background: #888;
-                  border-radius: 10px;
-                }
-
-
-                &::-webkit-scrollbar-thumb:hover {
-                  background: #555;
-                }
-
-
-                .badge {
-                  display: flex;
-                  align-items: center;
-                  gap: 4px;
-
-                  @media only screen and (max-width:1720px) {
-                    font-size: 11px;
-                  }
-
-                  &.badge-editor {
-                    background: #EFF6FF;
-                  }
-
-                  &.badge-active {
-                    background: #F0FDF4;
-                    border: none;
-                  }
-
-                  &.viewer-only {
-                    padding: 8px 9px;
-                    cursor: pointer;
-                  }
-                }
               }
             }
 
@@ -2501,6 +2417,62 @@ input[type="radio"]:checked+span::after {
                 .dropdown-divider {
                   margin: 4px 0;
                   border-top: 1px solid var.$primary-color;
+                }
+              }
+            }
+
+            .active-project-tags {
+              display: flex;
+              gap: 8px;
+              flex-wrap: wrap;
+              margin-top: 4px;
+              max-height: 160px;
+              overflow-y: auto;           
+
+
+              &::-webkit-scrollbar {
+                width: 3px;
+              }
+
+
+              &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 10px;
+              }
+
+
+              &::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 10px;
+              }
+
+
+              &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+              }
+
+
+              .badge {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                @media only screen and (max-width:1720px) {
+                  font-size: 11px;
+                }
+
+                &.badge-editor {
+                  background: #EFF6FF;
+                }
+
+                &.badge-active {
+                  background: #F0FDF4;
+                  border: none;
+                }
+
+                &.viewer-only {
+                  padding: 8px 9px;
+                  cursor: pointer;
                 }
               }
             }
@@ -2579,24 +2551,13 @@ input[type="radio"]:checked+span::after {
 
               tr {
 
-                th {
-                  background: #F9FAFB;
-                  padding: 12px 24px;
-                  font-size: 12px;
-                  line-height: 16px;
-                  font-weight: 600;
-                  color: var.$secondary-text-color;
-
-                  &:last-child {
-                    text-align: center;
-                  }
-                }
-
                 td {
-                  padding: 16px 24px;
-                  font-size: 14px;
-                  line-height: 20px;
-                  color: var.$secondary-text-color;
+
+
+                  @media only screen and (min-width:1200px) and (max-width:1720px) {
+                   white-space: unset;
+                  }
+
 
                   .allowed-users-info {
                     display: flex;
@@ -2604,8 +2565,6 @@ input[type="radio"]:checked+span::after {
                     gap: 12px;
 
                     .users-profile-img {
-
-
                       span {
                         width: 40px;
                         height: 40px;
@@ -2613,6 +2572,7 @@ input[type="radio"]:checked+span::after {
                         font-size: 16px;
                         line-height: 24px;
                         font-weight: 600;
+                        display: inline-flex;
                       }
                     }
                   }
@@ -2670,7 +2630,9 @@ input[type="radio"]:checked+span::after {
 
 
 
-#createProjectModal {
+#createProjectModal,
+#editProjectModal,
+#addCustomerModal {
   .modal-dialog {
     .modal-content {
       .modal-body {
@@ -2679,13 +2641,106 @@ input[type="radio"]:checked+span::after {
             background-color: var.$white-color;
           }
 
-          .template-card {
-            .template-name {
-              padding: 12px;
-            }
-          }
+
         }
       }
     }
   }
+}
+
+#editProjectModal {
+  form {
+    input {
+      &::placeholder {
+        color: var.$text-color;
+      }
+    }
+  }
+}
+
+.select-template-option {
+  margin-top: 32px;
+
+  .template-container {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    @media only screen and (max-width:1199px) {
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        }
+
+       @media only screen and (max-width:767px) {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        }
+
+        @media only screen and (max-width:575px) {
+              grid-template-columns: 1fr;
+
+        }
+  }
+
+  .template-card {
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+
+    .template-img {
+      width: 100%;
+      height: 120px;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+    }
+
+    p {
+      margin: 12px;
+      height: 40px;
+
+      @media only screen and (max-width:1720px) {
+           
+height: 36px;
+        }
+
+@media only screen and (max-width:1199px) {
+           
+height: 30px;
+        }
+
+    }
+
+    &.active {
+      border-color: var.$cta-color;
+
+      &.active .checkmark {
+        display: flex;
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background: var.$cta-color;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    display: none;
+  }
+
+
 }
