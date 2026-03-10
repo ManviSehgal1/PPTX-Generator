@@ -103,7 +103,7 @@
                                 Doe’s Profile</h2>
                         </div>
                         <div class="header-actions">
-                            <button class="global-btn secondary-global-btn">
+                            <button class="global-btn secondary-global-btn" data-bs-toggle="modal" data-bs-target="#deactivateUserModal">
                                 Deactivate User
                             </button>
                             <button class="global-btn primary-global-btn action-btn">
@@ -321,6 +321,37 @@
             </div>
         </div>
     </footer>
+
+    <!-- Deactivate User Modal -->
+    <div class="modal fade" id="deactivateUserModal" tabindex="-1" aria-labelledby="deactivateUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-heading-option">
+                        <div class="exclamation-icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h5 class="modal-title" id="deactivateUserModalLabel">Deactivate User?</h5>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="mb-4">
+                        Are you sure you want to deactivate <strong>John Doe</strong>? This user will no longer be able to log in or access any entities. This action can be undone later.
+                    </p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="revokeSessionsCheckbox">
+                        <label class="form-check-label ms-2" for="revokeSessionsCheckbox">
+                            Also revoke all active sessions
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="global-btn secondary-global-btn" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="global-btn primary-global-btn">Deactivate</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- script -->
 

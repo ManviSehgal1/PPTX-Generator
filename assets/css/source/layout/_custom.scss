@@ -1,4 +1,4 @@
-@use "variables"as var;
+@use "variables" as var;
 
 .stepper-section {
   // padding: 140px 0 0;
@@ -27,7 +27,6 @@
 
   &.customer-stepper-section {
     padding: 140px 0 0;
-
   }
 }
 
@@ -74,10 +73,8 @@
           font-size: 12px;
           line-height: 16px;
         }
-
       }
     }
-
 
     @media only screen and (max-width: 767px) {
       p {
@@ -107,7 +104,6 @@
         height: 32px;
         font-size: 12px;
       }
-
     }
   }
 
@@ -130,8 +126,6 @@
   // @media only screen and (max-width: 767px) {
   //   padding: 0 0 36px;
   // }
-
-
 
   .process-section {
     padding: 33px;
@@ -192,7 +186,6 @@
         }
 
         p {
-
           @media only screen and (max-width: 1199px) {
             font-size: 14px;
           }
@@ -261,14 +254,12 @@
               transition: all 0.3s ease;
             }
 
-
             &::after {
               content: none;
             }
 
             &:hover {
               background: transparent;
-
 
               i {
                 color: var.$bg-color;
@@ -297,7 +288,6 @@
         display: flex;
         gap: 33px;
         align-items: flex-start;
-
 
         @media only screen and (max-width: 767px) {
           flex-direction: column;
@@ -331,7 +321,6 @@
             @media only screen and (min-width: 1200px) and (max-width: 1720px) {
               font-size: 15px;
             }
-
           }
 
           .company-option-list {
@@ -366,7 +355,7 @@
                 transition: all 0.2s ease;
               }
 
-              input:checked+.checkmark {
+              input:checked + .checkmark {
                 background: #00c853;
                 border-color: #00c853;
                 color: white;
@@ -382,7 +371,7 @@
                 }
               }
 
-              input:checked+.checkmark::after {
+              input:checked + .checkmark::after {
                 display: block;
               }
 
@@ -409,7 +398,6 @@
 
           @media only screen and (max-width: 1199px) {
             padding: 24px;
-
           }
 
           .uploaded-icon {
@@ -481,7 +469,6 @@
           @media only screen and (max-width: 767px) {
             border-radius: 0;
             overflow-x: scroll;
-
           }
 
           table {
@@ -502,6 +489,7 @@
                 line-height: 1.2;
                 font-family: "poppins";
                 font-weight: 500;
+                border: 1px solid #e5e7eb;
 
                 &:first-child {
                   width: 132px;
@@ -546,7 +534,6 @@
                 }
 
                 &.mResizeTh {
-
                   @media only screen and (max-width: 1199px) {
                     min-width: 200px;
                   }
@@ -554,8 +541,6 @@
                   @media only screen and (max-width: 991px) {
                     min-width: 240px;
                   }
-
-
                 }
               }
 
@@ -568,6 +553,7 @@
                 font-weight: 400;
                 border-radius: 8px;
                 background: transparent;
+                white-space: unset;
 
                 h6 {
                   font-size: 14px;
@@ -640,7 +626,6 @@
                     // &.fa-triangle-exclamation {
                     //   color: #ffb845;
                     // }
-
                   }
                 }
               }
@@ -779,7 +764,6 @@
               .color-picker-input {
                 display: flex;
                 gap: 12px;
-
 
                 input {
                   border: 1px solid #d1d5db;
@@ -942,12 +926,9 @@
   padding-top: 33px;
   flex-direction: row;
 
-
   @media only screen and (min-width: 1200px) and (max-width: 1720px) {
     padding-top: 28px;
-
   }
-
 
   @media only screen and (max-width: 1199px) {
     padding-top: 24px;
@@ -1027,12 +1008,10 @@ footer {
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width:767px) {
+  @media only screen and (max-width: 767px) {
     height: auto;
     z-index: 98;
   }
-
-
 
   .footer-content {
     display: flex;
@@ -1040,15 +1019,12 @@ footer {
     align-items: center;
     flex-direction: row;
 
-    @media only screen and (max-width:767px) {
+    @media only screen and (max-width: 767px) {
       flex-direction: column;
       padding: 12px 0;
     }
 
-
-
     .company-footer-logo {
-
       a {
         padding-top: 0;
         margin-right: 0;
@@ -1117,7 +1093,9 @@ label.section-title {
     position: relative;
     /* for absolute positioning of tick */
     user-select: none;
-    transition: border-color 0.3s, background-color 0.3s;
+    transition:
+      border-color 0.3s,
+      background-color 0.3s;
     border: 1px solid #e5e7eb;
     padding: 17px;
     border-radius: 8px;
@@ -1171,7 +1149,7 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="radio"]:checked+span {
+input[type="radio"]:checked + span {
   font-weight: 500;
   color: #111827;
   font-family: "Poppins";
@@ -1187,7 +1165,7 @@ input[type="radio"]:checked+span {
   }
 }
 
-input[type="radio"]:checked+span::after {
+input[type="radio"]:checked + span::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -1243,7 +1221,6 @@ input[type="radio"]:checked+span::after {
 
   &.gray-bg {
     color: var.$primary-color;
-
   }
 }
 
@@ -1253,7 +1230,6 @@ input[type="radio"]:checked+span::after {
   padding-bottom: 100px;
 }
 
-
 .user-management-header {
   display: flex;
   justify-content: space-between;
@@ -1262,12 +1238,8 @@ input[type="radio"]:checked+span::after {
 
   @media only screen and (max-width: 991px) {
     flex-wrap: wrap;
-  }
-
-  @media only screen and (max-width: 991px) {
     gap: 16px;
   }
-
 
   h2 {
     font-size: 24px;
@@ -1279,7 +1251,7 @@ input[type="radio"]:checked+span::after {
       line-height: 24px;
     }
 
-    @media only screen and (min-width: 1400px) and (max-width: 1720px) {
+    @media only screen and (min-width: 1200px) and (max-width: 1720px) {
       font-size: 22px;
       line-height: 28px;
     }
@@ -1296,7 +1268,7 @@ input[type="radio"]:checked+span::after {
       line-height: 16px;
     }
 
-    @media only screen and (min-width: 1400px) and (max-width: 1720px) {
+    @media only screen and (min-width: 1200px) and (max-width: 1720px) {
       font-size: 13px;
       line-height: 18px;
     }
@@ -1324,7 +1296,6 @@ input[type="radio"]:checked+span::after {
         flex: 1 1 auto;
       }
 
-
       @media only screen and (min-width: 1200px) and (max-width: 1720px) {
         padding: 9px 12px;
       }
@@ -1332,7 +1303,6 @@ input[type="radio"]:checked+span::after {
   }
 
   &.user-details-header {
-
     @media only screen and (max-width: 575px) {
       gap: 12px;
     }
@@ -1341,10 +1311,7 @@ input[type="radio"]:checked+span::after {
       flex-wrap: nowrap;
     }
 
-
     .header-actions {
-
-
       @media only screen and (max-width: 575px) {
         width: 100%;
       }
@@ -1380,7 +1347,6 @@ input[type="radio"]:checked+span::after {
         width: auto;
       }
     }
-
   }
 }
 
@@ -1401,7 +1367,6 @@ input[type="radio"]:checked+span::after {
     @media only screen and (max-width: 767px) {
       width: 225px;
     }
-
   }
 
   input::placeholder,
@@ -1414,7 +1379,7 @@ input[type="radio"]:checked+span::after {
 }
 
 .card {
-  border: 1px solid #E2E8F0;
+  border: 1px solid #e2e8f0;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
 }
@@ -1444,7 +1409,6 @@ input[type="radio"]:checked+span::after {
       gap: 16px;
     }
 
-
     .inner-filter-header {
       display: flex;
       align-items: center;
@@ -1468,8 +1432,8 @@ input[type="radio"]:checked+span::after {
       }
 
       .badge {
-        background: #F1F5F9;
-        border: 1px solid #E2E8F0;
+        background: #f1f5f9;
+        border: 1px solid #e2e8f0;
         color: var.$primary-color;
         font-size: 12px;
         line-height: 16px;
@@ -1509,8 +1473,8 @@ input[type="radio"]:checked+span::after {
       gap: 8px;
 
       .filter-tag {
-        background: #F8FAFC;
-        border: 1px solid #CBD5E1;
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
         color: var.$text-color;
         font-size: 12px;
         line-height: 20px;
@@ -1530,32 +1494,27 @@ input[type="radio"]:checked+span::after {
   }
 }
 
-
 .card {
-
   .table-responsive {
     height: 460px;
 
-    @media only screen and (max-width:767px) {
+    @media only screen and (max-width: 767px) {
       height: 400px;
     }
 
     .user-table {
       tr {
-
         th,
         td {
           &:first-child {
             max-width: 60px;
             width: 60px;
-
           }
         }
 
         &.active-row {
           background: rgba(127, 53, 178, 0.05);
         }
-
       }
 
       > :not(:first-child) {
@@ -1585,7 +1544,7 @@ input[type="radio"]:checked+span::after {
         }
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 5px;
           left: 50%;
@@ -1605,19 +1564,15 @@ input[type="radio"]:checked+span::after {
           box-shadow: none;
         }
       }
-
     }
   }
 }
-
-
-
 
 .pagination-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #E2E8F0;
+  border-top: 1px solid #e2e8f0;
   padding: 22px 24px 24px;
   gap: 16px;
 
@@ -1635,8 +1590,7 @@ input[type="radio"]:checked+span::after {
     font-weight: 400;
     color: #475569;
 
-
-    @media only screen and (max-width:991px) {
+    @media only screen and (max-width: 991px) {
       font-size: 12px;
       line-height: 16px;
     }
@@ -1652,7 +1606,7 @@ input[type="radio"]:checked+span::after {
       font-size: 13px;
       line-height: 20px;
 
-      @media only screen and (max-width:991px) {
+      @media only screen and (max-width: 991px) {
         padding: 4px 12px;
         font-size: 12px;
         line-height: 16px;
@@ -1687,7 +1641,6 @@ input[type="radio"]:checked+span::after {
     }
   }
 }
-
 
 // user details styling
 
@@ -1742,9 +1695,7 @@ input[type="radio"]:checked+span::after {
       width: 100%;
     }
 
-
     .user-profile-options {
-
       .user-profile-info {
         display: flex;
         flex-direction: column;
@@ -1771,19 +1722,18 @@ input[type="radio"]:checked+span::after {
             object-fit: cover;
           }
 
-          @media only screen and (max-width:991px) {
+          @media only screen and (max-width: 991px) {
             width: 84px;
             height: 84px;
           }
 
-          @media only screen and (max-width:767px) {
+          @media only screen and (max-width: 767px) {
             width: 72px;
             height: 72px;
           }
         }
 
         .profile-details {
-
           .user-name {
             font-size: 20px;
             line-height: 28px;
@@ -1791,8 +1741,7 @@ input[type="radio"]:checked+span::after {
             font-weight: 600;
             margin-bottom: 4px;
 
-
-            @media only screen and (max-width:1199px) {
+            @media only screen and (max-width: 1199px) {
               font-size: 18px;
               line-height: 24px;
             }
@@ -1804,7 +1753,7 @@ input[type="radio"]:checked+span::after {
             color: var.$email-color;
             margin-bottom: 12px;
 
-            @media only screen and (max-width:1199px) {
+            @media only screen and (max-width: 1199px) {
               font-size: 13px;
               line-height: 18px;
             }
@@ -1822,12 +1771,10 @@ input[type="radio"]:checked+span::after {
               border-radius: 12px;
               text-transform: uppercase;
 
-              @media only screen and (max-width:1199px) {
+              @media only screen and (max-width: 1199px) {
                 font-size: 11px;
               }
-
             }
-
           }
         }
       }
@@ -1836,19 +1783,16 @@ input[type="radio"]:checked+span::after {
         border-top: 1px solid var.$primary-bg;
         padding-top: 24px;
 
-
-        @media only screen and (max-width:991px) {
+        @media only screen and (max-width: 991px) {
           padding-top: 20px;
         }
 
-        @media only screen and (max-width:767px) {
+        @media only screen and (max-width: 767px) {
           padding-top: 16px;
         }
 
         .basic-details-card {
-
           .basic-details-card-body {
-
             .card-title {
               font-size: 12px;
               line-height: 16px;
@@ -1856,8 +1800,6 @@ input[type="radio"]:checked+span::after {
               font-weight: 600;
               text-transform: uppercase;
             }
-
-
 
             .basic-details-grid-card {
               display: grid;
@@ -1872,7 +1814,6 @@ input[type="radio"]:checked+span::after {
           }
         }
       }
-
     }
 
     .system-access-card {
@@ -1887,13 +1828,12 @@ input[type="radio"]:checked+span::after {
         font-weight: 600;
         margin-bottom: 0;
 
-        @media only screen and (max-width:1720px) {
+        @media only screen and (max-width: 1720px) {
           font-size: 16px;
           line-height: 24px;
         }
 
-
-        @media only screen and (max-width:1199px) {
+        @media only screen and (max-width: 1199px) {
           font-size: 15px;
           line-height: 24px;
         }
@@ -1909,18 +1849,16 @@ input[type="radio"]:checked+span::after {
           display: flex;
           justify-content: center;
           align-items: center;
-          background: #FAF5FF;
+          background: #faf5ff;
           border-radius: 8px;
 
-          @media only screen and (max-width:1199px) {
+          @media only screen and (max-width: 1199px) {
             width: 32px;
             height: 32px;
           }
         }
-
       }
     }
-
   }
 
   .user-entities-access-table {
@@ -1935,7 +1873,6 @@ input[type="radio"]:checked+span::after {
       padding: 0 0 24px;
     }
 
-
     .card-title {
       font-size: 18px;
       line-height: 28px;
@@ -1949,7 +1886,6 @@ input[type="radio"]:checked+span::after {
         margin-bottom: 0;
 
         tr {
-
           th {
             padding: 12px 16px;
 
@@ -1970,7 +1906,7 @@ input[type="radio"]:checked+span::after {
 
           td {
             padding: 16px;
-            border-top: 1px solid #E2E8F0;
+            border-top: 1px solid #e2e8f0;
             font-size: 14px;
             line-height: 20px;
             font-weight: 500;
@@ -1987,7 +1923,6 @@ input[type="radio"]:checked+span::after {
               line-height: 16px;
               padding: 12px;
             }
-
 
             &:first-child {
               padding-left: 0;
@@ -2021,21 +1956,19 @@ input[type="radio"]:checked+span::after {
               padding: 2px 10px;
               text-transform: none;
 
-
               @media only screen and (max-width: 1199px) {
                 font-size: 11px;
               }
             }
 
             .status-td {
-
               &.status-active {
-                color: #16A34A;
+                color: #16a34a;
                 font-weight: 500;
               }
 
               &.status-restricted {
-                color: #DC2626;
+                color: #dc2626;
                 font-weight: 500;
               }
             }
@@ -2057,7 +1990,6 @@ input[type="radio"]:checked+span::after {
         //     }
         //   }
         // }
-
       }
     }
 
@@ -2082,17 +2014,16 @@ input[type="radio"]:checked+span::after {
   }
 }
 
-// customers details style 
+// customers details style
 
 .customers-all-details {
-
   padding-bottom: 80px;
 
   .customer-details-asides {
     display: flex;
     flex-direction: row;
 
-    @media only screen and (max-width:991px) {
+    @media only screen and (max-width: 991px) {
       flex-direction: column;
     }
 
@@ -2105,12 +2036,12 @@ input[type="radio"]:checked+span::after {
         color: var.$text-color;
         text-transform: uppercase;
 
-        @media only screen and (max-width:1720px) {
+        @media only screen and (max-width: 1720px) {
           font-size: 13px;
           line-height: 18px;
         }
 
-        @media only screen and (max-width:1199px) {
+        @media only screen and (max-width: 1199px) {
           font-size: 12px;
           line-height: 16px;
         }
@@ -2127,40 +2058,37 @@ input[type="radio"]:checked+span::after {
       flex-shrink: 0;
 
       &.globe-icon {
-        background: #EFF6FF;
+        background: #eff6ff;
 
         i {
-          color: #2563EB;
+          color: #2563eb;
         }
       }
 
       &.total-projects-icon {
-        background-color: #FCE7F3;
+        background-color: #fce7f3;
 
         i {
-          color: #BE185D;
+          color: #be185d;
         }
       }
 
       &.total-users-icon {
-        background-color: #EFF6FF;
+        background-color: #eff6ff;
 
         i {
-          color: #1E40AF;
+          color: #1e40af;
         }
       }
 
-
       &.active-users-icon {
-        background: #F0FDF4;
+        background: #f0fdf4;
 
         i {
           color: #166534;
         }
-
       }
     }
-
 
     .left-aside-details {
       width: 21.2%;
@@ -2171,19 +2099,19 @@ input[type="radio"]:checked+span::after {
       flex-direction: column;
       gap: 24px;
 
-      @media only screen and (min-width:1200px) and (max-width:1720px) {
+      @media only screen and (min-width: 1200px) and (max-width: 1720px) {
         width: 24%;
       }
 
-      @media only screen and (min-width:992px) and (max-width:1720px) {
+      @media only screen and (min-width: 992px) and (max-width: 1720px) {
         padding: 20px;
       }
 
-      @media only screen and (min-width:992px) and (max-width:1199px) {
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
         width: 28%;
       }
 
-      @media only screen and (max-width:991px) {
+      @media only screen and (max-width: 991px) {
         width: 100%;
         padding: 20px 16px;
         border-right: none;
@@ -2193,17 +2121,13 @@ input[type="radio"]:checked+span::after {
       .classification-subdetails {
         display: flex;
         gap: 16px;
-
-
       }
 
       .quick-stats-card {
-
         padding-top: 16px;
         border-top: 1px solid var.$primary-bg;
 
         .stats-details {
-
           .stats-subdetails {
             display: flex;
             align-items: center;
@@ -2215,46 +2139,44 @@ input[type="radio"]:checked+span::after {
               font-weight: 700;
               color: var.$text-color;
 
-              @media only screen and (max-width:1200px) and (max-width:1720px) {
+              @media only screen and (max-width: 1200px) and (max-width: 1720px) {
                 font-size: 28px;
                 line-height: 32px;
               }
 
-              @media only screen and (max-width:1199px) {
+              @media only screen and (max-width: 1199px) {
                 font-size: 24px;
                 line-height: 28px;
               }
             }
           }
 
-          @media only screen and (max-width:991px) {
+          @media only screen and (max-width: 991px) {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
           }
         }
       }
-
     }
 
     .right-aside-details {
       width: 78.8%;
       padding: 24px;
 
-      @media only screen and (min-width:1200px) and (max-width:1720px) {
+      @media only screen and (min-width: 1200px) and (max-width: 1720px) {
         width: 76%;
       }
 
-      @media only screen and (min-width:992px) and (max-width:1720px) {
+      @media only screen and (min-width: 992px) and (max-width: 1720px) {
         padding: 20px;
-
       }
 
-      @media only screen and (min-width:992px) and (max-width:1199px) {
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
         width: 72%;
       }
 
-      @media only screen and (max-width:991px) {
+      @media only screen and (max-width: 991px) {
         width: 100%;
         padding: 20px 16px;
       }
@@ -2265,12 +2187,12 @@ input[type="radio"]:checked+span::after {
         font-weight: 600;
         color: var.$text-color;
 
-        @media only screen and (min-width:1200px) and (max-width:1720px) {
+        @media only screen and (min-width: 1200px) and (max-width: 1720px) {
           font-size: 18px;
           line-height: 24px;
         }
 
-        @media only screen and (max-width:1199px) {
+        @media only screen and (max-width: 1199px) {
           font-size: 16px;
           line-height: 20px;
         }
@@ -2309,11 +2231,11 @@ input[type="radio"]:checked+span::after {
           max-height: 550px;
           overflow-y: auto;
 
-          @media only screen and (max-width:1199px) {
+          @media only screen and (max-width: 1199px) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
           }
 
-          @media only screen and (max-width:767px) {
+          @media only screen and (max-width: 767px) {
             grid-template-columns: 1fr;
           }
 
@@ -2321,18 +2243,15 @@ input[type="radio"]:checked+span::after {
             width: 3px;
           }
 
-
           &::-webkit-scrollbar-track {
             background: #f1f1f1;
             border-radius: 10px;
           }
 
-
           &::-webkit-scrollbar-thumb {
             background: #888;
             border-radius: 10px;
           }
-
 
           &::-webkit-scrollbar-thumb:hover {
             background: #555;
@@ -2343,7 +2262,7 @@ input[type="radio"]:checked+span::after {
             flex-direction: column;
             gap: 16px;
 
-            @media only screen and (max-width:991px) {
+            @media only screen and (max-width: 991px) {
               width: 100%;
               gap: 12px;
             }
@@ -2352,7 +2271,6 @@ input[type="radio"]:checked+span::after {
               display: flex;
               justify-content: space-between;
               gap: 8px;
-
 
               h5 {
                 font-size: 18px;
@@ -2427,46 +2345,41 @@ input[type="radio"]:checked+span::after {
               flex-wrap: wrap;
               margin-top: 4px;
               max-height: 160px;
-              overflow-y: auto;           
-
+              overflow-y: auto;
 
               &::-webkit-scrollbar {
                 width: 3px;
               }
-
 
               &::-webkit-scrollbar-track {
                 background: #f1f1f1;
                 border-radius: 10px;
               }
 
-
               &::-webkit-scrollbar-thumb {
                 background: #888;
                 border-radius: 10px;
               }
 
-
               &::-webkit-scrollbar-thumb:hover {
                 background: #555;
               }
-
 
               .badge {
                 display: flex;
                 align-items: center;
                 gap: 4px;
 
-                @media only screen and (max-width:1720px) {
+                @media only screen and (max-width: 1720px) {
                   font-size: 11px;
                 }
 
                 &.badge-editor {
-                  background: #EFF6FF;
+                  background: #eff6ff;
                 }
 
                 &.badge-active {
-                  background: #F0FDF4;
+                  background: #f0fdf4;
                   border: none;
                 }
 
@@ -2485,7 +2398,7 @@ input[type="radio"]:checked+span::after {
             font-weight: 600;
             text-transform: uppercase;
 
-            @media only screen and (max-width:1720px) {
+            @media only screen and (max-width: 1720px) {
               font-size: 11px;
             }
           }
@@ -2498,7 +2411,7 @@ input[type="radio"]:checked+span::after {
           justify-content: space-between;
           align-items: center;
 
-          @media only screen and (max-width:991px) {
+          @media only screen and (max-width: 991px) {
             flex-wrap: wrap;
             gap: 12px;
           }
@@ -2508,7 +2421,6 @@ input[type="radio"]:checked+span::after {
             gap: 12px;
             align-items: center;
 
-
             .search-wrapper {
               input {
                 background: var.$white-color;
@@ -2517,7 +2429,7 @@ input[type="radio"]:checked+span::after {
 
             .btn {
               padding: 9px;
-              border: 1px solid #CBD5E1;
+              border: 1px solid #cbd5e1;
               display: flex;
               height: fit-content;
               border-radius: 8px;
@@ -2537,7 +2449,6 @@ input[type="radio"]:checked+span::after {
             box-shadow: var.$boxshadow;
 
             .table {
-
               thead {
                 tr {
                   border-radius: 12px 12px 0 0;
@@ -2550,14 +2461,10 @@ input[type="radio"]:checked+span::after {
               }
 
               tr {
-
                 td {
-
-
-                  @media only screen and (min-width:1200px) and (max-width:1720px) {
-                   white-space: unset;
+                  @media only screen and (min-width: 1200px) and (max-width: 1720px) {
+                    white-space: unset;
                   }
-
 
                   .allowed-users-info {
                     display: flex;
@@ -2628,8 +2535,6 @@ input[type="radio"]:checked+span::after {
   }
 }
 
-
-
 #createProjectModal,
 #editProjectModal,
 #addCustomerModal {
@@ -2640,8 +2545,6 @@ input[type="radio"]:checked+span::after {
           .form-select {
             background-color: var.$white-color;
           }
-
-
         }
       }
     }
@@ -2658,6 +2561,137 @@ input[type="radio"]:checked+span::after {
   }
 }
 
+#deactivateUserModal {
+.show {
+  display: block;
+}
+
+  .modal-dialog {
+    max-width: 540px;
+
+
+
+      @media only screen and (min-width: 575px) {
+        margin: 28px auto;
+      }
+   
+
+    .modal-header {
+      padding: 32px 32px 12px;
+      display: flex;
+      justify-content: center;
+
+      @media only screen and (max-width: 1199px) {
+        padding: 20px 20px 12px;
+      }
+
+      .modal-heading-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .exclamation-icon {
+          width: 64px;
+          height: 64px;
+          background: rgba(127, 53, 178, 0.1);
+          border-radius: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 20px;
+
+          i {
+            font-size: 24px;
+            color: var.$bg-color;
+          }
+        }
+
+        .modal-title {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 0 32px;
+
+      @media only screen and (max-width: 1199px) {
+        padding: 0 20px;
+      }
+
+      p {
+        padding: 0 20px;
+        margin-bottom: 0;
+        color: var.$secondary-text-color;
+        font-size: 16px;
+        line-height: 24px;
+
+        @media only screen and (max-width: 1199px) {
+          padding: 0 12px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .form-check {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 16px;
+        border-radius: 8px;
+        background: #f9fafb;
+        text-align: left;
+
+        @media only screen and (max-width: 1199px) {
+          padding: 12px;
+        }
+
+        .form-check-input {
+          margin: 0;
+
+          &:checked {
+            background-color: var.$bg-color;
+            border-color: var.$bg-color;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            width: 4px;
+            height: 7px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: translate(-50%, -60%) rotate(45deg);
+            display: none;
+          }
+
+          &:checked::after {
+            display: block;
+          }
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        .form-check-label {
+          font-size: 16px;
+          line-height: 24px;
+          color: var.$text-color;
+
+          @media only screen and (max-width: 1199px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .select-template-option {
   margin-top: 32px;
 
@@ -2666,20 +2700,17 @@ input[type="radio"]:checked+span::after {
     grid-gap: 16px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
 
-    @media only screen and (max-width:1199px) {
-              grid-template-columns: repeat(3, minmax(0, 1fr));
+    @media only screen and (max-width: 1199px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
-        }
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-       @media only screen and (max-width:767px) {
-              grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        }
-
-        @media only screen and (max-width:575px) {
-              grid-template-columns: 1fr;
-
-        }
+    @media only screen and (max-width: 575px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .template-card {
@@ -2704,16 +2735,13 @@ input[type="radio"]:checked+span::after {
       margin: 12px;
       height: 40px;
 
-      @media only screen and (max-width:1720px) {
-           
-height: 36px;
-        }
+      @media only screen and (max-width: 1720px) {
+        height: 36px;
+      }
 
-@media only screen and (max-width:1199px) {
-           
-height: 30px;
-        }
-
+      @media only screen and (max-width: 1199px) {
+        height: 30px;
+      }
     }
 
     &.active {
@@ -2741,6 +2769,4 @@ height: 30px;
     font-size: 28px;
     display: none;
   }
-
-
 }

@@ -258,10 +258,10 @@ header {
 
             // But if it is active, it should stay active color
             &.active:focus {
-              color: var.$cta-color !important;
+              color: var.$bg-color !important;
 
               i {
-                color: var.$cta-color !important;
+                color: var.$bg-color !important;
               }
             }
           }
