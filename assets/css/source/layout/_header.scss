@@ -164,10 +164,6 @@ header {
             }
           }
 
-          .setGap {
-            margin-right: 6px;
-          }
-
           @media screen and (min-width: 1200px) and (max-width: 1720px) {
             font-size: 14px;
           }
@@ -282,6 +278,17 @@ header {
               font-weight: 400;
               color: #334155;
 
+
+            @media only screen and (max-width: 1720px) {
+              font-size: 13px;
+              line-height: 18px;
+            }
+
+            @media only screen and (max-width: 1199px) {
+              font-size: 12px;
+              line-height: 16px;
+            }
+
               &:active, &:hover, &:focus {
                 color: var.$white-color;
                 background: var.$bg-color;
@@ -329,7 +336,7 @@ header {
 
 
       .setGap1 {
-        margin-right: 10px;
+        margin-right: 8px;
         display: none;
 
         @media only screen and (min-width: 1200px) {

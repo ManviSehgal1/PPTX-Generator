@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "variables"as var;
 
 .stepper-section {
   // padding: 140px 0 0;
@@ -355,7 +355,7 @@
                 transition: all 0.2s ease;
               }
 
-              input:checked + .checkmark {
+              input:checked+.checkmark {
                 background: #00c853;
                 border-color: #00c853;
                 color: white;
@@ -371,7 +371,7 @@
                 }
               }
 
-              input:checked + .checkmark::after {
+              input:checked+.checkmark::after {
                 display: block;
               }
 
@@ -956,7 +956,7 @@
       border-radius: 8px;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 8px;
 
       &:disabled {
         pointer-events: none;
@@ -1149,7 +1149,7 @@ input[type="radio"] {
   display: none;
 }
 
-input[type="radio"]:checked + span {
+input[type="radio"]:checked+span {
   font-weight: 500;
   color: #111827;
   font-family: "Poppins";
@@ -1165,7 +1165,7 @@ input[type="radio"]:checked + span {
   }
 }
 
-input[type="radio"]:checked + span::after {
+input[type="radio"]:checked+span::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -1359,6 +1359,13 @@ input[type="radio"]:checked + span::after {
     left: 12px;
     transform: translateY(-50%);
     color: var.$light-gray;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media only screen and (max-width: 1720px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   input {
@@ -1414,7 +1421,7 @@ input[type="radio"]:checked + span::after {
       align-items: center;
       gap: 10px;
 
-      h6 {
+      h2 {
         font-size: 16px;
         line-height: 24px;
         font-weight: 600;
@@ -1504,6 +1511,7 @@ input[type="radio"]:checked + span::after {
 
     .user-table {
       tr {
+
         th,
         td {
           &:first-child {
@@ -2028,7 +2036,7 @@ input[type="radio"]:checked + span::after {
     }
 
     .all-similar-cards {
-      h6 {
+      h2 {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.35px;
@@ -2139,13 +2147,13 @@ input[type="radio"]:checked + span::after {
               font-weight: 700;
               color: var.$text-color;
 
-              @media only screen and (max-width: 1200px) and (max-width: 1720px) {
-                font-size: 28px;
+              @media only screen and (min-width: 1200px) and (max-width: 1720px) {
+                font-size: 26px;
                 line-height: 32px;
               }
 
               @media only screen and (max-width: 1199px) {
-                font-size: 24px;
+                font-size: 22px;
                 line-height: 28px;
               }
             }
@@ -2561,131 +2569,154 @@ input[type="radio"]:checked + span::after {
   }
 }
 
-#deactivateUserModal {
-.show {
-  display: block;
+.similar-modal {
+  .modal-dialog {
+    max-width: 540px !important;
+
+    @media only screen and (max-width: 767px) {
+      margin: auto;
+    }
+
+    @media only screen and (max-width: 575px) {
+      max-width: 95% !important;
+    }
+  }
 }
 
-  .modal-dialog {
-    max-width: 540px;
+#deactivateUserModal,
+#deleteEntityModal {
 
+  .modal-header {
+    padding: 32px 32px 12px;
+    display: flex;
+    justify-content: center;
 
+    @media only screen and (max-width: 1199px) {
+      padding: 20px 20px 12px;
+    }
 
-      @media only screen and (min-width: 575px) {
-        margin: 28px auto;
-      }
-   
+    @media only screen and (min-width:1200px) and (max-width:1720px) {
+          padding: 24px 24px 16px;
+        }
 
-    .modal-header {
-      padding: 32px 32px 12px;
+    .modal-heading-option {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
 
-      @media only screen and (max-width: 1199px) {
-        padding: 20px 20px 12px;
-      }
-
-      .modal-heading-option {
+      .exclamation-icon {
+        width: 64px;
+        height: 64px;
+        background: rgba(127, 53, 178, 0.1);
+        border-radius: 100px;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        text-align: center;
+        margin-bottom: 20px;
 
-        .exclamation-icon {
-          width: 64px;
-          height: 64px;
-          background: rgba(127, 53, 178, 0.1);
-          border-radius: 100px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-bottom: 20px;
+        @media only screen and (max-width: 1720px) {
+          margin-bottom: 16px;
+        }
 
-          i {
-            font-size: 24px;
-            color: var.$bg-color;
+        @media only screen and (max-width: 1199px) {
+          margin-bottom: 12px;
+        }
+
+        i {
+          font-size: 24px;
+          color: var.$bg-color;
+
+          &.fa-trash {
+            color: var.$secondary-bg-color;
           }
         }
+      }
 
-        .modal-title {
-          margin-bottom: 0;
-        }
+      .modal-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 0 32px;
+
+    @media only screen and (max-width: 1199px) {
+      padding: 0 20px;
+    }
+
+    p {
+      padding: 0 20px;
+      margin-bottom: 0;
+      color: var.$secondary-text-color;
+      font-size: 16px;
+      line-height: 24px;
+
+      @media only screen and (max-width: 1720px) {
+        padding: 0 16px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @media only screen and (max-width: 1199px) {
+        padding: 0 12px;
+        font-size: 13px;
+        line-height: 18px;
       }
     }
 
-    .modal-body {
-      padding: 0 32px;
+    .form-check {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 16px;
+      border-radius: 8px;
+      background: #f9fafb;
+      text-align: left;
 
       @media only screen and (max-width: 1199px) {
-        padding: 0 20px;
+        padding: 12px;
       }
 
-      p {
-        padding: 0 20px;
-        margin-bottom: 0;
-        color: var.$secondary-text-color;
+      .form-check-input {
+        margin: 0;
+
+        &:checked {
+          background-color: var.$bg-color;
+          border-color: var.$bg-color;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 50%;
+          width: 4px;
+          height: 7px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: translate(-50%, -60%) rotate(45deg);
+          display: none;
+        }
+
+        &:checked::after {
+          display: block;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      .form-check-label {
         font-size: 16px;
         line-height: 24px;
+        color: var.$text-color;
 
         @media only screen and (max-width: 1199px) {
-          padding: 0 12px;
           font-size: 14px;
           line-height: 20px;
-        }
-      }
-
-      .form-check {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 16px;
-        border-radius: 8px;
-        background: #f9fafb;
-        text-align: left;
-
-        @media only screen and (max-width: 1199px) {
-          padding: 12px;
-        }
-
-        .form-check-input {
-          margin: 0;
-
-          &:checked {
-            background-color: var.$bg-color;
-            border-color: var.$bg-color;
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 5px;
-            left: 50%;
-            width: 4px;
-            height: 7px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            transform: translate(-50%, -60%) rotate(45deg);
-            display: none;
-          }
-
-          &:checked::after {
-            display: block;
-          }
-
-          &:focus {
-            box-shadow: none;
-          }
-        }
-
-        .form-check-label {
-          font-size: 16px;
-          line-height: 24px;
-          color: var.$text-color;
-
-          @media only screen and (max-width: 1199px) {
-            font-size: 14px;
-            line-height: 20px;
-          }
         }
       }
     }
@@ -2699,6 +2730,10 @@ input[type="radio"]:checked + span::after {
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-height: 320px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-top: 8px;
 
     @media only screen and (max-width: 1199px) {
       grid-template-columns: repeat(3, minmax(0, 1fr));

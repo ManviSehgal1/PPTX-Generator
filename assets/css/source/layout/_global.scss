@@ -77,6 +77,21 @@ h6 {
   }
 }
 
+.form-control, .form-select {
+  font-size: 14px;
+  line-height: 20px;
+
+  @media only screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @media only screen and (min-width:1200px) and (max-width:1720px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
 .flex-column-with-gap {
   display: flex;
   flex-direction: column;
@@ -86,7 +101,7 @@ h6 {
 
 .all-btns {
   color: var.$white-color !important;
-  background: var.$cta-color;
+  background: var.$bg-color;
   border-radius: 8px;
   font-family: "Poppins";
   font-weight: 400;
@@ -153,6 +168,10 @@ h6 {
     &:focus {
       border-color: var.$secondary-text-color;
     }
+
+    @media only screen and (max-width: 1720px) {
+      padding: 10px 16px 10px 30px !important;
+    }
   }
 
   &:hover {
@@ -168,7 +187,8 @@ h6 {
   &.action-btn {
     border-color: var.$bg-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: var.$bg-hover-color;
       color: var.$white-color;
     }
@@ -536,7 +556,7 @@ h6 {
 
   @media only screen and (max-width:1720px) {
     font-size: 11px;
-    font-weight: 15px;
+    line-height: 14px;
   }
 
 
@@ -641,7 +661,7 @@ h6 {
 
 .modal {
   background: rgba(0, 0, 0, 0.7);
- 
+
 
   .modal-dialog {
     max-width: 768px;
@@ -722,6 +742,10 @@ h6 {
             color: var.$bg-color;
           }
         }
+
+        &.modal-header1 {
+          align-items: center;
+        }
       }
 
       .modal-body {
@@ -757,15 +781,9 @@ h6 {
             padding: 12px 16px;
             border-radius: 8px;
 
-            @media only screen and (max-width: 1199px) {
-              font-size: 14px;
-              line-height: 20px;
-              padding: 10px 14px;
 
-              @media only screen and (min-width:1200px) and (max-width:1720px) {
-                font-size: 15px;
-                line-height: 24px;
-              }
+            @media only screen and (max-width: 1199px) {
+              padding: 10px 14px;            
             }
 
             &::placeholder {
@@ -790,14 +808,7 @@ h6 {
             border-radius: 8px;
 
             @media only screen and (max-width: 1199px) {
-              font-size: 14px;
-              line-height: 20px;
               padding: 10px 14px;
-            }
-
-            @media only screen and (min-width:1200px) and (max-width:1720px) {
-              font-size: 15px;
-              line-height: 24px;
             }
 
             &:hover {
@@ -869,19 +880,7 @@ h6 {
             .form-control {
               padding: 0;
               border: none;
-              margin-top: 8px;
-              font-size: 14px;
-              line-height: 20px;
-
-              @media only screen and (max-width: 1199px) {
-                font-size: 12px;
-                line-height: 16px;
-              }
-
-              @media only screen and (min-width:1200px) and (max-width:1720px) {
-                font-size: 13px;
-                line-height: 18px;
-              }
+              margin-top: 8px;              
             }
           }
 
@@ -918,13 +917,17 @@ h6 {
         padding: 24px 32px;
         gap: 16px;
 
-          @media only screen and (max-width: 1199px) {
+        @media only screen and (max-width: 1199px) {
           padding: 16px 20px;
-          gap: 8px;
+         
         }
 
         @media only screen and (min-width:1200px) and (max-width:1720px) {
           padding: 20px 24px;
+        }
+
+         @media only screen and (max-width:1720px) {
+          gap: 8px;
         }
 
         .global-btn {
@@ -1028,38 +1031,38 @@ h6 {
         }
 
 
-         &.td-name {
-            a {
-              font-weight: 600;
-              color: var.$text-color;
+        &.td-name {
+          a {
+            font-weight: 600;
+            color: var.$text-color;
 
-              &:hover {
-                color: var.$bg-color;
-                text-decoration: underline;
-              }
+            &:hover {
+              color: var.$bg-color;
+              text-decoration: underline;
             }
           }
+        }
 
-          &.text-muted {
-            color: var.$email-color;
+        &.text-muted {
+          color: var.$email-color;
 
-            i {
-              color: var.$light-gray;
-            }
-
-            .text-opcity {
-              opacity: 0.5;
-            }
+          i {
+            color: var.$light-gray;
           }
 
-           &:last-child {
-            text-align: center;
-
-            i {
-              color: var.$light-gray;
-              cursor: pointer;
-            }
+          .text-opcity {
+            opacity: 0.5;
           }
+        }
+
+        &:last-child {
+          text-align: center;
+
+          i {
+            color: var.$light-gray;
+            cursor: pointer;
+          }
+        }
 
 
         .btn {
@@ -1102,7 +1105,9 @@ h6 {
               line-height: 16px;
             }
 
-            &:hover {
+            &:hover,
+            &:focus,
+            &:active {
               background: var.$bg-color;
               color: var.$white-color;
             }

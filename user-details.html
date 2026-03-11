@@ -14,8 +14,6 @@
     <!-- css-->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/all.min.css" />
-    <!-- custom overrides -->
-    <link rel="stylesheet" href="assets/css/custom.css" />
 
     <!-- Font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -56,16 +54,14 @@
                                     <i class="fa-solid fa-users me-2"></i>Users
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="usersDropdown">
-                                    <li><a class="dropdown-item" href="user-management.html">Users
-                                            management</a></li>
+                                    <li><a class="dropdown-item" href="user-management.html">Users management</a></li>
                                     <li><a class="dropdown-item" href="#">Access log</a></li>
                                 </ul>
                             </li>
 
                             <li class="nav-item navBtn1">
-                                <a href class="new-ppt">
-                                    <span class="setGap"><i class="fa-solid fa-plus"></i></span><span>Nuova
-                                        presentazione</span>
+                                <a href="" class="new-ppt">
+                                    <i class="fa-solid fa-plus me-2"></i>Nuova presentazione
                                 </a>
                             </li>
                         </ul>
@@ -103,12 +99,11 @@
                                 Doe’s Profile</h2>
                         </div>
                         <div class="header-actions">
-                            <button class="global-btn secondary-global-btn" data-bs-toggle="modal" data-bs-target="#deactivateUserModal">
+                            <button class="global-btn secondary-global-btn" data-bs-toggle="modal"data-bs-target="#deactivateUserModal">
                                 Deactivate User
                             </button>
                             <button class="global-btn primary-global-btn action-btn">
-                                <i class="fa-solid fa-plus me-2"></i>
-                                Edit User
+                                <i class="fa-solid fa-plus me-2"></i>Edit User
                             </button>
                         </div>
                     </div>
@@ -151,16 +146,7 @@
                                         <div class>
                                             <p class="mb-1 small">Email</p>
                                             <p class="mb-0 large user-email">john.doe@company.com</p>
-                                        </div>
-                                        <!-- <div class>
-                                            <p class="mb-1 small">Phone</p>
-                                            <p class="mb-0 large user-phone">+1
-                                                (555) 123-4567</p>
-                                        </div>
-                                        <div class>
-                                            <p class="mb-1 small">Department</p>
-                                            <p class="mb-0 large user-department">Engineering</p>
-                                        </div> -->
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +157,7 @@
                         <h5 class="card-title">System Access</h5>
                         <div class="system-access-card-body">
                             <div class="system-access-left-icon">
-                                <img src="assets/images/last-login.svg" alt="Last Login">                    
+                                <img src="assets/images/last-login.svg" alt="Last Login">
                             </div>
                             <div class="system-access-more-details">
                                 <p class="small mb-0">Last
@@ -183,7 +169,7 @@
                         <div class="system-access-card-body">
                             <div class="system-access-left-icon">
                                 <img src="assets/images/account-created.svg" alt="Account
-                                    Created">                            
+                                    Created">
                             </div>
                             <div class="system-access-more-details">
                                 <p class="small mb-0">Account
@@ -191,37 +177,26 @@
                                 <p class="mb-0 large access-created">Jan 15,
                                     2024</p>
                             </div>
-                        </div>
-                        <!-- <div class="system-access-card-body">
-                            <div class="system-access-left-icon">
-                                <img src="assets/images/authentication-method.svg" alt="Authentication
-                                    Method">                            
-                            </div>
-                            <div class="system-access-more-details">
-                                <p class="small mb-0">Authentication
-                                    Method</p>
-                                <p class="mb-0 large access-auth">SSO – Microsoft
-                                    Azure AD</p>
-                            </div>
-                        </div> -->
+                        </div>                        
                     </div>
                 </div>
 
                 <div class="user-entities-access-table similar-card-details">
                     <div class="filter-section">
-                            <div class="filter-header">
-                                <div class="inner-filter-header">
-                                    <h6 class="mb-0">Entities Access</h6>
-                                    <span class="badge">5 Entities</span>
+                        <div class="filter-header">
+                            <div class="inner-filter-header">
+                                <h6 class="mb-0">Entities Access</h6>
+                                <span class="badge">5 Entities</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <div class="search-wrapper">
+                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                    <input type="text" class="form-control ps-5 global-btn secondary-global-btn"
+                                        placeholder="Search entities...">
                                 </div>
-                                <div class="d-flex gap-2">
-                                    <div class="search-wrapper">
-                                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                                        <input type="text" class="form-control ps-5 global-btn secondary-global-btn" placeholder="Search entities...">
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>  
+                            </div>
+                        </div>
+                    </div>
                     <div class="table-responsive">
                         <table class="table entities-table">
                             <thead>
@@ -242,7 +217,14 @@
                                     <td><span class="badge full-access">Full Access</span></td>
                                     <td><span class="status-td status-active">Active</span></td>
                                     <td>10</td>
-                                    <td><i class="fa-solid fa-ellipsis-vertical ellipsis-action"></i></td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Enterprise Solutions">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -252,7 +234,14 @@
                                     <td><span class="badge manager">Manager</span></td>
                                     <td><span class="status-td status-active">Active</span></td>
                                     <td>18</td>
-                                    <td><i class="fa-solid fa-ellipsis-vertical ellipsis-action"></i></td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Corporate Headquarters">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -262,7 +251,14 @@
                                     <td><span class="badge viewer-only">Viewer Only</span></td>
                                     <td><span class="status-td status-restricted">Restricted</span></td>
                                     <td>22</td>
-                                    <td><i class="fa-solid fa-ellipsis-vertical ellipsis-action"></i></td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Regional Partners Network">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -272,18 +268,32 @@
                                     <td><span class="badge full-access">Full Access</span></td>
                                     <td><span class="status-td status-active">Active</span></td>
                                     <td>8</td>
-                                    <td><i class="fa-solid fa-ellipsis-vertical ellipsis-action"></i></td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Sales Operations">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <h6 class="mb-0">
-                                        Marketing Division</h6>
-                                         <p class="small">Corporate HQ</p>
+                                            Marketing Division</h6>
+                                        <p class="small">Corporate HQ</p>
                                     </td>
                                     <td><span class="badge manager">Manager</span></td>
                                     <td><span class="status-td status-active">Active</span></td>
                                     <td>12</td>
-                                    <td><i class="fa-solid fa-ellipsis-vertical ellipsis-action"></i></td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Marketing Division">Delete</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -323,7 +333,8 @@
     </footer>
 
     <!-- Deactivate User Modal -->
-    <div class="modal fade" id="deactivateUserModal" tabindex="-1" aria-labelledby="deactivateUserModalLabel" aria-hidden="true">
+    <div class="modal fade similar-modal" id="deactivateUserModal" tabindex="-1" aria-labelledby="deactivateUserModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0">
@@ -336,7 +347,8 @@
                 </div>
                 <div class="modal-body text-center">
                     <p class="mb-4">
-                        Are you sure you want to deactivate <strong>John Doe</strong>? This user will no longer be able to log in or access any entities. This action can be undone later.
+                        Are you sure you want to deactivate <strong>John Doe</strong>? This user will no longer be able
+                        to log in or access any entities. This action can be undone later.
                     </p>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="revokeSessionsCheckbox">
@@ -346,8 +358,39 @@
                     </div>
                 </div>
                 <div class="modal-footer border-0">
-                    <button type="button" class="global-btn secondary-global-btn" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="global-btn primary-global-btn">Deactivate</button>
+                    <button type="button" class="global-btn secondary-global-btn"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="global-btn primary-global-btn action-btn">Deactivate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Entity Confirmation Modal -->
+    <div class="modal fade similar-modal" id="deleteEntityModal" tabindex="-1" aria-labelledby="deleteEntityModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-heading-option">
+                        <div class="exclamation-icon">
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+                        <h5 class="modal-title" id="deleteEntityModalLabel">Delete Entity?</h5>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="mb-2">
+                        Are you sure you want to delete <strong id="deleteEntityName">Entity Name</strong>?
+                    </p>
+                    <p class="small text-muted">
+                        This action cannot be undone. The entity and all associated data will be permanently removed.
+                    </p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="global-btn secondary-global-btn"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="global-btn primary-global-btn action-btn" id="confirmDeleteBtn">Delete</button>
                 </div>
             </div>
         </div>
@@ -358,7 +401,7 @@
     <script src="assets/js/jquery.js"></script>
     <!-- custom page scripts (modal etc.) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             var addUserModal = document.getElementById('addUserModal');
             var addUserForm = document.getElementById('addUserForm');
             if (addUserModal) {
@@ -418,6 +461,30 @@
             // Initialize state on load (in case checks persist)
             userCheckboxes.forEach(cb => {
                 if (cb.checked) updateRowStyle(cb);
+            });
+
+            // Delete Entity Modal Handling
+            const deleteEntityLinks = document.querySelectorAll('.delete-entity');
+            const deleteEntityModal = new bootstrap.Modal(document.getElementById('deleteEntityModal'));
+            const deleteEntityNameSpan = document.getElementById('deleteEntityName');
+            let currentEntityToDelete = '';
+
+            deleteEntityLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    currentEntityToDelete = this.getAttribute('data-entity');
+                    deleteEntityNameSpan.textContent = currentEntityToDelete;
+                    deleteEntityModal.show();
+                });
+            });
+
+            // Confirm Delete Button
+            document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+                console.log('Entity deleted: ' + currentEntityToDelete);
+                // Here you can add code to actually delete the entity (API call, etc.)
+                deleteEntityModal.hide();
+                // Optionally remove the row from the table
+                // You can add a fadeOut effect before removing
             });
         });
     </script>
