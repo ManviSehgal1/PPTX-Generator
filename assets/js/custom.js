@@ -45,7 +45,7 @@
 
 
 let currentStep = 1;
-    const totalSteps = 3;
+    const totalSteps = 4;
 
 
     const prevBtn = document.getElementById("prevBtn");
@@ -412,3 +412,11 @@ let currentStep = 1;
         });
       }
     }
+
+    // Initialize Bootstrap Tooltips
+    document.addEventListener("DOMContentLoaded", function() {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.forEach(function(tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    });

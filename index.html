@@ -94,6 +94,11 @@
             <hr class="liner" />
             <div class="step">
               <div class="circle">3</div>
+              <p class="mb-0">Selezione del modello</p>
+            </div>
+            <hr class="liner" />
+            <div class="step">
+              <div class="circle">4</div>
               <p class="mb-0">Download</p>
             </div>
           </div>
@@ -416,8 +421,208 @@
             </div>
             <!-- Step 2 end -->
 
-            <!-- Step 4 start -->
+            <!-- Step 3 start -->
+
             <div class="process-content d-none" id="step-3">
+              <div class="process-title-section">
+                <h3 class="main-title">Select Template</h3>
+                <p class="mb-0">Choose a template from those available for this project. The selected template will
+                  determine the structure and style of the generated PowerPoint presentation.</p>
+              </div>
+              <div class="select-template-option mt-0">
+                <div class="template-container">
+
+                  <div class="template-card all-similar-cards p-0 active" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx1.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Global Market Expansion Strategy and
+                      Regional Growth Analysis 2026</p>
+                  </div>
+
+                  <div class="template-card all-similar-cards p-0" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx2.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Quarterly Report</p>
+                  </div>
+
+                  <div class="template-card all-similar-cards p-0" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx3.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Financial Overview</p>
+                  </div>
+
+                  <div class="template-card all-similar-cards p-0" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx4.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Market Trends</p>
+                  </div>
+
+                  <div class="template-card all-similar-cards p-0" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx1.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Global Market Expansion Strategy and
+                      Regional Growth Analysis 2026</p>
+                  </div>
+
+                  <div class="template-card all-similar-cards p-0" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx2.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Quarterly Report</p>
+                  </div>
+
+                  <div class="template-card all-similar-cards p-0" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx3.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Financial Overview</p>
+                  </div>
+
+                  <div class="template-card all-similar-cards p-0" onclick="selectTemplate(this)">
+                    <div class="template-img">
+                      <img src="assets/images/pptx4.png" />
+                      <div class="checkmark"><i class="fa-regular fa-check"></i></div>
+                    </div>
+                    <p class="template-name large text-ellipsis">Market Trends</p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="process-title-section">
+                <h3 class="main-title">Manage Template Sections</h3>
+                <p class="mb-0">Customize the presentation by selecting which sections of the chosen template to include
+                  in the generated output.</p>
+              </div>
+
+              <div class="toggle-items">
+                <div class="table-responsive section-table">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th style="width:60%; background: transparent;">Sections</th>
+                        <th style="width:28%; background: transparent;">Source</th>
+                        <th style="width:12%; background: transparent;">Include</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Introduction</td>
+                        <td>
+                          -
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Results Overview</td>
+                        <td>
+                          <div class="badge yellow-bg">Benchmark</div>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Historical Breakdown</td>
+                        <td>
+                          <div class="badge light-green-bg">Historical Breakdown</div>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="disabled-td">Internal Comparison<span data-bs-toggle="tooltip"
+                            data-bs-placement="top" data-bs-title="Data missing for this section"><i
+                              class="fa-solid fa-circle-info ms-2"></i></span></td>
+                              <td>
+                          <div class="badge blue-bg">Breakdown</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>All Questions by Category</td>
+                        <td>
+                          <div class="badge yellow-bg">Benchmark</div>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Questions with Non-Standard Response Scale</td>
+                        <td>
+                          <div class="badge yellow-bg">Benchmark</div>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>All question breakdown</td>
+                        <td><div class="badge blue-bg">Breakdown</div></td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Open Endend Questions</td>
+                        <td>
+                          <div class="badge gray-bg">Comments</div>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Theme Analysis</td>
+                        <td>
+                          <div class="badge light-purple-bg">Theme Breakdown</div>
+                        </td>
+                        <td>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" checked>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Step 3 end -->
+
+            <!-- Step 4 start -->
+            <div class="process-content d-none" id="step-4">
               <div class="download-svg-img text-center">
                 <img src="./assets/images/download-svg.svg" alt="download" />
               </div>

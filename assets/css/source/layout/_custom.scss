@@ -1,4 +1,4 @@
-@use "variables"as var;
+@use "variables" as var;
 
 .stepper-section {
   // padding: 140px 0 0;
@@ -1222,6 +1222,16 @@ input[type="radio"]:checked+span::after {
   &.gray-bg {
     color: var.$primary-color;
   }
+
+  &.light-green-bg {
+    background: var.$light-green-color;
+    color: #155724;
+  }
+
+  &.light-purple-bg {
+    background-color: #f3d4ff;
+    color: #bc15da;
+  }
 }
 
 // user management page css
@@ -1421,7 +1431,7 @@ input[type="radio"]:checked+span::after {
       align-items: center;
       gap: 10px;
 
-      h2 {
+      h6 {
         font-size: 16px;
         line-height: 24px;
         font-weight: 600;
@@ -2036,7 +2046,7 @@ input[type="radio"]:checked+span::after {
     }
 
     .all-similar-cards {
-      h2 {
+      h6 {
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 0.35px;
@@ -2596,8 +2606,8 @@ input[type="radio"]:checked+span::after {
     }
 
     @media only screen and (min-width:1200px) and (max-width:1720px) {
-          padding: 24px 24px 16px;
-        }
+      padding: 24px 24px 16px;
+    }
 
     .modal-heading-option {
       display: flex;
@@ -2803,5 +2813,46 @@ input[type="radio"]:checked+span::after {
     justify-content: center;
     font-size: 28px;
     display: none;
+  }
+}
+
+/* 16-03-2026 */
+.process-content {
+  .template-container {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+
+    .template-card {
+      flex: 0 0 265px;
+    }
+  }
+
+  .table-responsive {
+    max-height: 100%;
+
+    table tr {
+
+      th:last-child,
+      td:last-child {
+        text-align: start;
+      }
+    }
+
+    &.section-table {
+      .disabled-td {
+        color: var.$light-gray !important;
+      }
+    }
+  }
+}
+
+.btns-option {
+
+  .prev-label,
+  .next-label {
+    font-size: 14px;
   }
 }
