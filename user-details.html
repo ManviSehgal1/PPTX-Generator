@@ -21,6 +21,9 @@
     <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  
 </head>
 
 <body>
@@ -104,6 +107,9 @@
                             </button>
                             <button class="global-btn primary-global-btn action-btn">
                                 <i class="fa-solid fa-plus me-2"></i>Edit User
+                            </button>
+                            <button class="global-btn primary-global-btn action-btn" data-bs-toggle="modal" data-bs-target="#addPermissionsModal">
+                                <i class="fa-solid fa-plus me-2"></i>Add Permissions
                             </button>
                         </div>
                     </div>
@@ -198,109 +204,85 @@
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table entities-table">
+                        <table class="table entities-table dtl-entities-table">
                             <thead>
                                 <tr>
-                                    <th>Entity Name</th>
-                                    <th>Access Level</th>
-                                    <th>Status</th>
+                                    <th>Customer</th>
                                     <th>Projects</th>
+                                    <th class="min-w130">Total Projects Allowed</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <h6 class="mb-0">Enterprise Solutions</h6>
-                                        <p class="small">All Customers</p>
+                                        <h6 class="mb-1">Enterprise Solutions</h6>
+                                        <span class="badge badge-active">Active</span>
                                     </td>
-                                    <td><span class="badge full-access">Full Access</span></td>
-                                    <td><span class="status-td status-active">Active</span></td>
-                                    <td>10</td>
                                     <td>
-                                        <div class="dropdown">
-                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Enterprise Solutions">Delete</a></li>
-                                            </ul>
-                                        </div>
+                                        <!-- <span class="badge full-access">Full Access</span> -->
+                                        <h6 class="mb-0">All</h6>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h6 class="mb-0">Corporate Headquarters</h6>
-                                        <p class="small">Corporate HQ</p>
-                                    </td>
-                                    <td><span class="badge manager">Manager</span></td>
-                                    <td><span class="status-td status-active">Active</span></td>
-                                    <td>18</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Corporate Headquarters">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h6 class="mb-0">Regional Partners Network</h6>
-                                        <p class="small">Partner Node</p>
-                                    </td>
-                                    <td><span class="badge viewer-only">Viewer Only</span></td>
-                                    <td><span class="status-td status-restricted">Restricted</span></td>
-                                    <td>22</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Regional Partners Network">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h6 class="mb-0">Sales Operations</h6>
-                                        <p class="small">All Customers</p>
-                                    </td>
-                                    <td><span class="badge full-access">Full Access</span></td>
-                                    <td><span class="status-td status-active">Active</span></td>
-                                    <td>8</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Sales Operations">Delete</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <h6 class="mb-0">
-                                            Marketing Division</h6>
-                                        <p class="small">Corporate HQ</p>
-                                    </td>
-                                    <td><span class="badge manager">Manager</span></td>
-                                    <td><span class="status-td status-active">Active</span></td>
                                     <td>12</td>
                                     <td>
-                                        <div class="dropdown">
-                                            <i class="fa-solid fa-ellipsis-vertical ellipsis-action" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item delete-entity" href="#" data-entity="Marketing Division">Delete</a></li>
-                                            </ul>
-                                        </div>
+                                        <a href="#" class="delete-icon-link" data-entity="Delete">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <h6 class="mb-1">Corporate Headquarters​</h6>
+                                        <span class="badge badge-active">Active</span>
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-1">Engagement Survey 2026​</h6>
+                                        <span class="badge badge-active">Active</span>
+                                    </td>
+                                    <td>1</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link" data-entity="Delete">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <h6 class="mb-1">Regional Partner Network​</h6>
+                                        <span class="badge badge-inactive">Inactive</span>
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0">All</h6>
+                                    </td>
+                                    <td>5</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link" data-entity="Delete">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td>
+                                        <h6 class="mb-1">Sales Operation​</h6>
+                                        <span class="badge badge-active">Active</span>
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-1">Smartwork Survey 2025​</h6>
+                                        <span class="badge badge-inactive">Inactive</span>
+                                    </td>
+                                    <td>1</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link" data-entity="Delete">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="grant-permissions">
+                    <!-- <div class="grant-permissions">
                         <a href="#">GRANT MORE PERMISSIONS +</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -316,7 +298,7 @@
                                 class="main-logo1" />
                         </a>
 
-                        <span>© 2025 WTW. Tutti i diritti riservati.</span>
+                        <span> 2025 WTW. Tutti i diritti riservati.</span>
                     </p>
                 </div>
 
@@ -396,6 +378,56 @@
         </div>
     </div>
 
+    <!-- Add Permissions Modal -->
+    <div class="modal similar-modal fade" id="addPermissionsModal" tabindex="-1" role="dialog" aria-labelledby="addPermissionsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header modal-header1">
+                    <div class="modal-heading-option">
+                        <h5 class="modal-title mb-0" id="addPermissionsModalLabel">Add New Permissions</h5>
+                    </div>
+                    <i class="fa-solid fa-x close-btn" role="button" data-bs-dismiss="modal" aria-label="Close"></i>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <!-- <div class="col-12">
+                                <label for="customerName" class="form-label">Customer Name</label>
+                                <input type="text" class="form-control" id="customerName"
+                                    placeholder="e.g. Acme Corp Industries">
+                            </div> -->
+                            <div class="col-12">
+                                <label for="CST_DDL" class="form-label">Select a Customer (DDL)​</label>
+                                <select class="form-select" id="CST_DDL">
+                                    <option></option>
+                                    <option value="1">Enterprise Solutions</option>
+                                    <option value="2">Corporate Headquarters​</option>
+                                    <option value="3">Regional Partner Network​</option>
+                                    <option value="4">Sales Operation</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="select2-multiple-dv">
+                                    <label for="PROJECT_DDL" class="form-label">Select Projects​</label>
+                                    <select class="form-select" id="PROJECT_DDL">
+                                        <option value="1">Select All</option>
+                                        <option value="2">Engagement Survey 2026</option>
+                                        <option value="3">Smartwork Survey 2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="global-btn secondary-global-btn"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="global-btn primary-global-btn action-btn">Add Permissions</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- script -->
 
     <script src="assets/js/jquery.js"></script>
@@ -415,9 +447,85 @@
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/custom1.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Select2 dropdowns
+            $('#CST_DDL').select2({
+                placeholder: 'Select a customer',
+                allowClear: true,
+                width: '100%',
+                minimumResultsForSearch: -1 // Disable search
+            });
+            
+            // Initially hide projects dropdown
+            $('.select2-multiple-dv').hide();
+            
+            $('#PROJECT_DDL').select2({
+                placeholder: 'Select projects',
+                allowClear: true,
+                width: '100%',
+                multiple: true
+            });
+            
+            // Handle customer selection change
+            $('#CST_DDL').on('change', function() {
+                var selectedCustomer = $(this).val();
+                if (selectedCustomer) {
+                    // Show projects dropdown
+                    $('.select2-multiple-dv').show();
+                    
+                    // Update projects dropdown options based on selected customer
+                    var projectOptions = getProjectOptions(selectedCustomer);
+                    $('#PROJECT_DDL').html(projectOptions).trigger('change');
+                } else {
+                    // Hide projects dropdown
+                    $('.select2-multiple-dv').hide();
+                    $('#PROJECT_DDL').val([]).trigger('change');
+                }
+            });
+            
+            // Function to get project options based on customer
+            function getProjectOptions(customerId) {
+                var options = '<option value="all">Select All</option>';
+                
+                if (customerId === '1') { // Enterprise Solutions
+                    options += '<option value="2">Engagement Survey 2026</option>';
+                    options += '<option value="3">Smartwork Survey 2025</option>';
+                    options += '<option value="4">Q1 Performance Review</option>';
+                } else if (customerId === '2') { // Corporate Headquarters
+                    options += '<option value="2">Engagement Survey 2026</option>';
+                    options += '<option value="5">Annual Report 2026</option>';
+                } else if (customerId === '3') { // Regional Partner Network
+                    options += '<option value="3">Smartwork Survey 2025</option>';
+                    options += '<option value="6">Regional Analysis</option>';
+                } else if (customerId === '4') { // Sales Operation
+                    options += '<option value="3">Smartwork Survey 2025</option>';
+                    options += '<option value="7">Sales Performance Metrics</option>';
+                }
+                
+                return options;
+            }
+            
+            // Handle "Select All" functionality
+            $('#PROJECT_DDL').on('change', function() {
+                var selectedOptions = $(this).val();
+                var allOption = 'all';
+                
+                if (selectedOptions && selectedOptions.includes(allOption)) {
+                    // If "Select All" is selected, select all other options
+                    var allOtherOptions = [];
+                    $(this).find('option').each(function() {
+                        var val = $(this).val();
+                        if (val && val !== allOption) {
+                            allOtherOptions.push(val);
+                        }
+                    });
+                    $(this).val(allOtherOptions).trigger('change');
+                }
+            });
+
             const checkAll = document.getElementById('checkAll');
             const userCheckboxes = document.querySelectorAll('.user-table tbody .form-check-input');
 
