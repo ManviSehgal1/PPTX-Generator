@@ -11661,7 +11661,7 @@ h6 {
   text-transform: uppercase;
   vertical-align: middle;
   position: sticky;
-  top: -2px;
+  top: 0px;
   z-index: 1;
 }
 @media only screen and (max-width: 1720px) {
@@ -13473,6 +13473,8 @@ input[type=radio]:checked + span::after {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 24px;
 }
 .user-details-info .profile-main-details .system-access-card .card-title {
   font-size: 18px;
@@ -13531,6 +13533,9 @@ input[type=radio]:checked + span::after {
   font-weight: 600;
   margin-bottom: 16px;
 }
+.user-details-info .user-entities-access-table .table-responsive {
+  max-height: calc(100dvh - 420px);
+}
 .user-details-info .user-entities-access-table .table-responsive .entities-table {
   margin-bottom: 0;
 }
@@ -13548,7 +13553,7 @@ input[type=radio]:checked + span::after {
   }
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table tr td {
-  padding: 16px;
+  padding: 8px 16px;
   border-top: 1px solid #e2e8f0;
   font-size: 14px;
   line-height: 20px;
@@ -13566,7 +13571,7 @@ input[type=radio]:checked + span::after {
   .user-details-info .user-entities-access-table .table-responsive .entities-table tr td {
     font-size: 12px;
     line-height: 16px;
-    padding: 12px;
+    padding: 8px 12px;
   }
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table tr td:last-child {
@@ -13589,6 +13594,9 @@ input[type=radio]:checked + span::after {
     line-height: 20px;
   }
 }
+.user-details-info .user-entities-access-table .table-responsive .entities-table tr td .text-black {
+  color: #0F172A !important;
+}
 .user-details-info .user-entities-access-table .table-responsive .entities-table tr td .badge {
   font-size: 12px;
   line-height: 16px;
@@ -13596,6 +13604,7 @@ input[type=radio]:checked + span::after {
   border-radius: 20px;
   padding: 2px 10px;
   text-transform: none;
+  margin-top: 4px;
 }
 @media only screen and (max-width: 1199px) {
   .user-details-info .user-entities-access-table .table-responsive .entities-table tr td .badge {
@@ -14708,6 +14717,53 @@ body .select2-multiple-dv .select2-container--default:after {
   align-items: center;
   justify-content: center;
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.user-details-section {
+  padding-bottom: 80px;
+}
+
+.tbl-status-row {
+  display: flex;
+}
+.tbl-status-row .txt {
+  flex: 1;
+  word-wrap: break-word;
+  display: inline-block;
+  white-space: normal;
+  max-width: 270px;
+}
+.tbl-status-row .round {
+  margin-right: 6px;
+  width: 6px;
+  height: 6px;
+  background: rgb(207, 207, 207);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 7px;
+}
+.tbl-status-row .round.round-active {
+  background: #28a745;
+}
+.tbl-status-row .round.round-inactive {
+  background: rgba(71, 85, 105, 0.4);
+}
+@media (max-width: 1720px) {
+  .tbl-status-row .round {
+    top: 6px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .tbl-status-row .round {
+    top: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .min-mbl-w200 {
+    min-width: 200px !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

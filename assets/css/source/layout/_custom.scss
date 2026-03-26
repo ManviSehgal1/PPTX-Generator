@@ -1837,6 +1837,8 @@ input[type="radio"]:checked + span::after {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 24px;
 
       .card-title {
         font-size: 18px;
@@ -1899,6 +1901,8 @@ input[type="radio"]:checked + span::after {
     }
 
     .table-responsive {
+      max-height: calc(100dvh - 420px);
+
       .entities-table {
         margin-bottom: 0;
 
@@ -1922,7 +1926,7 @@ input[type="radio"]:checked + span::after {
           }
 
           td {
-            padding: 16px;
+            padding: 8px 16px;
             border-top: 1px solid #e2e8f0;
             font-size: 14px;
             line-height: 20px;
@@ -1938,7 +1942,7 @@ input[type="radio"]:checked + span::after {
             @media only screen and (max-width: 1199px) {
               font-size: 12px;
               line-height: 16px;
-              padding: 12px;
+              padding: 8px 12px;
             }
 
             // &:first-child {
@@ -1965,6 +1969,10 @@ input[type="radio"]:checked + span::after {
               }
             }
 
+            .text-black {
+              color: var.$text-color !important;
+            }
+
             .badge {
               font-size: 12px;
               line-height: 16px;
@@ -1972,6 +1980,7 @@ input[type="radio"]:checked + span::after {
               border-radius: 20px;
               padding: 2px 10px;
               text-transform: none;
+              margin-top: 4px;
 
               @media only screen and (max-width: 1199px) {
                 font-size: 11px;
@@ -3256,4 +3265,53 @@ body .select2-multiple-dv .select2-container--default:after {
   align-items: center;
   justify-content: center;
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.user-details-section {
+  padding-bottom: 80px;
+}
+
+.tbl-status-row {
+  display: flex;
+
+  .txt {
+    flex: 1;
+    word-wrap: break-word;
+    display: inline-block;
+    white-space: normal;
+    max-width: 270px;
+  }
+
+  .round {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    background: rgb(207, 207, 207);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+
+    &.round-active {
+      background: #28a745;
+    }
+
+    &.round-inactive {
+      background: rgba(71, 85, 105, 0.4);
+    }
+
+    @media (max-width: 1720px) {
+      top: 6px;
+    }
+
+    @media only screen and (max-width: 1199px) {
+      top: 5px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .min-mbl-w200 {
+    min-width: 200px !important;
+  }
 }

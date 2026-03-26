@@ -23,7 +23,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
     <!-- Select2 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  
+
 </head>
 
 <body>
@@ -88,7 +88,8 @@
                     <nav aria-label="breadcrumb">
                         <ul class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
-                                <a href="user-management.html" class>USERS</a></li>
+                                <a href="user-management.html" class>USERS</a>
+                            </li>
                             <li class="breadcrumb-item"><i class="fa-regular fa-chevron-right"></i></li>
                             <li class="breadcrumb-item breadcrumb-item1 breadcrumb-user-name" aria-current="page">John
                                 Doe</li>
@@ -102,13 +103,15 @@
                                 Doe’s Profile</h2>
                         </div>
                         <div class="header-actions">
-                            <button class="global-btn secondary-global-btn" data-bs-toggle="modal"data-bs-target="#deactivateUserModal">
+                            <button class="global-btn secondary-global-btn" data-bs-toggle="modal"
+                                data-bs-target="#deactivateUserModal">
                                 Deactivate User
                             </button>
                             <button class="global-btn primary-global-btn action-btn">
                                 <i class="fa-solid fa-plus me-2"></i>Edit User
                             </button>
-                            <button class="global-btn primary-global-btn action-btn" data-bs-toggle="modal" data-bs-target="#addPermissionsModal">
+                            <button class="global-btn primary-global-btn action-btn" data-bs-toggle="modal"
+                                data-bs-target="#addPermissionsModal">
                                 <i class="fa-solid fa-plus me-2"></i>Add Permissions
                             </button>
                         </div>
@@ -120,7 +123,7 @@
 
     <section class="user-management-section user-details-section">
         <div class="container">
-            <div class="user-details-info">
+            <div class="user-details-info mb-0">
                 <div class="profile-main-details">
                     <div class="user-profile-options similar-card-details">
                         <div class="user-profile-info text-center">
@@ -137,7 +140,47 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="user-additional-info">
+
+                        <div class="system-access-card">
+                            <div class="system-access-card-body">
+                                <div class="system-access-left-icon">
+                                    <img src="assets/images/geo-area.svg" alt="Geo Area">
+                                </div>
+                                <div class="system-access-more-details">
+                                    <p class="small mb-0">Geo
+                                        Area</p>
+                                    <p class="mb-0 large">Europe</p>
+                                </div>
+                            </div>
+
+                            <div class="system-access-card-body">
+                                <div class="system-access-left-icon">
+                                    <img src="assets/images/last-login.svg" alt="Last Login">
+                                </div>
+                                <div class="system-access-more-details">
+                                    <p class="small mb-0">Last
+                                        Login</p>
+                                    <p class="mb-0 large access-last-login">Feb 11,
+                                        2026 at 10:32 AM</p>
+                                </div>
+                            </div>
+                            <div class="system-access-card-body">
+                                <div class="system-access-left-icon">
+                                    <img src="assets/images/account-created.svg" alt="Account
+                                        Created">
+                                </div>
+                                <div class="system-access-more-details">
+                                    <p class="small mb-0">Account
+                                        Created</p>
+                                    <p class="mb-0 large access-created">Jan 15,
+                                        2024</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- <div class="user-additional-info">
                             <div class="basic-details-card">
                                 <div class="basic-details-card-body">
                                     <h5 class="card-title mb-3">Basic
@@ -156,35 +199,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="system-access-card similar-card-details">
-                        <h5 class="card-title">System Access</h5>
-                        <div class="system-access-card-body">
-                            <div class="system-access-left-icon">
-                                <img src="assets/images/last-login.svg" alt="Last Login">
-                            </div>
-                            <div class="system-access-more-details">
-                                <p class="small mb-0">Last
-                                    Login</p>
-                                <p class="mb-0 large access-last-login">Feb 11,
-                                    2026 at 10:32 AM</p>
-                            </div>
-                        </div>
-                        <div class="system-access-card-body">
-                            <div class="system-access-left-icon">
-                                <img src="assets/images/account-created.svg" alt="Account
-                                    Created">
-                            </div>
-                            <div class="system-access-more-details">
-                                <p class="small mb-0">Account
-                                    Created</p>
-                                <p class="mb-0 large access-created">Jan 15,
-                                    2024</p>
-                            </div>
-                        </div>                        
-                    </div>
+
                 </div>
 
                 <div class="user-entities-access-table similar-card-details">
@@ -204,11 +222,12 @@
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table entities-table dtl-entities-table">
+
+                        <table class="table entities-table dtl-entities-table ">
                             <thead>
                                 <tr>
-                                    <th>Customer</th>
-                                    <th>Projects</th>
+                                    <th class="min-mbl-w200">Customer</th>
+                                    <th class="min-mbl-w200">Projects</th>
                                     <th class="min-w130">Total Projects Allowed</th>
                                     <th>Actions</th>
                                 </tr>
@@ -216,63 +235,229 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <h6 class="mb-1">Enterprise Solutions</h6>
-                                        <span class="badge badge-active">Active</span>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Enterprise Solutions</b></span>
+                                        </div>
                                     </td>
                                     <td>
-                                        <!-- <span class="badge full-access">Full Access</span> -->
-                                        <h6 class="mb-0">All</h6>
-                                    </td>
-                                    <td>12</td>
-                                    <td>
-                                        <a href="#" class="delete-icon-link" data-entity="Delete">
-                                            <i class="fa-light fa-circle-xmark"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                 <tr>
-                                    <td>
-                                        <h6 class="mb-1">Corporate Headquarters​</h6>
-                                        <span class="badge badge-active">Active</span>
-                                    </td>
-                                    <td>
-                                        <h6 class="mb-1">Engagement Survey 2026​</h6>
-                                        <span class="badge badge-active">Active</span>
+                                        <div class="tbl-status-row">
+                                            <span class="round"></span>
+                                            <span class="txt">All</span>
+                                        </div>
                                     </td>
                                     <td>1</td>
                                     <td>
-                                        <a href="#" class="delete-icon-link" data-entity="Delete">
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
                                             <i class="fa-light fa-circle-xmark"></i>
                                         </a>
                                     </td>
                                 </tr>
-                                 <tr>
+
+                                <tr>
                                     <td>
-                                        <h6 class="mb-1">Regional Partner Network​</h6>
-                                        <span class="badge badge-inactive">Inactive</span>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Corporate Headquarters​</b></span>
+                                        </div>
                                     </td>
                                     <td>
-                                        <h6 class="mb-0">All</h6>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt">Engagement Survey 2026</span>
+                                        </div>
                                     </td>
                                     <td>5</td>
                                     <td>
-                                        <a href="#" class="delete-icon-link" data-entity="Delete">
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
                                             <i class="fa-light fa-circle-xmark"></i>
                                         </a>
                                     </td>
                                 </tr>
-                                 <tr>
+
+                                <tr>
                                     <td>
-                                        <h6 class="mb-1">Sales Operation​</h6>
-                                        <span class="badge badge-active">Active</span>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-inactive"></span>
+                                            <span class="txt"><b class="text-black">Regional Partner Network</b></span>
+                                        </div>
                                     </td>
                                     <td>
-                                        <h6 class="mb-1">Smartwork Survey 2025​</h6>
-                                        <span class="badge badge-inactive">Inactive</span>
+                                        <div class="tbl-status-row">
+                                            <span class="round"></span>
+                                            <span class="txt">All</span>
+                                        </div>
                                     </td>
                                     <td>1</td>
                                     <td>
-                                        <a href="#" class="delete-icon-link" data-entity="Delete">
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Sales Operation</b></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-inactive"></span>
+                                            <span class="txt">Smartwork Survey 2025</span>
+                                        </div>
+                                    </td>
+                                    <td>12</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Enterprise Solutions</b></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round"></span>
+                                            <span class="txt">All</span>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Corporate Headquarters​</b></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt">Engagement Survey 2026</span>
+                                        </div>
+                                    </td>
+                                    <td>5</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-inactive"></span>
+                                            <span class="txt"><b class="text-black">Regional Partner Network</b></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round"></span>
+                                            <span class="txt">All</span>
+                                        </div>
+                                    </td>
+                                    <td>1</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Sales Operation</b></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-inactive"></span>
+                                            <span class="txt">Smartwork Survey 2025</span>
+                                        </div>
+                                    </td>
+                                    <td>12</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Corporate Headquarters​</b></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt">Engagement Survey 2026</span>
+                                        </div>
+                                    </td>
+                                    <td>5</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
+                                            <i class="fa-light fa-circle-xmark"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-active"></span>
+                                            <span class="txt"><b class="text-black">Sales Operation</b></span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="tbl-status-row">
+                                            <span class="round round-inactive"></span>
+                                            <span class="txt">Smartwork Survey 2025</span>
+                                        </div>
+                                    </td>
+                                    <td>12</td>
+                                    <td>
+                                        <a href="#" class="delete-icon-link delete-tooltip" data-entity="Delete"
+                                            data-bs-toggle="tooltip" data-bs-html="true"
+                                            title="Click to remove this user's access to selected company or project(s)">
                                             <i class="fa-light fa-circle-xmark"></i>
                                         </a>
                                     </td>
@@ -315,8 +500,8 @@
     </footer>
 
     <!-- Deactivate User Modal -->
-    <div class="modal fade similar-modal" id="deactivateUserModal" tabindex="-1" aria-labelledby="deactivateUserModalLabel"
-        aria-hidden="true">
+    <div class="modal fade similar-modal" id="deactivateUserModal" tabindex="-1"
+        aria-labelledby="deactivateUserModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header border-0">
@@ -328,18 +513,18 @@
                     </div>
                 </div>
                 <div class="modal-body text-center">
-                    <p class="mb-4">
+                    <p class="mb-0">
                         Are you sure you want to deactivate <strong>John Doe</strong>? This user will no longer be able
                         to log in or access any entities. This action can be undone later.
                     </p>
-                    <div class="form-check">
+                    <!-- <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="revokeSessionsCheckbox">
                         <label class="form-check-label ms-2" for="revokeSessionsCheckbox">
                             Also revoke all active sessions
                         </label>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="modal-footer border-0">
+                <div class="modal-footer justify-content-center border-0">
                     <button type="button" class="global-btn secondary-global-btn"
                         data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="global-btn primary-global-btn action-btn">Deactivate</button>
@@ -372,15 +557,16 @@
                 <div class="modal-footer border-0">
                     <button type="button" class="global-btn secondary-global-btn"
                         data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="global-btn primary-global-btn action-btn" id="confirmDeleteBtn">Delete</button>
+                    <button type="button" class="global-btn primary-global-btn action-btn"
+                        id="confirmDeleteBtn">Delete</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Add Permissions Modal -->
-    <div class="modal similar-modal fade" id="addPermissionsModal" tabindex="-1" role="dialog" aria-labelledby="addPermissionsModalLabel"
-        aria-hidden="true">
+    <div class="modal similar-modal fade" id="addPermissionsModal" tabindex="-1" role="dialog"
+        aria-labelledby="addPermissionsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header modal-header1">
@@ -411,13 +597,13 @@
                                 <div class="select2-multiple-dv">
                                     <label for="PROJECT_DDL" class="form-label">Select Projects​</label>
                                     <select class="form-select" id="PROJECT_DDL">
-                                        <option value="1">Select All</option>
+                                        <option value="1">All</option>
                                         <option value="2">Engagement Survey 2026</option>
                                         <option value="3">Smartwork Survey 2025</option>
                                     </select>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -456,26 +642,28 @@
                 placeholder: 'Select a customer',
                 allowClear: true,
                 width: '100%',
-                minimumResultsForSearch: -1 // Disable search
+                dropdownParent: $('#addPermissionsModal'),
+                minimumResultsForSearch: 0  // Forces proper search input initialization
             });
-            
+
             // Initially hide projects dropdown
             $('.select2-multiple-dv').hide();
-            
+
             $('#PROJECT_DDL').select2({
                 placeholder: 'Select projects',
                 allowClear: true,
                 width: '100%',
+                dropdownParent: $('#addPermissionsModal'),
                 multiple: true
             });
-            
+
             // Handle customer selection change
-            $('#CST_DDL').on('change', function() {
+            $('#CST_DDL').on('change', function () {
                 var selectedCustomer = $(this).val();
                 if (selectedCustomer) {
                     // Show projects dropdown
                     $('.select2-multiple-dv').show();
-                    
+
                     // Update projects dropdown options based on selected customer
                     var projectOptions = getProjectOptions(selectedCustomer);
                     $('#PROJECT_DDL').html(projectOptions).trigger('change');
@@ -485,11 +673,11 @@
                     $('#PROJECT_DDL').val([]).trigger('change');
                 }
             });
-            
+
             // Function to get project options based on customer
             function getProjectOptions(customerId) {
-                var options = '<option value="all">Select All</option>';
-                
+                var options = '<option value="1">All</option>';
+
                 if (customerId === '1') { // Enterprise Solutions
                     options += '<option value="2">Engagement Survey 2026</option>';
                     options += '<option value="3">Smartwork Survey 2025</option>';
@@ -504,31 +692,41 @@
                     options += '<option value="3">Smartwork Survey 2025</option>';
                     options += '<option value="7">Sales Performance Metrics</option>';
                 }
-                
+
                 return options;
             }
-            
+
             // Handle "Select All" functionality
-            $('#PROJECT_DDL').on('change', function() {
+            var isUpdating = false; // Flag to prevent infinite loops
+            $('#PROJECT_DDL').on('change', function () {
+                if (isUpdating) return; // Exit if we're already updating
+
                 var selectedOptions = $(this).val();
-                var allOption = 'all';
-                
+                var allOption = '1'; // Change to match the HTML value
+
                 if (selectedOptions && selectedOptions.includes(allOption)) {
-                    // If "Select All" is selected, select all other options
-                    var allOtherOptions = [];
-                    $(this).find('option').each(function() {
-                        var val = $(this).val();
-                        if (val && val !== allOption) {
-                            allOtherOptions.push(val);
+                    // If "Select All" is selected, clear all other options and keep only "All"
+                    isUpdating = true;
+                    $(this).val([allOption]).trigger('change');
+                    isUpdating = false;
+                } else {
+                    // If other options are selected, make sure "All" is not selected
+                    if (selectedOptions && selectedOptions.length > 0) {
+                        // Ensure "All" is not in the selection when other projects are selected
+                        var filteredOptions = selectedOptions.filter(function (option) {
+                            return option !== allOption;
+                        });
+                        if (filteredOptions.length !== selectedOptions.length) {
+                            isUpdating = true;
+                            $(this).val(filteredOptions).trigger('change');
+                            isUpdating = false;
                         }
-                    });
-                    $(this).val(allOtherOptions).trigger('change');
+                    }
                 }
             });
 
             const checkAll = document.getElementById('checkAll');
             const userCheckboxes = document.querySelectorAll('.user-table tbody .form-check-input');
-
 
             function updateRowStyle(checkbox) {
                 const row = checkbox.closest('tr');

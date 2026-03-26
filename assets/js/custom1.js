@@ -67,22 +67,25 @@
               return;
             }
             // Close menu for actual navigation
-            hamburger.classList.remove('active');
-            headerRight.classList.remove('show');
-            body.classList.remove('navbar-open');
-          });
-        });
+    });
+  });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function (e) {
-          var isClickInsideMenu = headerRight.contains(e.target);
-          var isClickOnHamburger = hamburger.contains(e.target);
-          var isMenuOpen = headerRight.classList.contains('show');
+  // Close menu when clicking outside
+  document.addEventListener('click', function (e) {
+    var isClickInsideMenu = headerRight.contains(e.target);
+    var isClickOnHamburger = hamburger.contains(e.target);
+    var isMenuOpen = headerRight.classList.contains('show');
 
-          if (isMenuOpen && !isClickInsideMenu && !isClickOnHamburger) {
-            hamburger.classList.remove('active');
-            headerRight.classList.remove('show');
-            body.classList.remove('navbar-open');
-          }
-        });
-      });
+    if (isMenuOpen && !isClickInsideMenu && !isClickOnHamburger) {
+      hamburger.classList.remove('active');
+      headerRight.classList.remove('show');
+      body.classList.remove('navbar-open');
+    }
+  });
+
+  // Initialize Bootstrap tooltips
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  });
+});
