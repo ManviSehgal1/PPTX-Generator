@@ -13354,6 +13354,15 @@ input[type=radio]:checked + span::after {
     padding: 20px;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .user-details-info .similar-card-details .filter-section .filter-header {
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+  .user-details-info .similar-card-details .filter-section .filter-header .search-wrapper input {
+    width: 200px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .user-details-info .similar-card-details {
     padding: 16px;

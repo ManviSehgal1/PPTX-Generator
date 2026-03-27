@@ -1710,6 +1710,17 @@ input[type="radio"]:checked+span::after {
       padding: 20px;
     }
 
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .filter-section .filter-header {
+        gap: 16px;
+        flex-wrap: nowrap;
+
+        .search-wrapper input {
+          width: 200px;
+        }
+      }
+    }
+
     @media only screen and (max-width: 767px) {
       padding: 16px;
 
