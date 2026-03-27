@@ -21,7 +21,8 @@
     padding: 105px 0 28px;
   }
 
-  &.user-details-main-heading {
+  &.user-details-main-heading,
+  &.stepper-new-section {
     padding: 90px 0 16px;
 
     @media only screen and (max-width: 1199px) {
@@ -35,6 +36,12 @@
 
   &.customer-stepper-section {
     padding: 140px 0 0;
+  }
+}
+
+.stepper-new-section {
+  .user-management-header {
+    align-items: center;
   }
 }
 
@@ -1245,7 +1252,7 @@ input[type="radio"]:checked+span::after {
 // user management page css
 
 .user-management-section {
-  padding-bottom: 100px;
+  padding-bottom: 72px;
 }
 
 .user-management-header {
@@ -1529,8 +1536,6 @@ input[type="radio"]:checked+span::after {
 
 .card {
   .table-responsive {
-    height: 460px;
-
     @media only screen and (max-width: 767px) {
       height: 400px;
     }
@@ -1607,7 +1612,7 @@ input[type="radio"]:checked+span::after {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #e2e8f0;
-  padding: 22px 24px 24px;
+  padding: 10px 16px 10px;
   gap: 16px;
 
   @media only screen and (max-width: 575px) {
@@ -3376,6 +3381,13 @@ body .select2-multiple-dv .select2-container--default:after {
       top: 5px;
     }
   }
+}
+
+h2.h2-title {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #0F172A;
 }
 
 @media (max-width: 1199px) {

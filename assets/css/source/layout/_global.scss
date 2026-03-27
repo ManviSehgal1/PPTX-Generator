@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "variables"as var;
+@use "variables" as var;
 
 
 * {
@@ -77,7 +77,8 @@ h6 {
   }
 }
 
-.form-control, .form-select {
+.form-control,
+.form-select {
   font-size: 14px;
   line-height: 20px;
 
@@ -783,7 +784,7 @@ h6 {
 
 
             @media only screen and (max-width: 1199px) {
-              padding: 10px 14px;            
+              padding: 10px 14px;
             }
 
             &::placeholder {
@@ -880,7 +881,7 @@ h6 {
             .form-control {
               padding: 0;
               border: none;
-              margin-top: 8px;              
+              margin-top: 8px;
             }
           }
 
@@ -919,14 +920,14 @@ h6 {
 
         @media only screen and (max-width: 1199px) {
           padding: 16px 20px;
-         
+
         }
 
         @media only screen and (min-width:1200px) and (max-width:1720px) {
           padding: 20px 24px;
         }
 
-         @media only screen and (max-width:1720px) {
+        @media only screen and (max-width:1720px) {
           gap: 8px;
         }
 
@@ -972,7 +973,7 @@ h6 {
     tr {
 
       th {
-        padding: 12px 24px;
+        padding: 10px 16px;
         font-size: 12px;
         line-height: 16px;
         font-weight: 600;
@@ -985,18 +986,15 @@ h6 {
         position: sticky;
         top: 0px;
         z-index: 1;
+        height: 34px;
 
         @media only screen and (max-width: 1720px) {
           font-size: 11px;
           line-height: 14px;
         }
 
-        @media only screen and (min-width:1200px) and (max-width:1720px) {
-          padding: 12px 20px;
-        }
-
         @media only screen and (max-width:1199px) {
-          padding: 12px 16px;
+          padding: 6px 16px;
         }
 
         &:last-child {
@@ -1005,7 +1003,7 @@ h6 {
       }
 
       td {
-        padding: 22px 24px;
+        padding: 6px 16px;
         font-size: 14px;
         line-height: 20px;
         color: var.$primary-color;
@@ -1017,19 +1015,10 @@ h6 {
           line-height: 18px;
         }
 
-        @media only screen and (min-width:1200px) and (max-width:1720px) {
-          padding: 20px;
-        }
-
         @media only screen and (max-width:1399px) {
           font-size: 12px;
           line-height: 16px;
         }
-
-        @media only screen and (max-width:1199px) {
-          padding: 16px;
-        }
-
 
         &.td-name {
           a {
