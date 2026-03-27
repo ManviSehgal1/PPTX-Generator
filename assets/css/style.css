@@ -11814,7 +11814,17 @@ h6 {
   }
 }
 .stepper-section.user-details-main-heading {
-  padding: 140px 0 16px;
+  padding: 90px 0 16px;
+}
+@media only screen and (max-width: 1199px) {
+  .stepper-section.user-details-main-heading {
+    padding: 74px 0 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .stepper-section.user-details-main-heading {
+    padding: 74px 0 16px;
+  }
 }
 .stepper-section.customer-stepper-section {
   padding: 140px 0 0;
@@ -12698,7 +12708,7 @@ footer .footer-content {
 @media only screen and (max-width: 767px) {
   footer .footer-content {
     flex-direction: column;
-    padding: 12px 0;
+    padding: 5px 0;
   }
 }
 footer .footer-content .company-footer-logo a {
@@ -12995,6 +13005,11 @@ input[type=radio]:checked + span::after {
 @media only screen and (max-width: 575px) {
   .user-management-header.user-details-header .header-actions {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .user-management-header.user-details-header .header-actions > .global-btn:last-child {
+    grid-column: 1/-1;
   }
 }
 @media only screen and (min-width: 576px) {
@@ -13343,6 +13358,13 @@ input[type=radio]:checked + span::after {
   .user-details-info .similar-card-details {
     padding: 16px;
   }
+  .user-details-info .similar-card-details .filter-search-wrapper {
+    width: 100%;
+  }
+  .user-details-info .similar-card-details .filter-search-wrapper .search-wrapper,
+  .user-details-info .similar-card-details .filter-search-wrapper input {
+    width: 100%;
+  }
 }
 .user-details-info .profile-main-details {
   width: 31.2%;
@@ -13366,6 +13388,11 @@ input[type=radio]:checked + span::after {
   align-items: center;
   text-align: center;
   padding-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .user-details-info .profile-main-details .user-profile-options .user-profile-info {
+    padding-bottom: 16px;
+  }
 }
 .user-details-info .profile-main-details .user-profile-options .user-profile-info .profile-image {
   width: 96px;
@@ -13514,6 +13541,17 @@ input[type=radio]:checked + span::after {
     height: 32px;
   }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .user-details-info .profile-main-details .system-access-card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .user-details-info .profile-main-details .system-access-card {
+    padding-top: 16px;
+  }
+}
 .user-details-info .user-entities-access-table {
   width: 68.8%;
   height: fit-content;
@@ -13524,7 +13562,7 @@ input[type=radio]:checked + span::after {
   }
 }
 .user-details-info .user-entities-access-table .filter-section {
-  padding: 0 0 24px;
+  padding: 0 0 16px;
 }
 .user-details-info .user-entities-access-table .card-title {
   font-size: 18px;
@@ -13534,13 +13572,13 @@ input[type=radio]:checked + span::after {
   margin-bottom: 16px;
 }
 .user-details-info .user-entities-access-table .table-responsive {
-  max-height: calc(100dvh - 420px);
+  max-height: calc(100dvh - 370px);
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table {
   margin-bottom: 0;
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table tr th {
-  padding: 12px 16px;
+  padding: 10px 16px;
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table tr th:last-child {
   text-align: center;
@@ -13549,11 +13587,17 @@ input[type=radio]:checked + span::after {
   .user-details-info .user-entities-access-table .table-responsive .entities-table tr th {
     font-size: 11px;
     line-height: 14px;
-    padding: 12px;
+    padding: 10px 12px;
+  }
+}
+@media (max-width: 1199px) {
+  .user-details-info .user-entities-access-table .table-responsive .entities-table tr th {
+    padding: 6px 12px;
   }
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table tr td {
-  padding: 8px 16px;
+  padding: 6px 16px;
+  height: 34px;
   border-top: 1px solid #e2e8f0;
   font-size: 14px;
   line-height: 20px;
@@ -13565,13 +13609,14 @@ input[type=radio]:checked + span::after {
   .user-details-info .user-entities-access-table .table-responsive .entities-table tr td {
     font-size: 13px;
     line-height: 18px;
+    padding: 6px 12px;
   }
 }
 @media only screen and (max-width: 1199px) {
   .user-details-info .user-entities-access-table .table-responsive .entities-table tr td {
     font-size: 12px;
     line-height: 16px;
-    padding: 8px 12px;
+    padding: 6px 12px;
   }
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table tr td:last-child {
@@ -13624,6 +13669,21 @@ input[type=radio]:checked + span::after {
 }
 .user-details-info .user-entities-access-table .table-responsive .entities-table tbody {
   border-top: none;
+}
+@media only screen and (max-width: 1720px) {
+  .user-details-info .user-entities-access-table .table-responsive {
+    max-height: calc(100dvh - 352px);
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .user-details-info .user-entities-access-table .table-responsive {
+    max-height: calc(100dvh - 334px);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .user-details-info .user-entities-access-table .table-responsive {
+    max-height: 381px;
+  }
 }
 .user-details-info .user-entities-access-table .grant-permissions {
   margin-top: 24px;
@@ -14377,12 +14437,23 @@ input[type=radio]:checked + span::after {
   font-size: 14px;
 }
 
+.table-responsive table tr td:last-child .delete-icon-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .table-responsive table tr td:last-child .delete-icon-link i {
-  font-size: 21px;
+  font-size: 20px;
   color: var(--bs-red);
 }
 .table-responsive table tr th.min-w130 {
   min-width: 130px;
+}
+@media (max-width: 1199px) {
+  .table-responsive table tr th.min-w130 {
+    width: 130px;
+  }
 }
 
 .modal-open .select2-container {
@@ -14720,7 +14791,7 @@ body .select2-multiple-dv .select2-container--default:after {
 }
 
 .user-details-section {
-  padding-bottom: 80px;
+  padding-bottom: 72px;
 }
 
 .tbl-status-row {
@@ -14760,6 +14831,13 @@ body .select2-multiple-dv .select2-container--default:after {
   }
 }
 
+@media (max-width: 1199px) {
+  .tooltip-inner {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+  }
+}
 @media (max-width: 767px) {
   .min-mbl-w200 {
     min-width: 200px !important;
