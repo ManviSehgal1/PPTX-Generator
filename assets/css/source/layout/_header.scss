@@ -1,4 +1,4 @@
-@use "variables"as var;
+@use "variables" as var;
 
 
 header {
@@ -102,7 +102,7 @@ header {
         position: fixed;
         top: 74px;
         right: -100%;
-        width: 400px;
+        width: 300px;
         background: #ffffff;
         border-bottom: 1px solid #E5E7EB;
         box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.07);
@@ -161,6 +161,10 @@ header {
             &:hover {
               background: transparent;
               color: var.$cta-color;
+            }
+
+            @media (max-width: 1199px) {
+              width: 100%;
             }
           }
 
@@ -279,17 +283,19 @@ header {
               color: #334155;
 
 
-            @media only screen and (max-width: 1720px) {
-              font-size: 13px;
-              line-height: 18px;
-            }
+              @media only screen and (max-width: 1720px) {
+                font-size: 13px;
+                line-height: 18px;
+              }
 
-            @media only screen and (max-width: 1199px) {
-              font-size: 12px;
-              line-height: 16px;
-            }
+              @media only screen and (max-width: 1199px) {
+                font-size: 12px;
+                line-height: 16px;
+              }
 
-              &:active, &:hover, &:focus {
+              &:active,
+              &:hover,
+              &:focus {
                 color: var.$white-color;
                 background: var.$bg-color;
               }
@@ -327,8 +333,8 @@ header {
       font-weight: 500;
 
       @media only screen and (max-width: 1199px) {
-               line-height: 16px;
-        }
+        line-height: 16px;
+      }
 
       @media screen and (min-width: 1200px) and (max-width: 1720px) {
         font-size: 13px;
@@ -359,5 +365,12 @@ header {
 body.navbar-open {
   @media only screen and (max-width: 1199px) {
     overflow: hidden;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar-nav .dropdown-menu {
+    margin-top: 8px;
+    border-radius: 8px;
   }
 }

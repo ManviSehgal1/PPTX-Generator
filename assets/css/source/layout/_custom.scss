@@ -30,7 +30,7 @@
     }
 
     @media only screen and (max-width: 767px) {
-      padding: 74px 0 16px;
+      padding: 92px 0 16px;
     }
   }
 
@@ -52,7 +52,7 @@
   gap: 20px;
 
   @media only screen and (max-width: 767px) {
-    gap: 12px;
+    gap: 8px;
   }
 
   .step {
@@ -71,6 +71,12 @@
       font-size: 14px;
     }
 
+    @media only screen and (max-width: 1199px) {
+      font-size: 12px;
+      line-height: 16px;
+      gap: 8px;
+    }
+
     &.active {
       .circle {
         background-color: var.$bg-color;
@@ -81,7 +87,8 @@
         color: var.$bg-color;
 
         @media only screen and (max-width: 1199px) {
-          font-size: 14px;
+          font-size: 12px;
+          line-height: 16px;
         }
 
         @media only screen and (max-width: 767px) {
@@ -1253,6 +1260,10 @@ input[type="radio"]:checked+span::after {
 
 .user-management-section {
   padding-bottom: 72px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 90px;
+  }
 }
 
 .user-management-header {
@@ -2217,6 +2228,11 @@ input[type="radio"]:checked+span::after {
         gap: 16px;
       }
 
+      @media (max-width: 767px) {
+        padding: 0;
+        background-color: transparent;
+      }
+
       .classification-subdetails {
         display: flex;
         gap: 16px;
@@ -2250,7 +2266,7 @@ input[type="radio"]:checked+span::after {
             }
           }
 
-          @media only screen and (max-width: 991px) {
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -2278,6 +2294,10 @@ input[type="radio"]:checked+span::after {
       @media only screen and (max-width: 991px) {
         width: 100%;
         padding: 20px 16px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 20px 0;
       }
 
       h4 {
@@ -2336,6 +2356,7 @@ input[type="radio"]:checked+span::after {
 
           @media only screen and (max-width: 767px) {
             grid-template-columns: 1fr;
+            max-height: none;
           }
 
           &::-webkit-scrollbar {
@@ -3390,6 +3411,29 @@ h2.h2-title {
   color: #0F172A;
 }
 
+.classification-card,
+.quick-stats-card {
+  h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #0F172A;
+  }
+}
+
+.cst-details-div {
+  .user-management-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+
+  .user-management-section {
+    padding-bottom: 0 !important;
+  }
+}
+
+
 @media (max-width: 1199px) {
   .tooltip-inner {
     font-size: 12px;
@@ -3401,5 +3445,21 @@ h2.h2-title {
 @media (max-width: 767px) {
   .min-mbl-w200 {
     min-width: 200px !important;
+  }
+
+  .header-search-full {
+    width: 100%;
+
+    .search-wrapper {
+      flex: 1;
+    }
+
+    input.form-control {
+      width: 100%;
+    }
+  }
+
+  .process-section .radio-buttons {
+    height: auto;
   }
 }

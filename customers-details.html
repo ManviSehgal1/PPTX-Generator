@@ -78,14 +78,15 @@
         </div>
     </header>
 
-    <div class="stepper-section customer-stepper-section">
+    <div class="stepper-section stepper-new-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav aria-label="breadcrumb">
                         <ul class="breadcrumb mb-0">
                             <li class="breadcrumb-item">
-                                <a href="customer-management.html" class="">Customers</a></li>
+                                <a href="customer-management.html" class="">Customers</a>
+                            </li>
                             <li class="breadcrumb-item"><i class="fa-regular fa-chevron-right"></i></li>
                             <li class="breadcrumb-item breadcrumb-item1" aria-current="page">Global Tech Solutions</li>
                         </ul>
@@ -123,7 +124,7 @@
                             <div class="classification-details flex-column-with-gap">
                                 <div class="classification-subdetails">
                                     <div class="classification-icon globe-icon">
-                                        <i class="fa-solid fa-globe"></i>
+                                        <img src="assets/images/geo-area.svg" alt="Geo Area">
                                     </div>
                                     <div>
                                         <div class="small">Geo Area</div>
@@ -392,7 +393,7 @@
                         </div>
                     </div>
 
-                    <div class="allowed-users-details flex-column-with-gap">
+                    <!-- <div class="allowed-users-details flex-column-with-gap">
                         <div class="allowed-users-heading">
                             <h4 class="mb-0">Allowed Users</h4>
                             <div class="search-with-filter-option">
@@ -417,7 +418,6 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- User 1 -->
                                         <tr>
                                             <td>
                                                 <div class="allowed-users-info">
@@ -438,7 +438,6 @@
                                                         class="fa-solid fa-ellipsis-vertical"></i></button>
                                             </td>
                                         </tr>
-                                        <!-- User 2 -->
                                         <tr>
                                             <td>
                                                 <div class="allowed-users-info">
@@ -460,7 +459,6 @@
                                                         class="fa-solid fa-ellipsis-vertical"></i></button>
                                             </td>
                                         </tr>
-                                        <!-- User 3 -->
                                         <tr>
                                             <td>
                                                 <div class="allowed-users-info">
@@ -484,9 +482,282 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <!-- <div class="all-user-link">
-                                <a href="#" class="large">Manage All Users</a>
-                            </div> -->
+                        </div>
+                    </div> -->
+
+                    <div class="cst-details-div">
+                        <div class="user-management-header">
+                            <div class="header-actions">
+                                <button class="btn global-btn secondary-global-btn" id="btnSetInactive"
+                                    style="display: none;">
+                                    <i class="fa-solid fa-eye-slash me-2"></i>
+                                    Set As Inactive
+                                </button>
+                                <button class="global-btn secondary-global-btn">
+                                    <i class="fa-solid fa-download me-2"></i>Download Users
+                                </button>
+                                <button class="global-btn primary-global-btn action-btn" data-bs-toggle="modal"
+                                    data-bs-target="#addUserModal">
+                                    <i class="fa-solid fa-plus me-2"></i>Add New User
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="user-management-section">
+                            <div class="card">
+                                <div class="filter-section">
+                                    <div class="filter-header">
+                                        <div class="inner-filter-header">
+                                            <h6 class="mb-0">Allowed Users</h6>
+                                            <span class="badge">99/150</span>
+                                        </div>
+
+                                        <div class="d-flex gap-2 header-search-full">
+                                            <div class="search-wrapper">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <input type="text"
+                                                    class="form-control ps-5 global-btn secondary-global-btn"
+                                                    placeholder="Search users...">
+                                            </div>
+                                            <div class="position-relative d-inline-block">
+                                                <button class="global-btn secondary-global-btn filter-btn"
+                                                    id="filterBtn">
+                                                    <i class="fa-solid fa-filter me-2"></i>Filter
+                                                </button>
+                                                <!-- Filter Dropdown -->
+                                                <div class="filter-dropdown" id="filterDropdown">
+                                                    <div class="filter-dropdown-header">
+                                                        <h6 class="mb-0">Filters</h6>
+                                                    </div>
+                                                    <div class="filter-dropdown-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-md-6 mt-0">
+                                                                <label class="form-label">
+                                                                    <i class="fa-light fa-user me-1"></i>
+                                                                    Profile</label>
+                                                                <select class="form-select">
+                                                                    <option selected>All profiles</option>
+                                                                    <option value="1">Global Admin</option>
+                                                                    <option value="2">local Admin</option>
+                                                                    <option value="3">User</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-6 mt-3 mt-md-0">
+                                                                <label class="form-label">
+                                                                    <i class="fa-regular fa-square-check me-1"></i>
+                                                                    Status</label>
+                                                                <select class="form-select">
+                                                                    <option selected>All statuses</option>
+                                                                    <option value="1">Active</option>
+                                                                    <option value="2">Inactive</option>
+                                                                    <option value="3">Blocked</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col-12">
+                                                                <label class="form-label">
+                                                                    <i class="fa-light fa-globe me-1"></i> Entities
+                                                                    Access
+                                                                </label>
+                                                                <div class="search-wrapper">
+                                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                                    <input type="text"
+                                                                        class="form-control ps-5 py-2 global-btn secondary-global-btn"
+                                                                        placeholder="Search entities....">
+                                                                </div>
+                                                                <div class="search-tags">
+                                                                    <span class="badge filter-tag">Italy <i
+                                                                            class="fa-solid fa-xmark ms-1"></i></span>
+                                                                    <span class="badge filter-tag">Spain <i
+                                                                            class="fa-solid fa-xmark ms-1"></i></span>
+                                                                    <span class="badge filter-tag">France <i
+                                                                            class="fa-solid fa-xmark ms-1"></i></span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter-dropdown-footer d-flex gap-2">
+                                                        <button
+                                                            class="global-btn primary-global-btn fliter-footer-btn action-btn">Apply
+                                                            Filter</button>
+                                                        <button
+                                                            class="global-btn secondary-global-btn fliter-footer-btn"
+                                                            id="clearFilters">Clear
+                                                            All</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive cst-table-responsive">
+                                        <table class="table user-table align-middle mb-0">
+                                            <thead class="bg-light text-uppercase text-muted small">
+                                                <tr>
+                                                    <th scope="col" class=""><input type="checkbox"
+                                                            class="form-check-input" id="checkAll">
+                                                    </th>
+                                                    <th scope="col">Name <i class="fa-solid fa-sort ms-1"></i></th>
+                                                    <th scope="col">Username / Email</th>
+                                                    <th scope="col">Profile</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Last Login</th>
+                                                    <th scope="col">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Row 1 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">John Doe</a></td>
+                                                    <td class="text-muted">john.doe@company.com</td>
+                                                    <td><span class="badge badge-admin">Global Admin</span></td>
+                                                    <td><span class="badge badge-active">Active</span></td>
+                                                    <td class="">Oct 24, 2025 09:42 AM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 2 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">Sarah Miller</a>
+                                                    </td>
+                                                    <td class="text-muted">sarah.m@agency.com</td>
+                                                    <td><span class="badge badge-admin">Global Admin</span></td>
+                                                    <td><span class="badge badge-inactive">Inactive</span></td>
+                                                    <td class="">Oct 23, 2025 04:15 PM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 3 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">Michael Ross</a>
+                                                    </td>
+                                                    <td class="text-muted">m.ross@inactive.com</td>
+                                                    <td><span class="badge badge-viewer">User</span></td>
+                                                    <td><span class="badge badge-blocked">Blocked</span></td>
+                                                    <td class="">Sep 12, 2025 11:00 AM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 4 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">Emma Lewis</a></td>
+                                                    <td class="text-muted">emma.lewis@design.co</td>
+                                                    <td><span class="badge badge-editor">Local Admin</span></td>
+                                                    <td><span class="badge badge-active">Active</span></td>
+                                                    <td class="">Oct 22, 2025 02:30 PM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 5 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">David Wilson</a>
+                                                    </td>
+                                                    <td class="text-muted">david.w@consulting.com</td>
+                                                    <td><span class="badge badge-viewer">User</span></td>
+                                                    <td><span class="badge badge-active">Active</span></td>
+                                                    <td class="">Oct 21, 2025 10:15 AM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 1 -->
+                                                <tr class="selected-row">
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">John Doe</a></td>
+                                                    <td class="text-muted">john.doe@company.com</td>
+                                                    <td><span class="badge badge-admin">Global Admin</span></td>
+                                                    <td><span class="badge badge-active">Active</span></td>
+                                                    <td class="">Oct 24, 2025 09:42 AM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 2 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">Sarah Miller</a>
+                                                    </td>
+                                                    <td class="text-muted">sarah.m@agency.com</td>
+                                                    <td><span class="badge badge-admin">Global Admin</span></td>
+                                                    <td><span class="badge badge-inactive">Inactive</span></td>
+                                                    <td class="">Oct 23, 2025 04:15 PM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 3 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">Michael Ross</a>
+                                                    </td>
+                                                    <td class="text-muted">m.ross@inactive.com</td>
+                                                    <td><span class="badge badge-viewer">User</span></td>
+                                                    <td><span class="badge badge-blocked">Blocked</span></td>
+                                                    <td class="">Sep 12, 2025 11:00 AM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 4 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">Emma Lewis</a></td>
+                                                    <td class="text-muted">emma.lewis@design.co</td>
+                                                    <td><span class="badge badge-editor">Local Admin</span></td>
+                                                    <td><span class="badge badge-active">Active</span></td>
+                                                    <td class="">Oct 22, 2025 02:30 PM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+                                                <!-- Row 5 -->
+                                                <tr>
+                                                    <td class="">
+                                                        <input type="checkbox" class="form-check-input">
+                                                    </td>
+                                                    <td class="td-name"><a href="user-details.html">David Wilson</a>
+                                                    </td>
+                                                    <td class="text-muted">david.w@consulting.com</td>
+                                                    <td><span class="badge badge-viewer">User</span></td>
+                                                    <td><span class="badge badge-active">Active</span></td>
+                                                    <td class="">Oct 21, 2025 10:15 AM</td>
+                                                    <td><i class="fa-solid fa-ellipsis-vertical"></i></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- Pagination -->
+                                    <div class="pagination-container">
+                                        <p class="mb-0">Showing <strong>1</strong> to <strong>5</strong> of
+                                            <strong>124</strong> users
+                                        </p>
+                                        <div class="pagination-wrapper">
+                                            <button class="global-btn secondary-global-btn disabled">
+                                                <i class="fa-solid fa-chevron-left "></i>
+                                            </button>
+                                            <button class="global-btn primary-global-btn active-global-btn">1</button>
+                                            <button class="global-btn secondary-global-btn">2</button>
+                                            <button class="global-btn secondary-global-btn">3</button>
+                                            <span class="text-muted px-2">...</span>
+                                            <button class="global-btn secondary-global-btn">25</button>
+                                            <button class="global-btn secondary-global-btn"><i
+                                                    class="fa-solid fa-chevron-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -520,9 +791,84 @@
         </div>
     </footer>
 
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-heading-option">
+                        <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
+                        <p class="modal-subtitle">Invite a new teammate to collaborate on PPTX Generator.</p>
+                    </div>
+                    <i class="fa-solid fa-x close-btn" data-bs-dismiss="modal" aria-label="Close"></i>
+                </div>
+                <div class="modal-body">
+                    <form id="addUserForm">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 mb-3 mb-sm-4">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="e.g. John">
+                            </div>
+                            <div class="col-12 col-sm-6 mb-3 mb-sm-4">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="e.g. Doe">
+                            </div>
+                            <div class="col-12 mb-3 mb-sm-4">
+                                <label for="emailAddress" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="emailAddress"
+                                    placeholder="john.doe@example.com">
+                            </div>
+                            <div class="col-12 mb-3 mb-sm-4">
+                                <label for="role" class="form-label">Profile / Role</label>
+                                <select class="form-select" id="role">
+                                    <option selected>Select a role</option>
+                                    <option>Global Admin</option>
+                                    <option>Local Admin</option>
+                                    <option>User</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Entities Access</label>
+                                <div class="entity-box">
+
+                                    <!-- Tags -->
+                                    <div class="entity-tags">
+                                        <span class="entity-tag">
+                                            <i class="fa-solid fa-location-dot"></i> Italy
+                                            <i class="fa-solid fa-x close-btn"></i>
+                                        </span>
+
+                                        <span class="entity-tag">
+                                            <i class="fa-solid fa-building"></i> TechCorp Ltd.
+                                            <i class="fa-solid fa-x close-btn"></i>
+                                        </span>
+                                    </div>
+
+                                    <!-- Search Input -->
+                                    <input type="text" class="form-control" placeholder="Search and add entities...">
+                                </div>
+                            </div>
+
+                            <div class="entity-helper">
+                                <i class="fa-solid fa-circle-info"></i> Select specific geographic areas or customers
+                                this user can manage.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="global-btn secondary-global-btn"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="global-btn primary-global-btn action-btn" form="addUserForm">Add
+                        User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Create New Project Modal -->
-    <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="createProjectModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog"
+        aria-labelledby="createProjectModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header modal-header1">
@@ -703,6 +1049,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            var addUserModal = document.getElementById('addUserModal');
+            var addUserForm = document.getElementById('addUserForm');
+            if (addUserModal) {
+                addUserModal.addEventListener('show.bs.modal', function () {
+                    // reset form when modal opens
+                    if (addUserForm) addUserForm.reset();
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
             const checkAll = document.getElementById('checkAll');
             const userCheckboxes = document.querySelectorAll('.user-table tbody .form-check-input');
             const btnSetInactive = document.getElementById('btnSetInactive');
@@ -711,17 +1070,17 @@
                 if (!btnSetInactive) return;
 
                 const anyChecked = Array.from(userCheckboxes).some(cb => cb.checked);
-                // "Change to inactive to active" - interpreting as enabling the button
-                btnSetInactive.disabled = !anyChecked;
+                // show or hide the button depending on selection
+                btnSetInactive.style.display = anyChecked ? 'inline-block' : 'none';
 
-                // If further visual change is needed beyond disabled state:
-                if (anyChecked) {
-                    btnSetInactive.classList.remove('secondary-global-btn');
-                    btnSetInactive.classList.add('primary-global-btn');
-                } else {
-                    btnSetInactive.classList.remove('primary-global-btn');
-                    btnSetInactive.classList.add('secondary-global-btn');
-                }
+                // adjust visual style when visible
+                // if (anyChecked) {
+                //     btnSetInactive.classList.remove('secondary-global-btn');
+                //     btnSetInactive.classList.add('primary-global-btn');
+                // } else {
+                //     btnSetInactive.classList.remove('primary-global-btn');
+                //     btnSetInactive.classList.add('secondary-global-btn');
+                // }
             }
 
             function updateRowStyle(checkbox) {
