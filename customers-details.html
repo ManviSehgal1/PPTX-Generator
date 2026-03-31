@@ -21,6 +21,7 @@
     <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -818,7 +819,7 @@
                                 <input type="email" class="form-control" id="emailAddress"
                                     placeholder="john.doe@example.com">
                             </div>
-                            <div class="col-12 mb-3 mb-sm-4">
+                            <!-- <div class="col-12 mb-3 mb-sm-4">
                                 <label for="role" class="form-label">Profile / Role</label>
                                 <select class="form-select" id="role">
                                     <option selected>Select a role</option>
@@ -826,12 +827,12 @@
                                     <option>Local Admin</option>
                                     <option>User</option>
                                 </select>
-                            </div>
-                            <div class="col-12">
+                            </div> -->
+                            <!-- <div class="col-12">
                                 <label class="form-label">Entities Access</label>
                                 <div class="entity-box">
 
-                                    <!-- Tags -->
+                                    
                                     <div class="entity-tags">
                                         <span class="entity-tag">
                                             <i class="fa-solid fa-location-dot"></i> Italy
@@ -844,7 +845,6 @@
                                         </span>
                                     </div>
 
-                                    <!-- Search Input -->
                                     <input type="text" class="form-control" placeholder="Search and add entities...">
                                 </div>
                             </div>
@@ -852,6 +852,16 @@
                             <div class="entity-helper">
                                 <i class="fa-solid fa-circle-info"></i> Select specific geographic areas or customers
                                 this user can manage.
+                            </div> -->
+                            <div class="col-12 mb-3 mb-sm-4">
+                                <div class="select2-multiple-dv">
+                                    <label for="PROJECT_DDL" class="form-label">Select Projects</label>
+                                    <select class="form-select" id="PROJECT_DDL" multiple>
+                                        <option value="1">All</option>
+                                        <option value="2">Engagement Survey 2026</option>
+                                        <option value="3">Smartwork Survey 2025</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -1034,6 +1044,7 @@
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/custom1.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
         function selectTemplate(card) {
@@ -1218,6 +1229,44 @@
                     }
                 });
             }
+
+            // Initialize Select2 for Projects
+            $('#PROJECT_DDL').select2({
+                placeholder: 'Select projects',
+                allowClear: true,
+                width: '100%',
+                dropdownParent: $('#addUserModal'),
+                multiple: true
+            }).val([]).trigger('change');
+
+            // Handle "Select All" functionality
+            var isUpdating = false; // Flag to prevent infinite loops
+            $('#PROJECT_DDL').on('change', function () {
+                if (isUpdating) return; // Exit if we're already updating
+
+                var selectedOptions = $(this).val();
+                var allOption = '1'; // Change to match the HTML value
+
+                if (selectedOptions && selectedOptions.includes(allOption)) {
+                    // If "Select All" is selected, clear all other options and keep only "All"
+                    isUpdating = true;
+                    $(this).val([allOption]).trigger('change');
+                    isUpdating = false;
+                } else {
+                    // If other options are selected, make sure "All" is not selected
+                    if (selectedOptions && selectedOptions.length > 0) {
+                        // Ensure "All" is not in the selection when other projects are selected
+                        var filteredOptions = selectedOptions.filter(function (option) {
+                            return option !== allOption;
+                        });
+                        if (filteredOptions.length !== selectedOptions.length) {
+                            isUpdating = true;
+                            $(this).val(filteredOptions).trigger('change');
+                            isUpdating = false;
+                        }
+                    }
+                }
+            });
         });
     </script>
 </body>
