@@ -1037,13 +1037,7 @@
 
     <script>
         function selectTemplate(card) {
-
-            document.querySelectorAll('.template-card').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            card.classList.add('active');
-
+            card.classList.toggle('active');
         }
     </script>
 
