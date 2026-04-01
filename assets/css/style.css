@@ -14944,96 +14944,83 @@ h2.h2-title {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-.first-access-page .first-access-section {
-  flex: 1;
-  display: flex;
   align-items: center;
-  padding: 60px 0;
-}
-.first-access-page .first-access-section .auth-card {
-  background: #fff;
-  border-radius: 24px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 60px;
-  text-align: center;
+  justify-content: center;
+  padding: 86px 0 56px;
+  flex-wrap: wrap;
 }
 @media (max-width: 767px) {
-  .first-access-page .first-access-section .auth-card {
+  .first-access-page {
+    padding: 90px 0 76px;
+  }
+}
+
+.first-access-section {
+  width: 100%;
+}
+
+.auth-card {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .auth-card {
     padding: 30px 20px;
   }
 }
-.first-access-page .first-access-section .auth-card .main-heading {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  color: #111827;
-  margin-bottom: 8px;
-}
-.first-access-page .first-access-section .auth-card .user-info {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  font-style: italic;
-  color: #4b5563;
-  margin-bottom: 40px;
-}
-.first-access-page .first-access-section .auth-card .welcome-message {
-  margin-bottom: 40px;
-}
-.first-access-page .first-access-section .auth-card .welcome-message .welcome-title {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  color: #111827;
-  margin-bottom: 15px;
-}
-.first-access-page .first-access-section .auth-card .welcome-message .instruction-text {
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #4b5563;
-}
-.first-access-page .first-access-section .auth-card .password-setup-form {
+.auth-card .password-setup-form {
   max-width: 480px;
   margin: 0 auto;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .form-group {
+.auth-card .password-setup-form .form-group {
   margin-bottom: 20px;
   position: relative;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .form-group .form-control {
-  height: 52px;
+.auth-card .password-setup-form .form-group .form-control {
   border-radius: 8px;
-  border: 1px solid #d1d5db;
-  padding: 10px 45px 10px 15px;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  padding: 10px 45px 10px 16px;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .form-group .form-control:focus {
+.auth-card .password-setup-form .form-group .form-control:hover {
   border-color: #7F35B2;
-  box-shadow: 0 0 0 3px rgba(127, 53, 178, 0.1);
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .form-group .password-toggle {
+.auth-card .password-setup-form .form-group .form-control:focus {
+  border-color: #7F35B2;
+  box-shadow: none;
+}
+.auth-card .password-setup-form .form-group .password-toggle {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #9ca3af;
+  color: #6b7280;
   transition: color 0.2s;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .form-group .password-toggle:hover {
+.auth-card .password-setup-form .form-group .password-toggle:hover {
   color: #7F35B2;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements {
+@media (max-width: 1720px) {
+  .auth-card .password-setup-form .form-group {
+    margin-bottom: 16px;
+  }
+}
+.auth-card .password-setup-form .password-req {
   text-align: left;
   margin: 30px 0;
   background: #f9fafb;
   padding: 20px;
   border-radius: 12px;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-title {
+.auth-card .password-setup-form .password-req .req-title {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -15041,12 +15028,12 @@ h2.h2-title {
   margin-bottom: 12px;
   text-align: center;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list {
+.auth-card .password-setup-form .password-req .req-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement {
+.auth-card .password-setup-form .password-req .req-list .req {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   margin-bottom: 8px;
@@ -15055,40 +15042,97 @@ h2.h2-title {
   gap: 10px;
   transition: all 0.3s;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement i {
+.auth-card .password-setup-form .password-req .req-list .req i {
   font-size: 16px;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.invalid {
+.auth-card .password-setup-form .password-req .req-list .req.invalid {
   color: #6b7280;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.invalid i {
+.auth-card .password-setup-form .password-req .req-list .req.invalid i {
   color: #ef4444;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.valid {
+.auth-card .password-setup-form .password-req .req-list .req.valid {
   color: #059669;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.valid i {
+.auth-card .password-setup-form .password-req .req-list .req.valid i {
   color: #10b981;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .set-password-btn {
+.auth-card .password-setup-form .password-req .req-list .req:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 1720px) {
+  .auth-card .password-setup-form .password-req .req-list .req {
+    font-size: 13px;
+    gap: 8px;
+  }
+}
+@media (max-width: 1720px) {
+  .auth-card .password-setup-form .password-req {
+    margin: 16px 0;
+    padding: 16px;
+  }
+}
+.auth-card .password-setup-form .set-password-btn {
   width: 100%;
-  height: 52px;
   background-color: #7F35B2;
   border: none;
   border-radius: 8px;
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 16px;
-  color: #fff;
   transition: all 0.2s;
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .set-password-btn:hover:not(:disabled) {
+.auth-card .password-setup-form .set-password-btn:hover:not(:disabled) {
   background-color: #651f94;
   transform: translateY(-1px);
 }
-.first-access-page .first-access-section .auth-card .password-setup-form .set-password-btn:disabled {
+.auth-card .password-setup-form .set-password-btn:disabled {
   background-color: #d1d5db;
   cursor: not-allowed;
+}
+
+.first-access-message {
+  margin-bottom: 24px;
+}
+.first-access-message h2 {
+  font-size: 24px;
+  line-height: 1.3;
+  font-family: "poppins";
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+@media (max-width: 1720px) {
+  .first-access-message h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 1199px) {
+  .first-access-message h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+}
+.first-access-message p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+@media (max-width: 1720px) {
+  .first-access-message p {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 1199px) {
+  .first-access-message p {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 1720px) {
+  .first-access-message {
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

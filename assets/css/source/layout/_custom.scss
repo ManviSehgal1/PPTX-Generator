@@ -3473,173 +3473,205 @@ h2.h2-title {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 86px 0 56px;
+  flex-wrap: wrap;
 
-  .first-access-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 60px 0;
+  @media (max-width:767px) {
+    padding: 90px 0 76px;
+  }
+}
 
-    .auth-card {
-      background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      padding: 60px;
-      text-align: center;
+.first-access-section {
+  width: 100%;
+}
 
-      @media (max-width: 767px) {
-        padding: 30px 20px;
+.auth-card {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+  }
+
+  .password-setup-form {
+    max-width: 480px;
+    margin: 0 auto;
+
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+
+      .form-control {
+        border-radius: 8px;
+        padding: 10px 45px 10px 16px;
+
+        &:hover {
+          border-color: #7F35B2;
+        }
+
+        &:focus {
+          border-color: #7F35B2;
+          box-shadow: none;
+        }
       }
 
-      .main-heading {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 28px;
-        color: #111827;
-        margin-bottom: 8px;
-      }
+      .password-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6b7280;
+        transition: color 0.2s;
 
-      .user-info {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-        font-style: italic;
-        color: #4b5563;
-        margin-bottom: 40px;
-      }
-
-      .welcome-message {
-        margin-bottom: 40px;
-
-        .welcome-title {
-          font-family: 'Poppins', sans-serif;
-          font-weight: 600;
-          font-size: 20px;
-          color: #111827;
-          margin-bottom: 15px;
-        }
-
-        .instruction-text {
-          font-family: 'Poppins', sans-serif;
-          font-size: 16px;
-          line-height: 1.6;
-          color: #4b5563;
+        &:hover {
+          color: var.$bg-color;
         }
       }
 
-      .password-setup-form {
-        max-width: 480px;
-        margin: 0 auto;
-
-        .form-group {
-          margin-bottom: 20px;
-          position: relative;
-
-          .form-control {
-            height: 52px;
-            border-radius: 8px;
-            border: 1px solid #d1d5db;
-            padding: 10px 45px 10px 15px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-
-            &:focus {
-              border-color: var.$bg-color;
-              box-shadow: 0 0 0 3px rgba(127, 53, 178, 0.1);
-            }
-          }
-
-          .password-toggle {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #9ca3af;
-            transition: color 0.2s;
-
-            &:hover {
-              color: var.$bg-color;
-            }
-          }
-        }
-
-        .password-requirements {
-          text-align: left;
-          margin: 30px 0;
-          background: #f9fafb;
-          padding: 20px;
-          border-radius: 12px;
-
-          .requirements-title {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 14px;
-            color: #374151;
-            margin-bottom: 12px;
-            text-align: center;
-          }
-
-          .requirements-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            .requirement {
-              font-family: 'Poppins', sans-serif;
-              font-size: 14px;
-              margin-bottom: 8px;
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              transition: all 0.3s;
-
-              i {
-                font-size: 16px;
-              }
-
-              &.invalid {
-                color: #6b7280;
-
-                i {
-                  color: #ef4444;
-                }
-              }
-
-              &.valid {
-                color: #059669;
-
-                i {
-                  color: #10b981;
-                }
-              }
-            }
-          }
-        }
-
-        .set-password-btn {
-          width: 100%;
-          height: 52px;
-          background-color: var.$bg-color;
-          border: none;
-          border-radius: 8px;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 600;
-          font-size: 16px;
-          color: #fff;
-          transition: all 0.2s;
-
-          &:hover:not(:disabled) {
-            background-color: var.$bg-hover-color;
-            transform: translateY(-1px);
-          }
-
-          &:disabled {
-            background-color: #d1d5db;
-            cursor: not-allowed;
-          }
-        }
+      @media (max-width: 1720px) {
+        margin-bottom: 16px;
       }
     }
+
+    .password-req {
+      text-align: left;
+      margin: 30px 0;
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 12px;
+
+      .req-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        color: #374151;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .req-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .req {
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          margin-bottom: 8px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.3s;
+
+          i {
+            font-size: 16px;
+          }
+
+          &.invalid {
+            color: #6b7280;
+
+            i {
+              color: #ef4444;
+            }
+          }
+
+          &.valid {
+            color: #059669;
+
+            i {
+              color: #10b981;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          @media (max-width: 1720px) {
+            font-size: 13px;
+            gap: 8px;
+          }
+        }
+      }
+
+      @media (max-width:1720px) {
+        margin: 16px 0;
+        padding: 16px;
+      }
+    }
+
+    .set-password-btn {
+      width: 100%;
+      background-color: var.$bg-color;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s;
+
+      &:hover:not(:disabled) {
+        background-color: var.$bg-hover-color;
+        transform: translateY(-1px);
+      }
+
+      &:disabled {
+        background-color: #d1d5db;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.first-access-message {
+  margin-bottom: 24px;
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: "poppins";
+    font-weight: 700;
+    margin-bottom: 12px;
+
+    @media (max-width: 1720px) {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+
+    @media (max-width: 1720px) {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 1199px) {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+  }
+
+  @media (max-width: 1720px) {
+    margin-bottom: 20px;
   }
 }

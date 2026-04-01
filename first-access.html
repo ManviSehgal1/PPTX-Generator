@@ -23,7 +23,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
 </head>
 
-<body class="first-access-page">
+<body>
   <header>
     <div class="container">
       <nav class="navbar navbar-light">
@@ -40,18 +40,18 @@
     </div>
   </header>
 
-  <main>
+  <main class="first-access-page">
     <section class="first-access-section">
-      <div class="container h-100">
-        <div class="row justify-content-center align-items-center h-100">
-          <div class="col-lg-8 col-md-10">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-12 col-md-12">
             <div class="auth-card">
               <div class="auth-card-body">
-                <h2 class="main-heading">Your first access to PPTX Generator</h2>
-                <p class="user-info">Name Surname, email</p>
 
-                <div class="welcome-message">
-                  <h4 class="welcome-title">Welcome to the WTW PPTX Generator platform!</h4>
+                <div class="first-access-message">
+                  <h2 class="main-heading">Your first access to PPTX Generator</h2>
+                  <p><i>Name Surname, email</i></p>
+                  <p>Welcome to the WTW PPTX Generator platform!</p>
                   <p class="instruction-text">
                     To get started, please create your personal password to access the tool.<br>
                     Your password is strictly personal: do not share it with anyone.
@@ -62,33 +62,33 @@
                   <div class="form-group password-field-group">
                     <input type="password" id="newPassword" class="form-control" placeholder="Password" required>
                     <span class="password-toggle" onclick="togglePassword('newPassword')">
-                      <i class="fa-regular fa-eye-slash"></i>
+                      <i class="fa-light fa-eye-slash"></i>
                     </span>
                   </div>
                   <div class="form-group password-field-group">
                     <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password"
                       required>
                     <span class="password-toggle" onclick="togglePassword('confirmPassword')">
-                      <i class="fa-regular fa-eye-slash"></i>
+                      <i class="fa-light fa-eye-slash"></i>
                     </span>
                   </div>
 
-                  <div class="password-requirements">
-                    <p class="requirements-title">Password requirements:</p>
-                    <ul class="requirements-list">
-                      <li id="req-length" class="requirement invalid">
+                  <div class="password-req">
+                    <p class="req-title">Password requirements:</p>
+                    <ul class="req-list">
+                      <li id="req-length" class="req invalid">
                         <i class="fa-solid fa-circle-xmark status-icon"></i> Minimum 10 characters
                       </li>
-                      <li id="req-uppercase" class="requirement invalid">
+                      <li id="req-uppercase" class="req invalid">
                         <i class="fa-solid fa-circle-xmark status-icon"></i> At least one uppercase letter
                       </li>
-                      <li id="req-lowercase" class="requirement invalid">
+                      <li id="req-lowercase" class="req invalid">
                         <i class="fa-solid fa-circle-xmark status-icon"></i> At least one lowercase letter
                       </li>
-                      <li id="req-number" class="requirement invalid">
+                      <li id="req-number" class="req invalid">
                         <i class="fa-solid fa-circle-xmark status-icon"></i> At least one number
                       </li>
-                      <li id="req-special" class="requirement invalid">
+                      <li id="req-special" class="req invalid">
                         <i class="fa-solid fa-circle-xmark status-icon"></i> At least one special character (# ? ! @ $ %
                         ^
                         & * -)
@@ -97,7 +97,8 @@
                   </div>
 
                   <div class="form-actions">
-                    <button type="submit" id="submitBtn" class="btn btn-primary set-password-btn" disabled>Set the
+                    <button type="submit" id="submitBtn"
+                      class="global-btn primary-global-btn action-btn set-password-btn" disabled>Set the
                       password</button>
                   </div>
                 </form>
@@ -138,6 +139,10 @@
   <!-- script -->
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/popper.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/custom1.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 
   <script>
     function togglePassword(inputId) {
