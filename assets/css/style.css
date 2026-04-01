@@ -14095,7 +14095,8 @@ input[type=radio]:checked + span::after {
   }
 }
 .customers-all-details .customer-details-asides .right-aside-details .all-project-info .view-all-projects .all-project-details .active-project-tags .badge.badge-editor {
-  background: #eff6ff;
+  background: rgb(241, 245, 249);
+  color: #0F172A;
 }
 .customers-all-details .customer-details-asides .right-aside-details .all-project-info .view-all-projects .all-project-details .active-project-tags .badge.badge-active {
   background: #f0fdf4;
@@ -14936,6 +14937,158 @@ h2.h2-title {
   .process-section .radio-buttons {
     height: auto;
   }
+}
+/* First Access Page Styles */
+.first-access-page {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.first-access-page .first-access-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+}
+.first-access-page .first-access-section .auth-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 60px;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .first-access-page .first-access-section .auth-card {
+    padding: 30px 20px;
+  }
+}
+.first-access-page .first-access-section .auth-card .main-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+.first-access-page .first-access-section .auth-card .user-info {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: italic;
+  color: #4b5563;
+  margin-bottom: 40px;
+}
+.first-access-page .first-access-section .auth-card .welcome-message {
+  margin-bottom: 40px;
+}
+.first-access-page .first-access-section .auth-card .welcome-message .welcome-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 15px;
+}
+.first-access-page .first-access-section .auth-card .welcome-message .instruction-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form {
+  max-width: 480px;
+  margin: 0 auto;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .form-group .form-control {
+  height: 52px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 10px 45px 10px 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .form-group .form-control:focus {
+  border-color: #7F35B2;
+  box-shadow: 0 0 0 3px rgba(127, 53, 178, 0.1);
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .form-group .password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9ca3af;
+  transition: color 0.2s;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .form-group .password-toggle:hover {
+  color: #7F35B2;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements {
+  text-align: left;
+  margin: 30px 0;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement i {
+  font-size: 16px;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.invalid {
+  color: #6b7280;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.invalid i {
+  color: #ef4444;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.valid {
+  color: #059669;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .password-requirements .requirements-list .requirement.valid i {
+  color: #10b981;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .set-password-btn {
+  width: 100%;
+  height: 52px;
+  background-color: #7F35B2;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.2s;
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .set-password-btn:hover:not(:disabled) {
+  background-color: #651f94;
+  transform: translateY(-1px);
+}
+.first-access-page .first-access-section .auth-card .password-setup-form .set-password-btn:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
 }
 
 /*# sourceMappingURL=style.css.map */

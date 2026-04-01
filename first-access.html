@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="author" content="" />
+  <meta name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" />
+  <meta name="keywords" content="" />
+  <title>First Access | WTW - PPTX Generator</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <!-- css-->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+
+  <!-- Font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/0901bfe3aa.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fe073c3ad3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/c6fd3d7ec2.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.7.1/dist/jszip.min.js"></script>
+</head>
+
+<body class="first-access-page">
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-light">
+        <div class="left-navbar-items">
+          <div class="brand-logo">
+            <a title="WTW - PPTX Generator" class="navbar-brand" href="index.html">
+              <img src="assets/images/logo1.svg" alt="WTW - PPTX Generator" class="main-logo1" />
+              <img src="assets/images/m-logo.svg" alt="WTW - PPTX Generator" class="main-logo2" />
+
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="first-access-section">
+      <div class="container h-100">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-md-10">
+            <div class="auth-card">
+              <div class="auth-card-body">
+                <h2 class="main-heading">Your first access to PPTX Generator</h2>
+                <p class="user-info">Name Surname, email</p>
+
+                <div class="welcome-message">
+                  <h4 class="welcome-title">Welcome to the WTW PPTX Generator platform!</h4>
+                  <p class="instruction-text">
+                    To get started, please create your personal password to access the tool.<br>
+                    Your password is strictly personal: do not share it with anyone.
+                  </p>
+                </div>
+
+                <form id="passwordSetupForm" class="password-setup-form">
+                  <div class="form-group password-field-group">
+                    <input type="password" id="newPassword" class="form-control" placeholder="Password" required>
+                    <span class="password-toggle" onclick="togglePassword('newPassword')">
+                      <i class="fa-regular fa-eye-slash"></i>
+                    </span>
+                  </div>
+                  <div class="form-group password-field-group">
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password"
+                      required>
+                    <span class="password-toggle" onclick="togglePassword('confirmPassword')">
+                      <i class="fa-regular fa-eye-slash"></i>
+                    </span>
+                  </div>
+
+                  <div class="password-requirements">
+                    <p class="requirements-title">Password requirements:</p>
+                    <ul class="requirements-list">
+                      <li id="req-length" class="requirement invalid">
+                        <i class="fa-solid fa-circle-xmark status-icon"></i> Minimum 10 characters
+                      </li>
+                      <li id="req-uppercase" class="requirement invalid">
+                        <i class="fa-solid fa-circle-xmark status-icon"></i> At least one uppercase letter
+                      </li>
+                      <li id="req-lowercase" class="requirement invalid">
+                        <i class="fa-solid fa-circle-xmark status-icon"></i> At least one lowercase letter
+                      </li>
+                      <li id="req-number" class="requirement invalid">
+                        <i class="fa-solid fa-circle-xmark status-icon"></i> At least one number
+                      </li>
+                      <li id="req-special" class="requirement invalid">
+                        <i class="fa-solid fa-circle-xmark status-icon"></i> At least one special character (# ? ! @ $ %
+                        ^
+                        & * -)
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn btn-primary set-password-btn" disabled>Set the
+                      password</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="company-footer-logo">
+          <p>
+            <a title="WTW" class="navbar-brand" href="https://www.wtwco.com/it-it">
+              <img src="assets/images/footer-logo.svg" alt="Generali - PPTX Generator" class="main-logo1" />
+            </a>
+
+            <span>© 2025 WTW. Tutti i diritti riservati.</span>
+          </p>
+        </div>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="" class="nav-links">Privacy Policy</a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-links">Termini di Servizio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <script>
+    function togglePassword(inputId) {
+      const input = document.getElementById(inputId);
+      const icon = input.nextElementSibling.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      }
+    }
+
+    const newPassword = document.getElementById('newPassword');
+    const confirmPassword = document.getElementById('confirmPassword');
+    const submitBtn = document.getElementById('submitBtn');
+
+    const requirements = {
+      length: (val) => val.length >= 10,
+      uppercase: (val) => /[A-Z]/.test(val),
+      lowercase: (val) => /[a-z]/.test(val),
+      number: (val) => /[0-9]/.test(val),
+      special: (val) => /[#?!@$%^&*-]/.test(val)
+    };
+
+    function validatePassword() {
+      const val = newPassword.value;
+      let allValid = true;
+
+      for (const [key, test] of Object.entries(requirements)) {
+        const item = document.getElementById(`req-${key}`);
+        const icon = item.querySelector('.status-icon');
+        const isValid = test(val);
+
+        if (isValid) {
+          item.classList.remove('invalid');
+          item.classList.add('valid');
+          icon.classList.remove('fa-circle-xmark');
+          icon.classList.add('fa-circle-check');
+        } else {
+          item.classList.remove('valid');
+          item.classList.add('invalid');
+          icon.classList.remove('fa-circle-check');
+          icon.classList.add('fa-circle-xmark');
+          allValid = false;
+        }
+      }
+
+      // Check confirm password
+      const passwordsMatch = val === confirmPassword.value && val !== '';
+
+      submitBtn.disabled = !(allValid && passwordsMatch);
+    }
+
+    newPassword.addEventListener('input', validatePassword);
+    confirmPassword.addEventListener('input', validatePassword);
+
+    document.getElementById('passwordSetupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Password set successfully!');
+      // Handle actual form submission here
+    });
+  </script>
+</body>
+
+</html>
