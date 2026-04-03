@@ -14758,7 +14758,7 @@ body .select2-container--default .select2-selection--multiple .select2-selection
 body .select2-container--default .select2-selection--multiple .select2-selection__clear {
   position: absolute;
   right: 8px;
-  top: 23px;
+  top: 22px;
   transform: translateY(-50%);
   color: #6b7280;
   margin-top: -1px;
@@ -15205,17 +15205,12 @@ h2.h2-title {
 }
 
 .select-box-init label.form-label {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
   font-weight: 600;
   color: #7F35B2;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-}
-@media (max-width: 767px) {
-  .select-box-init label.form-label {
-    font-size: 13px;
-  }
 }
 
 .project-init-item {
@@ -15275,6 +15270,16 @@ body .select-icon-box .select2-container--default .select2-selection--multiple {
 
 body .select2-container--default .select2-selection--multiple.select2-selection--clearable {
   padding-right: 34px;
+}
+
+body .project-init-row .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: rgb(241, 245, 249);
+  color: #0F172A;
+}
+
+body .project-init-row .select2-container--default .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove:hover,
+body .project-init-row .select2-container--default .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove {
+  color: #0F172A;
 }
 
 /*# sourceMappingURL=style.css.map */
