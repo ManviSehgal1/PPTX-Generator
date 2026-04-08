@@ -3819,3 +3819,28 @@ body .project-init-row .select2-container--default .select2-selection--multiple 
 body .project-init-row .select2-container--default .select2-selection--multiple .select2-selection__choice .select2-selection__choice__remove {
   color: #0F172A;
 }
+
+.badge-check-mark {
+  background: transparent;
+  color: #6c757d;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 20px;
+  margin: 0 auto;
+
+  &.green-mark {
+    background: #28a745;
+    color: #fff;
+    font-size: 10px;
+  }
+
+  &.yellow-mark {
+    background: #e2b018;
+    color: #fff;
+    font-size: 10px;
+  }
+}

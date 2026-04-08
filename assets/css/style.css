@@ -15282,4 +15282,27 @@ body .project-init-row .select2-container--default .select2-selection--multiple 
   color: #0F172A;
 }
 
+.badge-check-mark {
+  background: transparent;
+  color: #6c757d;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 20px;
+  margin: 0 auto;
+}
+.badge-check-mark.green-mark {
+  background: #28a745;
+  color: #fff;
+  font-size: 10px;
+}
+.badge-check-mark.yellow-mark {
+  background: #e2b018;
+  color: #fff;
+  font-size: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
